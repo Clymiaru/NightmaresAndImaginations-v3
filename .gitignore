@@ -1,16 +1,16 @@
 .idea/
 
 # Unity Folders
-NightmaresAndImaginations-v3/[Aa]ssets/AssetStoreTools*
-NightmaresAndImaginations-v3/[Ll]ibrary/
-NightmaresAndImaginations-v3/[Tt]emp/
-NightmaresAndImaginations-v3/[Oo]bj/
-NightmaresAndImaginations-v3/[Bb]uild/
-NightmaresAndImaginations-v3/[Bb]uilds/
-NightmaresAndImaginations-v3/[Ll]ogs/
-NightmaresAndImaginations-v3/[Mm]emoryCaptures/
-NightmaresAndImaginations-v3/[Ll]ocal[Cc]ache/
-NightmaresAndImaginations-v3/[Uu]nityGenerated/
+NightmaresAndImaginations/[Aa]ssets/AssetStoreTools*
+NightmaresAndImaginations/[Ll]ibrary/
+NightmaresAndImaginations/[Tt]emp/
+NightmaresAndImaginations/[Oo]bj/
+NightmaresAndImaginations/[Bb]uild/
+NightmaresAndImaginations/[Bb]uilds/
+NightmaresAndImaginations/[Ll]ogs/
+NightmaresAndImaginations/[Mm]emoryCaptures/
+NightmaresAndImaginations/[Ll]ocal[Cc]ache/
+NightmaresAndImaginations/[Uu]nityGenerated/
 
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
