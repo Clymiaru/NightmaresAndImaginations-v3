@@ -11,8 +11,8 @@ namespace TDS
 
         private void OnValidate()
         {
-            var presentCollider = GetComponent<Collider2D>();
-            if (presentCollider == null)
+            var colliderPresent = GetComponent<Collider2D>();
+            if (colliderPresent == null)
             {
                 Debug.Log($"A Trigger Collider is not present for {gameObject.name}!");
             }
@@ -21,7 +21,6 @@ namespace TDS
         private void OnTriggerEnter2D(Collider2D other)
         {
             hasBeenTriggered = true;
-            Debug.Log("Triggered!");
         }
 
         private void Start()
@@ -68,15 +67,11 @@ namespace TDS
         }
     }
 
-    // TODO: Make sure that spawn points that are in-use are not chosen until their spawn time is complete.
-    // TODO: For Creepy Doll enemies, make sure that the spawn points are not used again unless killed.
     [System.Serializable]
     public class Wave
     {
         [SerializeField] private List<Enemy> ToSpawn;
-        [SerializeField] private List<SpawnPoint> SpawnPoints;
         [SerializeField] private float SpawnDelay;
-        
         public bool HasSpawned { get; private set; } 
 
         public void UpdateCountdown()
@@ -98,8 +93,7 @@ namespace TDS
         {
             foreach (var spawn in ToSpawn)
             {
-                var chosenSpawnPointIndex = UnityEngine.Random.Range(0, SpawnPoints.Count);
-                SpawnPoints[chosenSpawnPointIndex].Spawn(spawn.gameObject, 5.0f);
+                spawn.OnSpawn();
             }
             
             HasSpawned = true;

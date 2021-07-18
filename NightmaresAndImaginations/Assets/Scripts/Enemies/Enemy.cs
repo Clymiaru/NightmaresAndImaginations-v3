@@ -5,11 +5,15 @@ namespace TDS
 {
     public abstract class Enemy : MonoBehaviour
     {
-        protected abstract void OnSpawn();
+        public virtual void OnSpawn()
+        {
+            
+        }
 
         public void Spawn()
         {
             OnSpawn();
+            gameObject.SetActive(true);
         }
     }
 }
