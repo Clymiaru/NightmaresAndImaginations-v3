@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -11,7 +8,7 @@ namespace TDS.AI
         [Tooltip("Repeats N times. If 0, it repeats infinitely.")]
         private readonly int repeatCount;
 
-        private int currentCount = 0;
+        private int currentCount;
 
         public RepeatNode(int repeatCount, Node child) : base(child)
         {

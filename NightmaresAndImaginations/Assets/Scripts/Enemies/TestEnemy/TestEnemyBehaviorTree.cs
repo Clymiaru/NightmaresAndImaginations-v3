@@ -17,11 +17,11 @@ namespace TDS.AI
             
             var targetInRangeSpriteColor = new ChangeSpriteColorNode(Sprite, TargetInRangeSpriteColor);
 
-            var isTargetInRange = new IsTargetInRangeNode(targetInRangeSpriteColor, gameObject, target, 5.0f);
+            // var isTargetInRange = new IsTargetInRangeNode(targetInRangeSpriteColor, gameObject, target, 5.0f);
 
-            var sequence = new SelectorNode(new List<Node>{isTargetInRange, freeRoamSpriteVFX});
+            // var sequence = new SelectorNode(new List<Node>{isTargetInRange, freeRoamSpriteVFX});
             
-            var repeatNode = new RepeatNode(0, sequence);
+            var repeatNode = new RepeatNode(0, new DoNothingNode());
             
             return new RootNode(repeatNode);
         }

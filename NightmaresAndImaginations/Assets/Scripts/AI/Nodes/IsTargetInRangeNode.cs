@@ -6,16 +6,11 @@ namespace TDS.AI
 {
     public class IsTargetInRangeNode : DecoratorNode
     {
-        private GameObject player;
-        private GameObject target;
-        private float sightRange;
+        private readonly SightLineSensor sightSensor;
         
-        public IsTargetInRangeNode(Node child, GameObject player, GameObject target, float range) : base(child)
+        public IsTargetInRangeNode(Node child, SightLineSensor sightSensor) : base(child)
         {
-            this.player = player;
-            this.target = target;
-            sightRange = range;
-
+            this.sightSensor = sightSensor;
         }
 
         protected override void OnStart()
@@ -24,15 +19,12 @@ namespace TDS.AI
 
         protected override State OnUpdate()
         {
-            var targetDistance = Vector2.Distance(player.transform.position, 
-                                                      target.transform.position);
-            if (targetDistance < sightRange)
-            {
-                Child.Update();
-                return State.Success;
-            }
+            var isTargetSighted = sightSensor.IsTargetWithinSight();
 
-            return State.Failure;
+            if (!isTargetSighted) return State.Failure;
+            
+            Child.Update();
+            return State.Success;
         }
 
         protected override void OnStop()

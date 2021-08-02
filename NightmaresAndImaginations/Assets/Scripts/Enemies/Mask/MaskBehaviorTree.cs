@@ -28,11 +28,15 @@ namespace TDS.AI
             
             
             // Idle State
-            
-            
-            
-            
-            throw new System.NotImplementedException();
+
+            var doNothingNode = new DoNothingNode();
+            var moveNode = new MoveNode(GetComponent<Mover>());
+            var isTargetInSightNode = new IsTargetInRangeNode(moveNode, GetComponent<SightLineSensor>());
+
+            var repeatNode = new RepeatNode(0, isTargetInSightNode);
+
+
+            return new RootNode(repeatNode);
         }
     }
 
