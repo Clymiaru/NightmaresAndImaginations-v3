@@ -58,10 +58,8 @@ public class PlayerMovement : MonoBehaviour
             this.movement = 0.0f;
         }
 
-       
         this.transform.position += new Vector3(this.movement, 0, 0) * Time.deltaTime * this.moveSpeed;
-
-
+        //rb.AddForce(Vector2.right * movement, ForceMode2D.Force);
 
         animator.SetFloat("Horizontal", this.movement);
         animator.SetFloat("Speed", movement * movement);

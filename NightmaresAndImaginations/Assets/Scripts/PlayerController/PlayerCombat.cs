@@ -59,12 +59,14 @@ public class PlayerCombat : MonoBehaviour
         else if (this.movementRef.GetAttackDirection() < 0)
             hitEnemies = Physics2D.OverlapCircleAll(this.attackPointLeft.position, this.attackRange, this.enemyLayers);
 
-        for(int i = 0; i < hitEnemies.Length; i++)
+        if (hitEnemies != null)
         {
-            Debug.Log("Hit enemy " + hitEnemies[i].name);
-            //do damage calculation here
+            for (int i = 0; i < hitEnemies.Length; i++)
+            {
+                Debug.Log("Hit enemy " + hitEnemies[i].name);
+                //do damage calculation here
+            }
         }
-
     }
 
 
@@ -73,5 +75,4 @@ public class PlayerCombat : MonoBehaviour
         Gizmos.DrawWireSphere(this.attackPointRight.position, this.attackRange);
         Gizmos.DrawWireSphere(this.attackPointLeft.position, this.attackRange);
     }
-
 }

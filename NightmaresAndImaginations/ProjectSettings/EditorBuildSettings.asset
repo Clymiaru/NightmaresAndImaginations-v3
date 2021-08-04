@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SetupScene.unity
     guid: fa27e0d93acfe2d42b67c8f6aee429d6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DreamWorldScene.unity
     guid: b697216e08a37354e8b9b8a3ad2bb64c
+  - enabled: 1
+    path: Assets/Scenes/TestScene.unity
+    guid: f874a25b2150fc44c924c0c1b32ef168
   m_configObjects: {}

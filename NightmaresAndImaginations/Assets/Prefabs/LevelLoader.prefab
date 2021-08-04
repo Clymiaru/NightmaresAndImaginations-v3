@@ -253,4 +253,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 4803217074716997386}
-  transitionTime: 3
+  transitionTime: 2
