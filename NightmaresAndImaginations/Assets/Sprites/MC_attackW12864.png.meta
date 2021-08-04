@@ -1,25 +1,31 @@
 fileFormatVersion: 2
-guid: a957ae5c92602ed40a3df5d990920c9e
+guid: b73f285aad1bda14ba172cad3e2f4532
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3992350900460970070
-    second: MC_runW6464_0
+      213: 6802315935541775665
+    second: MC_attackW12864_1
   - first:
-      213: 136609839745677770
-    second: MC_runW6464_1
+      213: -8705882914739832596
+    second: MC_attackW12864_3
   - first:
-      213: -7111778922241863839
-    second: MC_runW6464_2
+      213: -4743261716672328755
+    second: MC_attackW12864_4
   - first:
-      213: 5946924940372471792
-    second: MC_runW6464_3
+      213: -5389227304639530862
+    second: MC_attackW12864_5
   - first:
-      213: 7570931270311675294
-    second: MC_runW6464_4
+      213: 4608602051221392229
+    second: MC_attackW12864_6
   - first:
-      213: -8517735476207268571
-    second: MC_runW6464_5
+      213: -1106067274058616837
+    second: MC_attackW12864_7
+  - first:
+      213: 7952666879856415932
+    second: MC_attackW12864_9
+  - first:
+      213: -7238487381185945851
+    second: MC_attackW12864_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,44 +111,11 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 2
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MC_runW6464_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 650efa8ddfda76730800000000000000
-      internalID: 3992350900460970070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC_runW6464_1
+      name: MC_attackW12864_1
       rect:
         serializedVersion: 2
         x: 64
@@ -156,35 +129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac93ddaece555e100800000000000000
-      internalID: 136609839745677770
+      spriteID: 13d42fb9d4ea66e50800000000000000
+      internalID: 6802315935541775665
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_runW6464_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16fc9a200c2ed4d90800000000000000
-      internalID: -7111778922241863839
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC_runW6464_3
+      name: MC_attackW12864_3
       rect:
         serializedVersion: 2
         x: 192
@@ -198,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ffefc0a9b8b78250800000000000000
-      internalID: 5946924940372471792
+      spriteID: ce83ac26d9d7e2780800000000000000
+      internalID: -8705882914739832596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_runW6464_4
+      name: MC_attackW12864_4
       rect:
         serializedVersion: 2
         x: 256
@@ -219,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9503d9b0e9511960800000000000000
-      internalID: 7570931270311675294
+      spriteID: dcb490d799c8c2eb0800000000000000
+      internalID: -4743261716672328755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_runW6464_5
+      name: MC_attackW12864_5
       rect:
         serializedVersion: 2
         x: 320
@@ -240,8 +192,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52d4ce996bceac980800000000000000
-      internalID: -8517735476207268571
+      spriteID: 298ff1dd15e9535b0800000000000000
+      internalID: -5389227304639530862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_attackW12864_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b003ee52b05ff30800000000000000
+      internalID: 4608602051221392229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_attackW12864_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bff2d08aca576a0f0800000000000000
+      internalID: -1106067274058616837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_attackW12864_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb41bd6646c8d5e60800000000000000
+      internalID: 7952666879856415932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_attackW12864_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50f9345f31abb8b90800000000000000
+      internalID: -7238487381185945851
       vertices: []
       indices: 
       edges: []
