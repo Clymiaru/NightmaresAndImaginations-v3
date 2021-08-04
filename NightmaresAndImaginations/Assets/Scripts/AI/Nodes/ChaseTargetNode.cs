@@ -1,11 +1,17 @@
+using UnityEngine;
+
 namespace TDS.AI
 {
     public class ChaseTargetNode : ActionNode
     {
-        public ChaseTargetNode() : base()
+        private Mover mover;
+        private GameObject target;
+        
+        public ChaseTargetNode(Mover mover) : base()
         {
-            
+            this.mover = mover;
         }
+        
         protected override void OnStart()
         {
         }
