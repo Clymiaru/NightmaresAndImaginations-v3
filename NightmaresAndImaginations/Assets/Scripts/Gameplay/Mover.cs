@@ -2,10 +2,11 @@ using UnityEngine;
 
 namespace TDS
 {
-    [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(Rigidbody2D), 
+                      typeof(StatsComponent))]
     public class Mover : MonoBehaviour
     {
-        [SerializeField] private float Speed;
+        private float speed;
         private float speedModifier = 1.0f;
         
         private Rigidbody2D rigidbody2D;
@@ -13,6 +14,7 @@ namespace TDS
         private void Start()
         {
             rigidbody2D = GetComponent<Rigidbody2D>();
+            speed = GetComponent<StatsComponent>().MovementSpeed;  
             speedModifier = 1.0f;
         }
 
@@ -23,7 +25,7 @@ namespace TDS
 
         public void Move(Vector2 direction)
         {
-            rigidbody2D.velocity = (direction * (Speed * speedModifier * Time.fixedDeltaTime));
+            rigidbody2D.velocity = (direction * (speed * speedModifier * Time.fixedDeltaTime));
         }
 
         public void Stop()

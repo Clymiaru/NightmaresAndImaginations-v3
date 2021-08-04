@@ -18,6 +18,7 @@ namespace TDS.AI
         
         protected override RootNode CreateBehaviorTree()
         {
+            var stats = GetComponent<StatsComponent>();
             var mover = GetComponent<Mover>();
             var sprite = GetComponent<SpriteRenderer>();
             

@@ -11,8 +11,18 @@ namespace TDS
         [SerializeField] private int power;
         [SerializeField] private int movementSpeed;
 
-        public int MaxHealth => maxHealth;
-        public int Health => currentHealth;
+        public int MaxHealth
+        {
+            get => maxHealth;
+            set => maxHealth = value;
+        }
+
+        public int Health
+        {
+            get => currentHealth;
+            set => currentHealth = Mathf.Max(value, 0);
+        } 
+        
         public int Defense => defense;
         public int MovementSpeed => movementSpeed;
         public bool IsDead => currentHealth <= 0;

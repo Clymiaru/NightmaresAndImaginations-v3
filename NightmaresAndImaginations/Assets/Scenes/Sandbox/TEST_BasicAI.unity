@@ -1416,6 +1416,7 @@ GameObject:
   - component: {fileID: 4500677604268695429}
   - component: {fileID: 4500677604268695426}
   - component: {fileID: 4500677604268695427}
+  - component: {fileID: 4500677604268695431}
   m_Layer: 0
   m_Name: TestAI
   m_TagString: Untagged
@@ -1423,6 +1424,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4500677604268695431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4500677604268695430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fac63cb94110aa49aeab7c6de9c8f24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  defense: 0
+  power: 0
+  movementSpeed: 0
 --- !u!1001 &5395581174817932104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1477,6 +1494,10 @@ PrefabInstance:
     - target: {fileID: 5395581174699147987, guid: 2cc1984313fdfbc4db90d6b644bda64c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5395581174699148011, guid: 2cc1984313fdfbc4db90d6b644bda64c, type: 3}
+      propertyPath: movementSpeed
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cc1984313fdfbc4db90d6b644bda64c, type: 3}
