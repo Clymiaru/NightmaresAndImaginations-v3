@@ -1,37 +1,62 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace TDS
 {
     public class SightLineSensor : MonoBehaviour
     {
-        [SerializeField] private float SightRange;
+        [SerializeField] private float TargetSightRange;
+        [SerializeField] private Vector2 SightDirection;
+        [SerializeField] private string LayerOfTarget;
+        [SerializeField] private string TagOfTarget;
         
+        private GameObject sightedTarget = null;
+
+        public Vector2 GetDirection()
+        {
+            return SightDirection;
+        }
+        public void FlipDirection()
+        {
+            SightDirection *= -1;
+        }
         
         public bool IsTargetWithinSight()
         {
             Vector2 currPos = transform.position;
             
-            var endPos =  currPos + Vector2.left * SightRange;
+            var hit = Physics2D.Raycast(currPos, SightDirection, TargetSightRange, 1 << LayerMask.NameToLayer(LayerOfTarget));
 
-            var hit = Physics2D.Raycast(currPos, Vector2.left, SightRange, 1 << LayerMask.NameToLayer("Player"));
-            // var hit = Physics2D.Linecast(currPos, endPos, 1 << LayerMask.NameToLayer("Player"));
+            if (hit.collider != null)
+            {
+                if (hit.collider.gameObject.CompareTag(TagOfTarget))
+                {
+                    sightedTarget = hit.collider.gameObject;
+                    return true;
+                }
+            }
 
-            if (hit.collider == null)
-                return false;
-            
-            return hit.collider.gameObject.CompareTag("Player");
+            sightedTarget = null;
+            return false;
         }
 
-        private void OnDrawGizmos()
-        {  
+        public GameObject RetriveSightedTarget()
+        {
+            return sightedTarget;
+        }
+
+        private void DebugTargetSightRange()
+        {
             Vector2 currPos = transform.position;
-            var endPos =  currPos + Vector2.left * SightRange;
+            var endPos =  currPos + SightDirection * TargetSightRange;
             
             Gizmos.color = Color.yellow;
             Gizmos.DrawLine(currPos, endPos);
+        }
+
+        private void OnDrawGizmos()
+        {
+            DebugTargetSightRange();
         }
     }
 }

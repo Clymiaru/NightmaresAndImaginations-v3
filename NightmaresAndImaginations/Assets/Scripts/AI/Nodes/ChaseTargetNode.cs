@@ -5,11 +5,12 @@ namespace TDS.AI
     public class ChaseTargetNode : ActionNode
     {
         private Mover mover;
-        private GameObject target;
+        private SightLineSensor sightTargetSensor;
         
-        public ChaseTargetNode(Mover mover) : base()
+        public ChaseTargetNode(Mover mover, SightLineSensor sightSensor) : base()
         {
             this.mover = mover;
+            sightTargetSensor = sightSensor;
         }
         
         protected override void OnStart()
@@ -18,7 +19,17 @@ namespace TDS.AI
 
         protected override State OnUpdate()
         {
-            return State.Failure;
+            var targetObj = sightTargetSensor.RetriveSightedTarget(); 
+            
+            if (targetObj != null)
+            {
+                var vector = targetObj.transform.position - 
+                             sightTargetSensor.gameObject.transform.position;
+                
+                mover.SetSpeedModifier(3.0f);
+                mover.Move(vector.normalized);
+            }
+            return State.Success;
         }
 
         protected override void OnStop()

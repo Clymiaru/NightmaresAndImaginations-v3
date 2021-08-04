@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TDS.AI;
 using UnityEngine;
 
@@ -8,10 +6,12 @@ namespace TDS
     public class MoveNode : ActionNode
     {
         private readonly Mover mover;
+        private readonly SightLineSensor sightSensor;
 
-        public MoveNode(Mover moveComponent)
+        public MoveNode(Mover moveComponent, SightLineSensor sightSensor)
         {
             mover = moveComponent;
+            this.sightSensor = sightSensor;
         }
         
         protected override void OnStart()
@@ -20,7 +20,8 @@ namespace TDS
 
         protected override State OnUpdate()
         {
-            mover.Move(new Vector2(1.0f, 0.0f));
+            mover.SetSpeedModifier(1.0f);
+            mover.Move(sightSensor.GetDirection());
             return State.Success;
         }
 

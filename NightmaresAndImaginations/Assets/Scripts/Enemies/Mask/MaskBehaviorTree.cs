@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace TDS.AI
 {
@@ -12,24 +13,31 @@ namespace TDS.AI
     ********/
     public class MaskBehaviorTree : BehaviorTree
     {
+        [SerializeField] private SightLineSensor FrontLineOfSight;
+        [SerializeField] private SightLineSensor PathLineOfSight; 
+        
         protected override RootNode CreateBehaviorTree()
         {
-            // Check if player is sighted/in-range
-
-            // If yes:
-            // Chase player
-
-            // If not:
-            // Patrol
-
-            // Idle State
-
-            var doNothingNode = new DoNothingNode();
-            var isTargetInSightNode = new IsTargetInRangeNode(doNothingNode, GetComponent<SightLineSensor>());
-
-            // var chasePlayerNode = new ChaseTargetNode();
-
-            var selectNode = new SelectorNode(new List<Node> {isTargetInSightNode, doNothingNode});
+            var mover = GetComponent<Mover>();
+            var sprite = GetComponent<SpriteRenderer>();
+            
+            var chasePlayerNode = new ChaseTargetNode(mover, FrontLineOfSight);
+            var moveForwardNode = new MoveNode(mover, FrontLineOfSight);
+            var turnAroundNode = new TurnAroundNode(new List<SightLineSensor>{PathLineOfSight, FrontLineOfSight}, 
+                                                    sprite);
+            
+            var isTargetInSightNode = new IsTargetInRangeNode(chasePlayerNode,
+                                                              FrontLineOfSight);
+            
+            var isPathBlockedNode = new IsPathBlockedNode(turnAroundNode, PathLineOfSight);
+            
+            var selectNode = new SelectorNode(new List<Node>
+                                              {
+                                                  isTargetInSightNode, 
+                                                  isPathBlockedNode, 
+                                                  moveForwardNode
+                                              });
+            
             var repeatNode = new RepeatNode(0, selectNode);
 
             return new RootNode(repeatNode);

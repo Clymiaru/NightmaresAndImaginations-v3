@@ -18,11 +18,10 @@ namespace TDS.AI
         protected override State OnUpdate()
         {
             var isTargetSighted = sightSensor.IsTargetWithinSight();
-
+            
             if (!isTargetSighted) return State.Failure;
             
             Child.Update();
-            Debug.Log("Target sighted!");
             return State.Success;
         }
 
