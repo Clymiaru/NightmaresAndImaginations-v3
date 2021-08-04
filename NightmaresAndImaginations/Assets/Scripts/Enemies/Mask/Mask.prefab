@@ -109,7 +109,6 @@ GameObject:
   - component: {fileID: 5395581174699147991}
   - component: {fileID: 5395581174699148009}
   - component: {fileID: 5395581174699148008}
-  - component: {fileID: 5395581174699148010}
   - component: {fileID: 5395581174699148011}
   m_Layer: 7
   m_Name: Mask
@@ -277,23 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46cff1b13eb02d44caa7a6f9cbe1d0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 50
---- !u!114 &5395581174699148010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5395581174699147986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b358cdad4af5fc408a505f7115c6809, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TargetSightRange: 5
-  SightDirection: {x: 1, y: 0}
-  LayerOfTarget: 
-  TagOfTarget: 
+  Speed: 100
 --- !u!114 &5395581174699148011
 MonoBehaviour:
   m_ObjectHideFlags: 0
