@@ -6,12 +6,11 @@ namespace TDS
     public class MoveNode : ActionNode
     {
         private readonly Mover mover;
-        private readonly SightLineSensor sightSensor;
 
-        public MoveNode(Mover moveComponent, SightLineSensor sightSensor)
+        public MoveNode(Mover moveComponent)
         {
             mover = moveComponent;
-            this.sightSensor = sightSensor;
+
         }
         
         protected override void OnStart()
@@ -21,13 +20,15 @@ namespace TDS
         protected override State OnUpdate()
         {
             mover.SetSpeedModifier(1.0f);
-            mover.Move(sightSensor.GetDirection());
+            var direction = new Vector2(mover.transform.localScale.x,
+                                        0.0f);
+            
+            mover.Move(direction);
             return State.Success;
         }
 
         protected override void OnStop()
         {
-            mover.Stop();
         }
     }
 }

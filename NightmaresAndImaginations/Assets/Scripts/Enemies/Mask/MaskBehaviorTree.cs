@@ -13,24 +13,26 @@ namespace TDS.AI
     ********/
     public class MaskBehaviorTree : BehaviorTree
     {
-        [SerializeField] private SightLineSensor FrontLineOfSight;
-        [SerializeField] private SightLineSensor PathLineOfSight; 
+        [SerializeField] private Sensor FarRangeSensor;
+        [SerializeField] private Sensor PathSensor; 
         
         protected override RootNode CreateBehaviorTree()
         {
             var stats = GetComponent<StatsComponent>();
             var mover = GetComponent<Mover>();
             var sprite = GetComponent<SpriteRenderer>();
+
+            var doNothingNode = new DoNothingNode();
+            var chasePlayerNode = new ChaseTargetNode(mover, FarRangeSensor);
             
-            var chasePlayerNode = new ChaseTargetNode(mover, FrontLineOfSight);
-            var moveForwardNode = new MoveNode(mover, FrontLineOfSight);
-            var turnAroundNode = new TurnAroundNode(new List<SightLineSensor>{PathLineOfSight, FrontLineOfSight}, 
-                                                    sprite);
+            var moveForwardNode = new MoveNode(mover);
+            var turnAroundNode = new TurnAroundNode(transform);
             
-            var isTargetInSightNode = new IsTargetInRangeNode(chasePlayerNode,
-                                                              FrontLineOfSight);
+           var isTargetInSightNode = new IsTargetInRangeNode(chasePlayerNode,
+                                                             FarRangeSensor);
             
-            var isPathBlockedNode = new IsPathBlockedNode(turnAroundNode, PathLineOfSight);
+            var isPathBlockedNode = new IsPathBlockedNode(turnAroundNode, 
+                                                          PathSensor);
             
             var selectNode = new SelectorNode(new List<Node>
                                               {

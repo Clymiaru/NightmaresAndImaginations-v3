@@ -1,11 +1,14 @@
+using UnityEngine;
+
 namespace TDS.AI
 {
     public class IsPathBlockedNode : DecoratorNode
     {
-        private SightLineSensor pathSightSensor;
-        public IsPathBlockedNode(Node child, SightLineSensor sensor) : base(child)
+        private Sensor sensor;
+        
+        public IsPathBlockedNode(Node child, Sensor sensor) : base(child)
         {
-            pathSightSensor = sensor;
+            this.sensor = sensor;
         }
 
         protected override void OnStart()
@@ -14,8 +17,10 @@ namespace TDS.AI
 
         protected override State OnUpdate()
         {
-            var isPathBlocked = pathSightSensor.IsTargetWithinSight();
-            
+            sensor.FindVisibleTargets();
+
+            var isPathBlocked = sensor.VisibleTargets.Count > 0;
+
             if (!isPathBlocked) return State.Failure;
             
             Child.Update();

@@ -5,12 +5,11 @@ namespace TDS.AI
 {
     public class TurnAroundNode : ActionNode
     {
-        private readonly List<SightLineSensor> sensors;
-        private readonly SpriteRenderer sprite;
-        public TurnAroundNode(List<SightLineSensor> sightSensors, SpriteRenderer sprite)
+        private readonly Transform transform;
+        
+        public TurnAroundNode(Transform transform)
         {
-            sensors = sightSensors;
-            this.sprite = sprite;
+            this.transform = transform;
         }
         
         protected override void OnStart()
@@ -19,11 +18,8 @@ namespace TDS.AI
 
         protected override State OnUpdate()
         {
-            foreach (var sensor in sensors)
-            {
-                sensor.FlipDirection();
-            }
-            sprite.flipX = !sprite.flipX;
+            var currentScale = transform.localScale;
+            transform.localScale = new Vector3(-currentScale.x, currentScale.y, currentScale.z);
             return State.Success;
         }
 

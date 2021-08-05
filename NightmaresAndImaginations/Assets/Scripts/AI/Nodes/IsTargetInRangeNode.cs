@@ -4,20 +4,22 @@ namespace TDS.AI
 {
     public class IsTargetInRangeNode : DecoratorNode
     {
-        private readonly SightLineSensor sightSensor;
+        private readonly Sensor sensor;
         
-        public IsTargetInRangeNode(Node child, SightLineSensor sightSensor) : base(child)
+        public IsTargetInRangeNode(Node child, Sensor sensor) : base(child)
         {
-            this.sightSensor = sightSensor;
+            this.sensor = sensor;
         }
 
         protected override void OnStart()
         {
+            
         }
 
         protected override State OnUpdate()
         {
-            var isTargetSighted = sightSensor.IsTargetWithinSight();
+            sensor.FindVisibleTargets();
+            var isTargetSighted = sensor.VisibleTargets.Count > 0;
             
             if (!isTargetSighted) return State.Failure;
             

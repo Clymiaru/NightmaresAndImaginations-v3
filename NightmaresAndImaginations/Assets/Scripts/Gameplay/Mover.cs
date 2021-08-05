@@ -25,12 +25,11 @@ namespace TDS
 
         public void Move(Vector2 direction)
         {
-            rigidbody2D.velocity = (direction * (speed * speedModifier * Time.fixedDeltaTime));
+            var netSpeed = speed * speedModifier * Time.fixedDeltaTime;
+            var netDirection = direction * netSpeed;
+            var position = (Vector2) transform.position;
+            
+            rigidbody2D.MovePosition(position + netDirection);
         }
-
-        public void Stop()
-        {
-        }
-
     }
 }

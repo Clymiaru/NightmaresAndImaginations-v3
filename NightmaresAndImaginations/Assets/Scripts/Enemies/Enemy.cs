@@ -26,7 +26,6 @@ namespace TDS
             {
                 return;
             }
-
             stats.Health -= amount;
         }
     }
