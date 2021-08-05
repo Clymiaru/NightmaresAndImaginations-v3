@@ -5,40 +5,48 @@ using UnityEngine;
 
 namespace TDS.AI
 {
-    public class SelectorNode : CompositeNode
-    {
-        private int currentNodeIndex;
-        
-        public SelectorNode(List<Node> children) : base(children)
-        {
-            currentNodeIndex = 0;
-        }
-        
-        protected override void OnStart()
-        {
-            currentNodeIndex = 0;
-        }
-    
-        protected override State OnUpdate()
-        {
-            var child = Children[currentNodeIndex];
-
-            switch (child.Update())
-            {
-                case State.Running:
-                    return State.Running;
-                case State.Failure:
-                    currentNodeIndex++;
-                    break;
-                case State.Success:
-                    return State.Success;
-            }
-
-            return currentNodeIndex == Children.Count ? State.Failure : State.Running;;
-        }
-    
-        protected override void OnStop()
-        {
-        }
-    }
+    // public class SelectorNode : Node
+    // {
+    //     // private List<Node> nodes;
+    //     //
+    //     // public SelectorNode(List<Node> nodes)
+    //     // {
+    //     //     this.nodes = nodes;
+    //     // }
+    //     //
+    //     // public override NodeState Evaluate()
+    //     // {
+    //     //     foreach (var node in nodes)
+    //     //     {
+    //     //         switch (node.Evaluate())
+    //     //         {
+    //     //             case NodeState.Failure:
+    //     //                 break;
+    //     //             case NodeState.Running:
+    //     //                 state = NodeState.Running;
+    //     //                 return state;
+    //     //             case NodeState.Success:
+    //     //                 state = NodeState.Success;
+    //     //                 return state;
+    //     //         }
+    //     //     }
+    //     //
+    //     //     state = NodeState.Failure;
+    //     //     return state;
+    //     // }
+    //     public override void OnStart()
+    //     {
+    //         throw new NotImplementedException();
+    //     }
+    //
+    //     public override State OnUpdate()
+    //     {
+    //         throw new NotImplementedException();
+    //     }
+    //
+    //     public override void OnStop()
+    //     {
+    //         throw new NotImplementedException();
+    //     }
+    // }
 }

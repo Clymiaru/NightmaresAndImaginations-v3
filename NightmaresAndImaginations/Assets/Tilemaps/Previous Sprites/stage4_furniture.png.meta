@@ -1,0 +1,1080 @@
+fileFormatVersion: 2
+guid: 6c402c4ff98fca44ba684678e8d5f35b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4158571099562479818
+    second: stage4_furniture_0
+  - first:
+      213: 4903592295310890322
+    second: stage4_furniture_1
+  - first:
+      213: -1603461059015666625
+    second: stage4_furniture_2
+  - first:
+      213: 9023052697949706030
+    second: stage4_furniture_3
+  - first:
+      213: -2295332400113249208
+    second: stage4_furniture_4
+  - first:
+      213: -6226396703054251610
+    second: stage4_furniture_5
+  - first:
+      213: 6971798146931085975
+    second: stage4_furniture_6
+  - first:
+      213: -7933417444928187387
+    second: stage4_furniture_7
+  - first:
+      213: 1612110210045038903
+    second: stage4_furniture_8
+  - first:
+      213: 2441014049880156391
+    second: stage4_furniture_9
+  - first:
+      213: -4111382961567870298
+    second: stage4_furniture_10
+  - first:
+      213: -1319806681780615976
+    second: stage4_furniture_11
+  - first:
+      213: 1676146181520335652
+    second: stage4_furniture_12
+  - first:
+      213: 4623874561879641004
+    second: stage4_furniture_13
+  - first:
+      213: -2805227391006159298
+    second: stage4_furniture_14
+  - first:
+      213: 5025367281433297364
+    second: stage4_furniture_15
+  - first:
+      213: 4861511762440944246
+    second: stage4_furniture_16
+  - first:
+      213: -9006087750954116163
+    second: stage4_furniture_17
+  - first:
+      213: -8079311457207925163
+    second: stage4_furniture_18
+  - first:
+      213: -2875595790384519680
+    second: stage4_furniture_19
+  - first:
+      213: -2155401912517059198
+    second: stage4_furniture_20
+  - first:
+      213: 578871587077444253
+    second: stage4_furniture_21
+  - first:
+      213: 994439103560061679
+    second: stage4_furniture_22
+  - first:
+      213: 6409930621809854740
+    second: stage4_furniture_23
+  - first:
+      213: 5571105251945748718
+    second: stage4_furniture_24
+  - first:
+      213: 2189981433721954348
+    second: stage4_furniture_25
+  - first:
+      213: -1520675999337362332
+    second: stage4_furniture_26
+  - first:
+      213: -3833080544707036222
+    second: stage4_furniture_27
+  - first:
+      213: 4711308845454680666
+    second: stage4_furniture_28
+  - first:
+      213: 1446521031232131753
+    second: stage4_furniture_29
+  - first:
+      213: -128343183586283442
+    second: stage4_furniture_30
+  - first:
+      213: 6945245947305457869
+    second: stage4_furniture_31
+  - first:
+      213: -3026291748678863557
+    second: stage4_furniture_32
+  - first:
+      213: -1283446231118943846
+    second: stage4_furniture_33
+  - first:
+      213: 7965943212091671290
+    second: stage4_furniture_34
+  - first:
+      213: 7453063396608742600
+    second: stage4_furniture_35
+  - first:
+      213: -4187995936053976517
+    second: stage4_furniture_36
+  - first:
+      213: 3077949272181838762
+    second: stage4_furniture_37
+  - first:
+      213: -3470869885998427924
+    second: stage4_furniture_38
+  - first:
+      213: 891199301030470555
+    second: stage4_furniture_39
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: stage4_furniture_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 426
+        width: 60
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63f6f553e99c946c0800000000000000
+      internalID: -4158571099562479818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_1
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 397
+        width: 60
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2551955563f0d0440800000000000000
+      internalID: 4903592295310890322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_2
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 387
+        width: 61
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34133e89ac5fb9e0800000000000000
+      internalID: -1603461059015666625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_3
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 415
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e271ce26f92583d70800000000000000
+      internalID: 9023052697949706030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_4
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 381
+        width: 120
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8441ec1e7575520e0800000000000000
+      internalID: -2295332400113249208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 419
+        width: 21
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9b9cbff256799a0800000000000000
+      internalID: -6226396703054251610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_6
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 307
+        width: 40
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 792dd89f97dc0c060800000000000000
+      internalID: 6971798146931085975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_7
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 395
+        width: 13
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5041b2cedd6d6e190800000000000000
+      internalID: -7933417444928187387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_8
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 356
+        width: 63
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 731d388d1bd5f5610800000000000000
+      internalID: 1612110210045038903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_9
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 333
+        width: 66
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e828d6685930e120800000000000000
+      internalID: 2441014049880156391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_10
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 277
+        width: 30
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a25720cafe61f6c0800000000000000
+      internalID: -4111382961567870298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_11
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 244
+        width: 66
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d48748c0da1fade0800000000000000
+      internalID: -1319806681780615976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_12
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 237
+        width: 61
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 423a52d421ed24710800000000000000
+      internalID: 1676146181520335652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_13
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 301
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab0dca6a6d4b2040800000000000000
+      internalID: 4623874561879641004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_14
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 213
+        width: 60
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ec1e4fc84d119d0800000000000000
+      internalID: -2805227391006159298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_15
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 242
+        width: 60
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1c3bbbae0bdb540800000000000000
+      internalID: 5025367281433297364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_16
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 241
+        width: 91
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67afca7c03f877340800000000000000
+      internalID: 4861511762440944246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_17
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 154
+        width: 90
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb126428e2f30380800000000000000
+      internalID: -9006087750954116163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_18
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 179
+        width: 90
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556c063290580ef80800000000000000
+      internalID: -8079311457207925163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_19
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 172
+        width: 120
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 006a58c3dd4d718d0800000000000000
+      internalID: -2875595790384519680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_20
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 110
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d193061697612e0800000000000000
+      internalID: -2155401912517059198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_21
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 111
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92515634a0980800800000000000000
+      internalID: 578871587077444253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_22
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 85
+        width: 25
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe2947e8815fccd00800000000000000
+      internalID: 994439103560061679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_23
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 121
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41900e370f5a4f850800000000000000
+      internalID: 6409930621809854740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_24
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 121
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee81a8ca5ba805d40800000000000000
+      internalID: 5571105251945748718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_25
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 139
+        width: 42
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c20a2bdc280646e10800000000000000
+      internalID: 2189981433721954348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_26
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 130
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46cc8094c3975eae0800000000000000
+      internalID: -1520675999337362332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_27
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 102
+        width: 60
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cbb6499d892ecac0800000000000000
+      internalID: -3833080544707036222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_28
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 120
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a526b70fe6ee16140800000000000000
+      internalID: 4711308845454680666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_29
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 29
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a219b2c633131410800000000000000
+      internalID: 1446521031232131753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_30
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 57
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e403ff4fd88083ef0800000000000000
+      internalID: -128343183586283442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_31
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 89
+        width: 31
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc8fcde3468726060800000000000000
+      internalID: 6945245947305457869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_32
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 15
+        width: 31
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b35fc4540b37006d0800000000000000
+      internalID: -3026291748678863557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_33
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 10
+        width: 40
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9967d9e378403ee0800000000000000
+      internalID: -1283446231118943846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_34
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 5
+        width: 60
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af288a16527bc8e60800000000000000
+      internalID: 7965943212091671290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_35
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 57
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c49453dba99e6760800000000000000
+      internalID: 7453063396608742600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_36
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 58
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3229b692ef31e5c0800000000000000
+      internalID: -4187995936053976517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_37
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 5
+        width: 61
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa3121d2e8217ba20800000000000000
+      internalID: 3077949272181838762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_38
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 14
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce096776a3ef4dfc0800000000000000
+      internalID: -3470869885998427924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage4_furniture_39
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 16
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b936ff1ea0d2e5c00800000000000000
+      internalID: 891199301030470555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
