@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mask : MonoBehaviour
+namespace TDS
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Mask : Enemy
     {
-        
-    }
+        protected override void OnSpawn()
+        {
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        protected override void OnDeath()
+        {
+            Destroy(gameObject);
+        }
     }
 }

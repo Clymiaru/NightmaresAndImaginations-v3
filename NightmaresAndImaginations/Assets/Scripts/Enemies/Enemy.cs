@@ -13,7 +13,16 @@ namespace TDS
             stats = GetComponent<StatsComponent>();
         }
 
+        private void Update()
+        {
+            if (!stats.IsDead)
+                return;
+            
+            OnDeath();
+        }
+
         protected abstract void OnSpawn();
+        protected abstract void OnDeath();
 
         public void Spawn()
         {
@@ -28,5 +37,6 @@ namespace TDS
             }
             stats.Health -= amount;
         }
+        
     }
 }

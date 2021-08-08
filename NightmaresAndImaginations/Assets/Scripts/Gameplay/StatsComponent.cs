@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace TDS
@@ -33,6 +34,11 @@ namespace TDS
             defense = Mathf.Max(defense, 0);
             power = Mathf.Max(power, 0);
             movementSpeed = Mathf.Max(movementSpeed, 0);
+        }
+
+        private void Awake()
+        {
+            currentHealth = MaxHealth;
         }
     }
 }

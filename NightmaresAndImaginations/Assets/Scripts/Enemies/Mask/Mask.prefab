@@ -50,7 +50,7 @@ MonoBehaviour:
     m_Bits: 64
   ObstaclesLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 257
 --- !u!1 &5982948526460045835
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fac63cb94110aa49aeab7c6de9c8f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10
   defense: 50
   power: 50
   movementSpeed: 2
@@ -309,7 +309,7 @@ MonoBehaviour:
   ViewAngle: 135
   TargetsLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 256
   ObstaclesLayer:
     serializedVersion: 2
     m_Bits: 0
