@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -29,16 +27,23 @@ public class Interactables : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        this.image.SetActive(true);
-        this.isInsideCollider = true;
+        if (!isInsideCollider)
+        {
+            this.image.SetActive(true);
+            this.isInsideCollider = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        this.image.SetActive(false);
-        this.isInsideCollider = false;
+        if (isInsideCollider)
+        {
+            this.image.SetActive(false);
+            this.isInsideCollider = false;
+        }
     }
 
+    /*
     void ProcessCollision(GameObject collider)
     {
         if (collider.CompareTag("Player"))
@@ -47,9 +52,5 @@ public class Interactables : MonoBehaviour
             image.SetActive(true);
         }
     }
-
-    void DebugHitOBJ()
-    {
-        Debug.Log("PLAYER HITS OBJECT!");
-    }
+    */
 }
