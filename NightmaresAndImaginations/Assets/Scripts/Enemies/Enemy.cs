@@ -3,17 +3,40 @@ using UnityEngine;
 
 namespace TDS
 {
+    [RequireComponent(typeof(StatsComponent))]
     public abstract class Enemy : MonoBehaviour
     {
-        public virtual void OnSpawn()
+        private StatsComponent stats;
+
+        private void Awake()
         {
-            
+            stats = GetComponent<StatsComponent>();
         }
+
+        private void Update()
+        {
+            if (!stats.IsDead)
+                return;
+            
+            OnDeath();
+        }
+
+        protected abstract void OnSpawn();
+        protected abstract void OnDeath();
 
         public void Spawn()
         {
             OnSpawn();
-            gameObject.SetActive(true);
         }
+
+        public void TakeDamage(int amount)
+        {
+            if (stats.IsDead)
+            {
+                return;
+            }
+            stats.Health -= amount;
+        }
+        
     }
 }

@@ -54,7 +54,10 @@ public class PlayerCombat : MonoBehaviour
 
         Collider2D[] hitEnemies = null; ;
         
-        if(this.movementRef.GetAttackDirection() > 0)
+        Debug.Log($"{this.movementRef.GetAttackDirection()} !!");
+        if (this.movementRef.GetAttackDirection() == 0)
+            hitEnemies = Physics2D.OverlapCircleAll(this.attackPointLeft.position, this.attackRange, this.enemyLayers);
+        else if(this.movementRef.GetAttackDirection() > 0)
             hitEnemies = Physics2D.OverlapCircleAll(this.attackPointRight.position, this.attackRange, this.enemyLayers);
         else if (this.movementRef.GetAttackDirection() < 0)
             hitEnemies = Physics2D.OverlapCircleAll(this.attackPointLeft.position, this.attackRange, this.enemyLayers);
@@ -64,7 +67,9 @@ public class PlayerCombat : MonoBehaviour
             for (int i = 0; i < hitEnemies.Length; i++)
             {
                 Debug.Log("Hit enemy " + hitEnemies[i].name);
+                
                 //do damage calculation here
+                hitEnemies[i].GetComponent<TDS.Mask>().TakeDamage(10);
             }
         }
     }

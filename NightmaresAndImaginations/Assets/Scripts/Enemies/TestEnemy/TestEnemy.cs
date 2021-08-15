@@ -14,5 +14,13 @@ namespace TDS.AI
             Gizmos.color = Color.cyan;
             Gizmos.DrawWireSphere(transform.position, SightRange);
         }
+
+        protected override void OnSpawn()
+        {
+        }
+
+        protected override void OnDeath()
+        {
+        }
     }
 }

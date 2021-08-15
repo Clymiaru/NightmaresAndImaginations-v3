@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 7064913732075040696}
   - component: {fileID: 7064913732075040697}
   - component: {fileID: 7064913732075040703}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,7 +194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7064913732276685810}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HeadPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7064913733083214022}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttackPointRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7064913733630796710}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttackPointLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
