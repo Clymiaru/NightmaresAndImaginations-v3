@@ -2,55 +2,48 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Interactables : MonoBehaviour
-{
-    public GameObject image;
-    public Text text;
-
-    [SerializeField] private LevelLoader lvlLoader;
-    [SerializeField] private bool isInsideCollider = false;
-
-
-    private void Update()
+namespace TDS {
+    public class Interactables : MonoBehaviour
     {
-        if (isInsideCollider)
+        public GameObject image;
+        public Text text;
+
+        [SerializeField] private LevelLoader lvlLoader;
+        [SerializeField] private bool isInsideCollider = false;
+        [SerializeField] private bool is_F_KeyPressed = false;
+
+
+        private void FixedUpdate()
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (isInsideCollider)
             {
-                Debug.Log("GO TO DREAM WORLD");
-                //SceneManager.LoadScene(2);
-                lvlLoader.NextScene();
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    Debug.Log("GO TO DREAM WORLD");
+                    lvlLoader.NextScene();
+                    is_F_KeyPressed = true;
+                }
+            }
+        }
+
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (!isInsideCollider)
+            {
+                this.image.SetActive(true);
+                this.isInsideCollider = true;
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (isInsideCollider)
+            {
+                this.image.SetActive(false);
+                this.isInsideCollider = false;
             }
         }
     }
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (!isInsideCollider)
-        {
-            this.image.SetActive(true);
-            this.isInsideCollider = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (isInsideCollider)
-        {
-            this.image.SetActive(false);
-            this.isInsideCollider = false;
-        }
-    }
-
-    /*
-    void ProcessCollision(GameObject collider)
-    {
-        if (collider.CompareTag("Player"))
-        {
-            DebugHitOBJ();
-            image.SetActive(true);
-        }
-    }
-    */
 }
+
