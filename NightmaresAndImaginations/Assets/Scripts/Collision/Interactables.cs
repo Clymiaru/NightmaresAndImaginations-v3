@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-namespace TDS {
+
     public class Interactables : MonoBehaviour
     {
         public GameObject image;
@@ -13,7 +13,7 @@ namespace TDS {
         [SerializeField] private bool is_F_KeyPressed = false;
 
 
-        private void FixedUpdate()
+        private void Update()
         {
             if (isInsideCollider)
             {
@@ -29,21 +29,14 @@ namespace TDS {
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (!isInsideCollider)
-            {
                 this.image.SetActive(true);
                 this.isInsideCollider = true;
-            }
         }
 
         private void OnTriggerExit2D(Collider2D collision)
         {
-            if (isInsideCollider)
-            {
                 this.image.SetActive(false);
                 this.isInsideCollider = false;
-            }
         }
     }
-}
 
