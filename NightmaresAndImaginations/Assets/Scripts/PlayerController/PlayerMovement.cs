@@ -6,26 +6,35 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float jumpForce = 15f;
     public Rigidbody2D rb;
     public Animator animator;
 
+
+    //general movement
+    public float moveSpeed = 5f;
+    bool canMove = true;
+    float lastMove = 0.0f;
+
+    //wall collision
     public Transform headPoint;
     public LayerMask groundLayers;
     Collider2D[] hitHeadGround;
-
-    float lastMove = 0.0f;
     float colliderRadius = 0.9f;
     float movement;
-    Vector2 wew;
 
+    //jumping
     int maxJumps = 3;
     int jumps = 0;
+    private float jumpForce = 15f;
 
-
-    bool canMove = true;
-
+    //dashing
+    private float dashTime = 0.2f;
+    private float dashForce = 15.0f;
+    private float dashCDTimeCounter = 0.0f;
+    private float dashCoolDown = 1.0f;
+    private bool canDash = true;
+    private bool isDashing = false;
+    
 
     private void Start()
     {
@@ -36,33 +45,90 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    private void Update()
+    private void FixedUpdate()
     {
-        this.MovePlayer();
-        this.Jump();
-       
+        if(!this.isDashing)
+            this.rb.velocity = new Vector2(this.movement * this.moveSpeed, rb.velocity.y);
+        
     }
 
+    private void Update()
+    {
+        this.Jump();
+        this.MoveInput();
+        this.DashInput();
+    }
+
+
+    private void DashInput()
+    {
+
+        if (Input.GetMouseButtonDown(1) || Input.GetButtonDown("Fire3"))// left shift is Fire3 for some reason
+        {
+            Debug.Log("Right Click or Left Shift");
+            if (this.canDash == true)
+            {
+                Debug.Log("can Dash!");
+                this.canDash = false;
+                StartCoroutine(Dash());
+                animator.SetFloat("DashDirection", this.GetAttackDirection());
+                animator.SetTrigger("Dash");
+            }
+           
+        }
+
+        if(this.canDash == false && this.dashCDTimeCounter < this.dashCoolDown)
+        {
+            this.dashCDTimeCounter += Time.deltaTime;
+        }
+        else
+        {
+            this.canDash = true;
+            this.dashCDTimeCounter = 0.0f;
+        }
+
+    }
   
-    private void MovePlayer()
+    IEnumerator Dash()
+    {
+        float gravityScale = this.rb.gravityScale;
+        this.isDashing = true;
+        this.rb.velocity = new Vector2(this.rb.velocity.x, 0);
+        this.rb.AddForce(new Vector2(this.dashForce * this.lastMove, 0), ForceMode2D.Impulse);
+        this.rb.gravityScale = 0.0f;
+        yield return new WaitForSeconds(this.dashTime);
+        this.isDashing = false;
+        this.rb.gravityScale = gravityScale;
+    }
+
+
+    private void MoveInput()
     {
         if(this.canMove)
         {
             this.movement = Input.GetAxisRaw("Horizontal");
 
             if (this.movement != 0)
+            {
                 this.lastMove = this.movement;
+                
+            }
+                
         }
         else if (this.rb.velocity.y == 0.0)
         {
             this.movement = 0.0f;
         }
 
-        this.transform.position += new Vector3(this.movement, 0, 0) * Time.deltaTime * this.moveSpeed;
-        //rb.AddForce(Vector2.right * movement, ForceMode2D.Force);
 
-        animator.SetFloat("Horizontal", this.movement);
-        animator.SetFloat("Speed", movement * movement);
+        //animation
+        if(this.movement != 0)
+            animator.SetBool("IsWalking", true);
+        else
+            animator.SetBool("IsWalking", false);
+
+        animator.SetFloat("IdleDirection", this.lastMove);
+        animator.SetFloat("WalkDirection", this.movement);
     }
 
     private void Jump()
@@ -96,7 +162,7 @@ public class PlayerMovement : MonoBehaviour
                 this.hitHeadGround[i].GetComponent<BoxCollider2D>().enabled = false;
             }
         }
-       
+
     }
 
     private void OnDrawGizmosSelected()
