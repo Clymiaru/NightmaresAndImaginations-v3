@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     float movement;
     Vector2 wew;
 
-    int maxJumps = 3;
+    int maxJumps = 2;
     int jumps = 0;
 
 
@@ -40,7 +40,6 @@ public class PlayerMovement : MonoBehaviour
     {
         this.MovePlayer();
         this.Jump();
-       
     }
 
   

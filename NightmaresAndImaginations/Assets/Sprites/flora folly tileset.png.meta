@@ -1,0 +1,2112 @@
+fileFormatVersion: 2
+guid: c0c2abcdbbc57ce4eafc9ac5916df539
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4068109946424147692
+    second: flora folly tileset_0
+  - first:
+      213: -4344738923696281925
+    second: flora folly tileset_1
+  - first:
+      213: 1730112624936121876
+    second: flora folly tileset_2
+  - first:
+      213: 5701207258506842030
+    second: flora folly tileset_3
+  - first:
+      213: 3879470267529757407
+    second: flora folly tileset_4
+  - first:
+      213: -8868322966624643403
+    second: flora folly tileset_5
+  - first:
+      213: -5092548057400798244
+    second: flora folly tileset_6
+  - first:
+      213: 1202289217363121488
+    second: flora folly tileset_7
+  - first:
+      213: 7627190666979251562
+    second: flora folly tileset_8
+  - first:
+      213: 1838224779688572026
+    second: flora folly tileset_9
+  - first:
+      213: 44323426176801976
+    second: flora folly tileset_10
+  - first:
+      213: 5507891601795104367
+    second: flora folly tileset_11
+  - first:
+      213: -2627246769612671834
+    second: flora folly tileset_12
+  - first:
+      213: -4064255481892476659
+    second: flora folly tileset_13
+  - first:
+      213: 3268312138269579267
+    second: flora folly tileset_15
+  - first:
+      213: 6760274561406314180
+    second: flora folly tileset_16
+  - first:
+      213: 5063894832574555559
+    second: flora folly tileset_17
+  - first:
+      213: 3343037806353621682
+    second: flora folly tileset_18
+  - first:
+      213: 5190125089055833073
+    second: flora folly tileset_19
+  - first:
+      213: 9010079729819671784
+    second: flora folly tileset_20
+  - first:
+      213: 863324208150337705
+    second: flora folly tileset_21
+  - first:
+      213: 586236434577401526
+    second: flora folly tileset_22
+  - first:
+      213: -3382112799784411957
+    second: flora folly tileset_23
+  - first:
+      213: -4333371780924464291
+    second: flora folly tileset_24
+  - first:
+      213: -5662715106927440243
+    second: flora folly tileset_25
+  - first:
+      213: -5342533894816736460
+    second: flora folly tileset_26
+  - first:
+      213: 6965299694473050719
+    second: flora folly tileset_27
+  - first:
+      213: -3855665521977965146
+    second: flora folly tileset_29
+  - first:
+      213: 4076636392962716624
+    second: flora folly tileset_30
+  - first:
+      213: 2648394232116841215
+    second: flora folly tileset_31
+  - first:
+      213: 2822004472452522642
+    second: flora folly tileset_32
+  - first:
+      213: -1142076245349675665
+    second: flora folly tileset_33
+  - first:
+      213: 4565117999581403673
+    second: flora folly tileset_34
+  - first:
+      213: 3172618278626975683
+    second: flora folly tileset_35
+  - first:
+      213: 2063369860482094716
+    second: flora folly tileset_36
+  - first:
+      213: -3624782246191023734
+    second: flora folly tileset_37
+  - first:
+      213: 3303373758964692243
+    second: flora folly tileset_38
+  - first:
+      213: 3636105047395734373
+    second: flora folly tileset_39
+  - first:
+      213: 8256105196874549769
+    second: flora folly tileset_40
+  - first:
+      213: -8008587373518703148
+    second: flora folly tileset_41
+  - first:
+      213: -4974779960246300310
+    second: flora folly tileset_44
+  - first:
+      213: -1008901380003205477
+    second: flora folly tileset_45
+  - first:
+      213: 9175021755054900136
+    second: flora folly tileset_46
+  - first:
+      213: -445590674030803581
+    second: flora folly tileset_47
+  - first:
+      213: -4610802845537028986
+    second: flora folly tileset_48
+  - first:
+      213: -4161709476519547688
+    second: flora folly tileset_49
+  - first:
+      213: 6027597038461092638
+    second: flora folly tileset_50
+  - first:
+      213: 765033715080850011
+    second: flora folly tileset_51
+  - first:
+      213: 7225666812833438754
+    second: flora folly tileset_52
+  - first:
+      213: -2660215657914913627
+    second: flora folly tileset_53
+  - first:
+      213: 8034435250964354527
+    second: flora folly tileset_54
+  - first:
+      213: 5633686331475821837
+    second: flora folly tileset_55
+  - first:
+      213: -9178912269726644165
+    second: flora folly tileset_56
+  - first:
+      213: 8003862684484619301
+    second: flora folly tileset_59
+  - first:
+      213: -315500428783763818
+    second: flora folly tileset_60
+  - first:
+      213: -2856553070679300437
+    second: flora folly tileset_61
+  - first:
+      213: -5096992814132046221
+    second: flora folly tileset_62
+  - first:
+      213: -2036661073450718269
+    second: flora folly tileset_63
+  - first:
+      213: 1957129081524951879
+    second: flora folly tileset_64
+  - first:
+      213: 5969584145625001474
+    second: flora folly tileset_71
+  - first:
+      213: -8264242840874342551
+    second: flora folly tileset_72
+  - first:
+      213: -2641232636663783995
+    second: flora folly tileset_73
+  - first:
+      213: -5633046762324415654
+    second: flora folly tileset_84
+  - first:
+      213: -6949398242182267942
+    second: flora folly tileset_85
+  - first:
+      213: 8824471351078375984
+    second: flora folly tileset_86
+  - first:
+      213: 804605788641622735
+    second: flora folly tileset_96
+  - first:
+      213: 2378739155016243679
+    second: flora folly tileset_97
+  - first:
+      213: 6964747287183001260
+    second: flora folly tileset_98
+  - first:
+      213: 1315818889085403218
+    second: flora folly tileset_106
+  - first:
+      213: -4221878405720088225
+    second: flora folly tileset_107
+  - first:
+      213: 6441895966458682497
+    second: flora folly tileset_14
+  - first:
+      213: 7257406099209549563
+    second: flora folly tileset_28
+  - first:
+      213: -3587968609004836872
+    second: flora folly tileset_42
+  - first:
+      213: 6389163729170273533
+    second: flora folly tileset_43
+  - first:
+      213: -8703337243065393724
+    second: flora folly tileset_57
+  - first:
+      213: -3878442290513084127
+    second: flora folly tileset_58
+  - first:
+      213: -5241418389754924560
+    second: flora folly tileset_65
+  - first:
+      213: 1294406694797971249
+    second: flora folly tileset_66
+  - first:
+      213: -5490726608498240838
+    second: flora folly tileset_67
+  - first:
+      213: 1176609478883611329
+    second: flora folly tileset_68
+  - first:
+      213: -3381174907282649728
+    second: flora folly tileset_69
+  - first:
+      213: -378609120748982776
+    second: flora folly tileset_70
+  - first:
+      213: -580123457156514348
+    second: flora folly tileset_74
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: flora folly tileset_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411c728be8b2b87c0800000000000000
+      internalID: -4068109946424147692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 768
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb62543e7f264b3c0800000000000000
+      internalID: -4344738923696281925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 768
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4167cbe0448920810800000000000000
+      internalID: 1730112624936121876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_3
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 768
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eafcd2a9bc1ce1f40800000000000000
+      internalID: 5701207258506842030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 768
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd20dcc67a5a6d530800000000000000
+      internalID: 3879470267529757407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_5
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 768
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b656ec8f336de480800000000000000
+      internalID: -8868322966624643403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_6
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 768
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd31505f582a359b0800000000000000
+      internalID: -5092548057400798244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_7
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 768
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05516365ca36fa010800000000000000
+      internalID: 1202289217363121488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_8
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 768
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a651973408939d960800000000000000
+      internalID: 7627190666979251562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_9
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 768
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7478a2a2bfa28910800000000000000
+      internalID: 1838224779688572026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_10
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 768
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bc1f78dbe77d9000800000000000000
+      internalID: 44323426176801976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_11
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 768
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6eba52da36ff6c40800000000000000
+      internalID: 5507891601795104367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_12
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 768
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a4b1f79bf42a8bd0800000000000000
+      internalID: -2627246769612671834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_13
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 768
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d096d5d2c2dd897c0800000000000000
+      internalID: -4064255481892476659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 688
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 308d7a0d2906b5d20800000000000000
+      internalID: 3268312138269579267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_16
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 688
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c6abb865e151dd50800000000000000
+      internalID: 6760274561406314180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 688
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5ea834581964640800000000000000
+      internalID: 5063894832574555559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_18
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 688
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b2a8663c2bd46e20800000000000000
+      internalID: 3343037806353621682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_19
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 688
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fbf3012547070840800000000000000
+      internalID: 5190125089055833073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_20
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 688
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec59ddd6cb3a0d70800000000000000
+      internalID: 9010079729819671784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_21
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 688
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a8dbc01bc42bfb00800000000000000
+      internalID: 863324208150337705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_22
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 688
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6a0656eeab22800800000000000000
+      internalID: 586236434577401526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_23
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 688
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc5c8ae3525011d0800000000000000
+      internalID: -3382112799784411957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_24
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 688
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d53ab4e0355ccd3c0800000000000000
+      internalID: -4333371780924464291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_25
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 688
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e0a53dc9ef961b0800000000000000
+      internalID: -5662715106927440243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_26
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 688
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43bd6f68ab18bd5b0800000000000000
+      internalID: -5342533894816736460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_27
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 688
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5af33b1b27b9a060800000000000000
+      internalID: 6965299694473050719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 609
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a548cdc2aced7ac0800000000000000
+      internalID: -3855665521977965146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_30
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 609
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d3f8f0533f139830800000000000000
+      internalID: 4076636392962716624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_31
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 608
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa8486b58cf0c420800000000000000
+      internalID: 2648394232116841215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_32
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 608
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292a817bd16c92720800000000000000
+      internalID: 2822004472452522642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_33
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 608
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d4581b4b78620f0800000000000000
+      internalID: -1142076245349675665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_34
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 608
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91a9ac232ae8a5f30800000000000000
+      internalID: 4565117999581403673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_35
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 608
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cfd871e387670c20800000000000000
+      internalID: 3172618278626975683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_36
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 608
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c765846b4ff82ac10800000000000000
+      internalID: 2063369860482094716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_37
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 608
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8934a380cf22bdc0800000000000000
+      internalID: -3624782246191023734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_38
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 608
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 315ff678ee0f7dd20800000000000000
+      internalID: 3303373758964692243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_39
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 608
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5631704964a067230800000000000000
+      internalID: 3636105047395734373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_40
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 608
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ac6ff0fe3939270800000000000000
+      internalID: 8256105196874549769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_41
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 608
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d53db01738cbd090800000000000000
+      internalID: -8008587373518703148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 528
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6199c1dbf706fab0800000000000000
+      internalID: -4974779960246300310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_45
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 528
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ee18f4a89aff1f0800000000000000
+      internalID: -1008901380003205477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_46
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 528
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a34784cca9345f70800000000000000
+      internalID: 9175021755054900136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_47
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 528
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 385ca2f84a1f0d9f0800000000000000
+      internalID: -445590674030803581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_48
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 528
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684b766bd332300c0800000000000000
+      internalID: -4610802845537028986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_49
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 528
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dceca1e743ae36c0800000000000000
+      internalID: -4161709476519547688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_50
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 528
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e138ba6229356a350800000000000000
+      internalID: 6027597038461092638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_51
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 528
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5a679c4c12fd9a00800000000000000
+      internalID: 765033715080850011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_52
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 528
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c144cdea9b64460800000000000000
+      internalID: 7225666812833438754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_53
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 528
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5acac0c14f3051bd0800000000000000
+      internalID: -2660215657914913627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_54
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 528
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd55b90ea4c008f60800000000000000
+      internalID: 8034435250964354527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_55
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 528
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d050793bedfde2e40800000000000000
+      internalID: 5633686331475821837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_56
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 528
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3808723ce3fd9080800000000000000
+      internalID: -9178912269726644165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_59
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52cc5bb84be631f60800000000000000
+      internalID: 8003862684484619301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_60
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 448
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69e3cd7180e1f9bf0800000000000000
+      internalID: -315500428783763818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_61
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 448
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba6eb1ced1c7b58d0800000000000000
+      internalID: -2856553070679300437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_62
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 448
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 376d0f26a08d349b0800000000000000
+      internalID: -5096992814132046221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_63
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 448
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cbaa1d5b835cb3e0800000000000000
+      internalID: -2036661073450718269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_64
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 448
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b91e3c78e192b10800000000000000
+      internalID: 1957129081524951879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_71
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 368
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e28c8f62938d250800000000000000
+      internalID: 5969584145625001474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_72
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 368
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 967ae1c0ce28f4d80800000000000000
+      internalID: -8264242840874342551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_73
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 368
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd9c7a29e4785bd0800000000000000
+      internalID: -2641232636663783995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 304
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b2d7890d563d1b0800000000000000
+      internalID: -5633046762324415654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_85
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 304
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb70044e17ce8f90800000000000000
+      internalID: -6949398242182267942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_86
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 304
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03253a390f1d67a70800000000000000
+      internalID: 8824471351078375984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcaf438a3b88a2b00800000000000000
+      internalID: 804605788641622735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_97
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 240
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd95e0c88aaf20120800000000000000
+      internalID: 2378739155016243679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_98
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 240
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca688e2c1c0c7a060800000000000000
+      internalID: 6964747287183001260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_106
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2504fa0ee4ab24210800000000000000
+      internalID: 1315818889085403218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_107
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 176
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f51692e55ffd865c0800000000000000
+      internalID: -4221878405720088225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_14
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 176
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c9ac83046366950800000000000000
+      internalID: 6441895966458682497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_28
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 176
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf67326556c77b460800000000000000
+      internalID: 7257406099209549563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_42
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 240
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f7a30b5f89f43ec0800000000000000
+      internalID: -3587968609004836872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_43
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 240
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df411097f8edaa850800000000000000
+      internalID: 6389163729170273533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_57
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 304
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cdd8a2c3e8873780800000000000000
+      internalID: -8703337243065393724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_58
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 304
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1218d1029410d2ac0800000000000000
+      internalID: -3878442290513084127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_65
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 368
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f13577aebdb247b0800000000000000
+      internalID: -5241418389754924560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_66
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 304
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f0256e708a6f110800000000000000
+      internalID: 1294406694797971249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_67
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 368
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab25dad9d350dc3b0800000000000000
+      internalID: -5490726608498240838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_68
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2173c4618245010800000000000000
+      internalID: 1176609478883611329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_69
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08d04f70657a311d0800000000000000
+      internalID: -3381174907282649728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_70
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ea809b209eebaf0800000000000000
+      internalID: -378609120748982776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flora folly tileset_74
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dd70521accf2f7f0800000000000000
+      internalID: -580123457156514348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
