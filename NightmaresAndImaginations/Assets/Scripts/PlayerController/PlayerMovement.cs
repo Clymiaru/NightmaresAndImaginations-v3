@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     float movement;
 
     //jumping
-    int maxJumps = 3;
+    int maxJumps = 2;
     int jumps = 0;
     private float jumpForce = 15f;
 
