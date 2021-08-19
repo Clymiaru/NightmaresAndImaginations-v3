@@ -11,16 +11,23 @@ public class PlayerMovement : MonoBehaviour
 
 
     //general movement
-    public float moveSpeed = 5f;
+    public float moveSpeed = 100f;
     bool canMove = true;
-    float lastMove = 0.0f;
+    float lastMove = 1.0f;
 
     //wall collision
     public Transform headPoint;
-    public LayerMask groundLayers;
+    public LayerMask platformLayers;
     Collider2D[] hitHeadGround;
     float colliderRadius = 0.9f;
-    float movement;
+    float movement = 0.0f;
+
+
+    //ground check
+    public Transform groundCheck;
+    public LayerMask groundLayers;
+    float groundCheckRadius = 0.5f;
+
 
     //jumping
     int maxJumps = 2;
@@ -49,30 +56,58 @@ public class PlayerMovement : MonoBehaviour
     {
         if(!this.isDashing)
             this.rb.velocity = new Vector2(this.movement * this.moveSpeed, rb.velocity.y);
+
+        Debug.Log(Time.fixedDeltaTime);
         
     }
 
     private void Update()
     {
-        this.Jump();
+        this.JumpInput();
         this.MoveInput();
         this.DashInput();
+        this.UpdateAnimations();
     }
 
+
+    public bool GroundCheck()
+    {
+        Collider2D[] platformCheck = Physics2D.OverlapCircleAll(this.groundCheck.position, this.groundCheckRadius, this.platformLayers);
+        Collider2D[] groundCheck = Physics2D.OverlapCircleAll(this.groundCheck.position, this.groundCheckRadius, this.groundLayers);
+
+        if (platformCheck.Length != 0 || groundCheck.Length != 0)
+            return true;
+
+        return false;
+    }
+
+    private void UpdateAnimations()
+    {
+        if (this.movement != 0)
+            animator.SetBool("IsWalking", true);
+        else
+            animator.SetBool("IsWalking", false);
+
+        //attacking, moving, dashing, idle
+        animator.SetFloat("InputDirection", this.GetAttackDirection());
+        animator.SetFloat("IdleDirection", this.lastMove);
+        //jumping
+        animator.SetFloat("YVelocity", this.rb.velocity.y);
+    }
 
     private void DashInput()
     {
 
         if (Input.GetMouseButtonDown(1) || Input.GetButtonDown("Fire3"))// left shift is Fire3 for some reason
         {
-            Debug.Log("Right Click or Left Shift");
+            //Debug.Log("Right Click or Left Shift");
             if (this.canDash == true)
             {
-                Debug.Log("can Dash!");
+                //Debug.Log("can Dash!");
                 this.canDash = false;
                 StartCoroutine(Dash());
-                animator.SetFloat("DashDirection", this.GetAttackDirection());
-                animator.SetTrigger("Dash");
+                
+                animator.SetTrigger("Dash");  
             }
            
         }
@@ -119,19 +154,9 @@ public class PlayerMovement : MonoBehaviour
         {
             this.movement = 0.0f;
         }
-
-
-        //animation
-        if(this.movement != 0)
-            animator.SetBool("IsWalking", true);
-        else
-            animator.SetBool("IsWalking", false);
-
-        animator.SetFloat("IdleDirection", this.lastMove);
-        animator.SetFloat("WalkDirection", this.movement);
     }
 
-    private void Jump()
+    private void JumpInput()
     {
         //Jumping
         if (Input.GetButtonDown("Jump") && this.jumps > 0)
@@ -140,7 +165,7 @@ public class PlayerMovement : MonoBehaviour
             this.rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             this.jumps--;
         }
-        else if (this.rb.velocity.y == 0.0f)
+        else if (this.rb.velocity.y == 0.0f && this.GroundCheck() == true)
             this.jumps = this.maxJumps;
 
         //Make player go through ground when jumping
@@ -153,7 +178,7 @@ public class PlayerMovement : MonoBehaviour
                     this.hitHeadGround[i].GetComponent<BoxCollider2D>().enabled = true;
                 }
             }
-            Collider2D[] temp = Physics2D.OverlapCircleAll(this.headPoint.position, this.colliderRadius, this.groundLayers);
+            Collider2D[] temp = Physics2D.OverlapCircleAll(this.headPoint.position, this.colliderRadius, this.platformLayers);
             if(temp != null)
                 this.hitHeadGround = temp;
 
@@ -162,17 +187,23 @@ public class PlayerMovement : MonoBehaviour
                 this.hitHeadGround[i].GetComponent<BoxCollider2D>().enabled = false;
             }
         }
-
     }
+
+
+
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(this.headPoint.position, this.colliderRadius);
+        Gizmos.DrawWireSphere(this.groundCheck.position, this.groundCheckRadius);
     }
 
 
     public float GetAttackDirection()
     {
+        if (this.movement != 0)
+            return this.movement;
+
         return this.lastMove;
     }
 

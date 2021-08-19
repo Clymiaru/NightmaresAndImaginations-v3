@@ -1,31 +1,16 @@
 fileFormatVersion: 2
-guid: b73f285aad1bda14ba172cad3e2f4532
+guid: f49c298463fda074d96af405a03dab49
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6802315935541775665
-    second: MC_attackW12864_1
+      213: 4342730429435064591
+    second: MC_JumpLoopW(64,64)_0
   - first:
-      213: -8705882914739832596
-    second: MC_attackW12864_3
+      213: -4082410801570830556
+    second: MC_JumpLoopW(64,64)_1
   - first:
-      213: -4743261716672328755
-    second: MC_attackW12864_4
-  - first:
-      213: -5389227304639530862
-    second: MC_attackW12864_5
-  - first:
-      213: 4608602051221392229
-    second: MC_attackW12864_6
-  - first:
-      213: -1106067274058616837
-    second: MC_attackW12864_7
-  - first:
-      213: 7952666879856415932
-    second: MC_attackW12864_9
-  - first:
-      213: -7238487381185945851
-    second: MC_attackW12864_11
+      213: 2450637004234498491
+    second: MC_JumpLoopW(64,64)_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,7 +100,28 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MC_attackW12864_1
+      name: MC_JumpLoopW(64,64)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f01b1c9115a744c30800000000000000
+      internalID: 4342730429435064591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_JumpLoopW(64,64)_1
       rect:
         serializedVersion: 2
         x: 64
@@ -129,17 +135,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13d42fb9d4ea66e50800000000000000
-      internalID: 6802315935541775665
+      spriteID: 4272729610d5857c0800000000000000
+      internalID: -4082410801570830556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_attackW12864_3
+      name: MC_JumpLoopW(64,64)_2
       rect:
         serializedVersion: 2
-        x: 192
+        x: 128
         y: 0
         width: 64
         height: 64
@@ -150,134 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce83ac26d9d7e2780800000000000000
-      internalID: -8705882914739832596
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC_attackW12864_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dcb490d799c8c2eb0800000000000000
-      internalID: -4743261716672328755
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC_attackW12864_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 298ff1dd15e9535b0800000000000000
-      internalID: -5389227304639530862
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC_attackW12864_6
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56b003ee52b05ff30800000000000000
-      internalID: 4608602051221392229
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC_attackW12864_7
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bff2d08aca576a0f0800000000000000
-      internalID: -1106067274058616837
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC_attackW12864_9
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb41bd6646c8d5e60800000000000000
-      internalID: 7952666879856415932
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC_attackW12864_11
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50f9345f31abb8b90800000000000000
-      internalID: -7238487381185945851
+      spriteID: bb123de0f59620220800000000000000
+      internalID: 2450637004234498491
       vertices: []
       indices: 
       edges: []

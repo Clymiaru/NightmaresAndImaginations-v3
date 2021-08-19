@@ -29,7 +29,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if(Time.time >=  this.nextAttackTime)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && this.movementRef.GroundCheck() == true)
             {
                 Attack();
                 nextAttackTime = Time.time + 1f / this.attackRate;
@@ -49,7 +49,6 @@ public class PlayerCombat : MonoBehaviour
 
     private void Attack()
     {
-        animator.SetFloat("AttackDirection", this.movementRef.GetAttackDirection());
         animator.SetTrigger("Attack");
 
         Collider2D[] hitEnemies = null; ;
