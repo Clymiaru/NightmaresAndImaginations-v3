@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TDS
 {
@@ -35,7 +34,7 @@ namespace TDS
             {
                 return;
             }
-            stats.Health -= amount;
+            stats.Health.TakeDamage(amount);
         }
         
     }
