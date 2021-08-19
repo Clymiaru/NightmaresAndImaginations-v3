@@ -10,10 +10,11 @@ public class PlayerCombat : MonoBehaviour
     public Animator animator;
     private PlayerMovement movementRef;
 
-    public float attackRate = 5.0f;
-    private float nextAttackTime = 0.0f;
+    private float attackCD = 0.2f;
+    private float attackTimeCounter = 0.0f;
+    private bool canAttack = true;
 
-    float attackRange = 0.5f;
+    Vector2 attackRange;
     public Transform attackPointRight;
     public Transform attackPointLeft;
     public LayerMask enemyLayers;
@@ -25,19 +26,32 @@ public class PlayerCombat : MonoBehaviour
         if (this.movementRef == null)
             Debug.LogError("Script PlayerCombat: no reference to PlayerMovement component!");
 
+        this.attackRange = new Vector2(0.5f, 1.0f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Time.time >=  this.nextAttackTime)
-        {
-            if (Input.GetMouseButtonDown(0) && this.movementRef.GroundCheck() == true)
-            {
+        
+       if (Input.GetMouseButtonDown(0) && this.movementRef.GroundCheck() == true)
+       {
+           if (this.canAttack)
+           {
+                this.canAttack = false;
                 Attack();
-                nextAttackTime = Time.time + 1f / this.attackRate;
-            }    
-        }
+           }
+             
+       }
+
+       if (this.canAttack == false && this.attackTimeCounter < this.attackCD)
+       {
+            this.attackTimeCounter += Time.deltaTime;
+       }
+       else
+       {
+            this.canAttack = true;
+            this.attackTimeCounter = 0.0f;
+       }
 
        if(this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
        {
@@ -58,11 +72,11 @@ public class PlayerCombat : MonoBehaviour
         
 
         if (this.movementRef.GetAttackDirection() == 0)
-            hitEnemies = Physics2D.OverlapCircleAll(this.attackPointLeft.position, this.attackRange, this.enemyLayers);
+            hitEnemies = Physics2D.OverlapBoxAll(this.attackPointLeft.position, this.attackRange, this.enemyLayers);
         else if(this.movementRef.GetAttackDirection() > 0)
-            hitEnemies = Physics2D.OverlapCircleAll(this.attackPointRight.position, this.attackRange, this.enemyLayers);
+            hitEnemies = Physics2D.OverlapBoxAll(this.attackPointRight.position, this.attackRange, this.enemyLayers);
         else if (this.movementRef.GetAttackDirection() < 0)
-            hitEnemies = Physics2D.OverlapCircleAll(this.attackPointLeft.position, this.attackRange, this.enemyLayers);
+            hitEnemies = Physics2D.OverlapBoxAll(this.attackPointLeft.position, this.attackRange, this.enemyLayers);
 
         if (hitEnemies != null)
         {
@@ -79,7 +93,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireSphere(this.attackPointRight.position, this.attackRange);
-        Gizmos.DrawWireSphere(this.attackPointLeft.position, this.attackRange);
+        Gizmos.DrawWireCube(this.attackPointRight.position, this.attackRange * 2.0f);
+        Gizmos.DrawWireCube(this.attackPointLeft.position, this.attackRange * 2.0f);
     }
 }
