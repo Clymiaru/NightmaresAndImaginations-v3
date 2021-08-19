@@ -259,9 +259,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fac63cb94110aa49aeab7c6de9c8f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHealth: 10
+  baseHealth: 5
   basePower: 1
-  baseDefense: 10
+  baseDefense: 5
   baseSpeed: 100
 --- !u!1 &671209852184482353
 GameObject:
@@ -408,3 +408,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackInterval: 1
+  stats: {fileID: 671209851804393022}

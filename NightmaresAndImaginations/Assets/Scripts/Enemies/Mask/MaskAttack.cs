@@ -12,6 +12,8 @@ namespace TDS
         
         private float currentTime;
 
+        [SerializeField] private StatsComponent stats;
+
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (!other.gameObject.CompareTag("Player"))
@@ -32,7 +34,7 @@ namespace TDS
             if (currentTime > attackInterval)
             {
                 var enemyStats = other.gameObject.GetComponent<StatsComponent>();
-                enemyStats.Health.TakeDamage(10, 10);
+                enemyStats.Health.TakeDamage(stats.Power.Value, enemyStats.Defense.Value);
                 Debug.Log($"Hit! {enemyStats.Health.Value}");
                 currentTime = 0.0f;
                 return;
