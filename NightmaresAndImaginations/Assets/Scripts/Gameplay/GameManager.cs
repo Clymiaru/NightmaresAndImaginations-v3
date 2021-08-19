@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     private StatsComponent playerStats;
 
+    private int enemyCount = 0;
     public static GameManager Instance
     {
         get
@@ -33,6 +34,8 @@ public class GameManager : MonoBehaviour
         this.playerStats = GameObject.Find("Player").GetComponent<StatsComponent>();
         if (this.playerStats == null)
             Debug.LogError("Script GameManager, playerStats is null!");
+
+        this.enemyCount = GameObject.FindObjectsOfType<Enemy>().Length;
     }
 
     private void Update()
@@ -41,8 +44,11 @@ public class GameManager : MonoBehaviour
         {
             this.GameOver();
         }
-        Debug.Log("hello!");
 
+        if(this.enemyCount == 0)
+        {
+            this.PlayerWin();
+        }
         //add win condition
 
     }
@@ -51,5 +57,10 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         //do gameover here
+    }
+
+    private void PlayerWin()
+    {
+        //do win here
     }
 }
