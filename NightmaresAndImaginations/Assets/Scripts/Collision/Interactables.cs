@@ -1,55 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Interactables : MonoBehaviour
-{
-    public GameObject image;
-    public Text text;
 
-    [SerializeField] private LevelLoader lvlLoader;
-    [SerializeField] private bool isInsideCollider = false;
-
-
-    private void Update()
+    public class Interactables : MonoBehaviour
     {
-        if (isInsideCollider)
+        public GameObject image;
+        public Text text;
+
+        [SerializeField] private LevelLoader lvlLoader;
+        [SerializeField] private bool isInsideCollider = false;
+        [SerializeField] private bool is_F_KeyPressed = false;
+
+
+        private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (isInsideCollider)
             {
-                Debug.Log("GO TO DREAM WORLD");
-                //SceneManager.LoadScene(2);
-                lvlLoader.NextScene();
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    Debug.Log("GO TO DREAM WORLD");
+                    lvlLoader.NextScene();
+                    is_F_KeyPressed = true;
+                }
             }
         }
-    }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        this.image.SetActive(true);
-        this.isInsideCollider = true;
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        this.image.SetActive(false);
-        this.isInsideCollider = false;
-    }
-
-    void ProcessCollision(GameObject collider)
-    {
-        if (collider.CompareTag("Player"))
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            DebugHitOBJ();
-            image.SetActive(true);
+                this.image.SetActive(true);
+                this.isInsideCollider = true;
+        }
+
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+                this.image.SetActive(false);
+                this.isInsideCollider = false;
         }
     }
 
-    void DebugHitOBJ()
-    {
-        Debug.Log("PLAYER HITS OBJECT!");
-    }
-}
