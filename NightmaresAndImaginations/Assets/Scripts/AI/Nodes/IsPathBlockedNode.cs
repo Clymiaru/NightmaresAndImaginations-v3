@@ -4,9 +4,9 @@ namespace TDS.AI
 {
     public class IsPathBlockedNode : DecoratorNode
     {
-        private Sensor sensor;
+        private PathSensor sensor;
         
-        public IsPathBlockedNode(Node child, Sensor sensor) : base(child)
+        public IsPathBlockedNode(Node child, PathSensor sensor) : base(child)
         {
             this.sensor = sensor;
         }
@@ -17,9 +17,7 @@ namespace TDS.AI
 
         protected override State OnUpdate()
         {
-            sensor.FindVisibleTargets();
-
-            var isPathBlocked = sensor.VisibleTargets.Count > 0;
+            var isPathBlocked = sensor.IsBlocked;
 
             if (!isPathBlocked) return State.Failure;
             

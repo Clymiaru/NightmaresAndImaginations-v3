@@ -36,6 +36,11 @@ namespace TDS
             }
             stats.Health.TakeDamage(amount);
         }
+
+        public void DealDamage()
+        {
+            
+        }
         
     }
 }
