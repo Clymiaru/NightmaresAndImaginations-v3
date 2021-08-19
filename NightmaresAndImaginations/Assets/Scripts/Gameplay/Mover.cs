@@ -14,7 +14,7 @@ namespace TDS
         private void Start()
         {
             rigidbody2D = GetComponent<Rigidbody2D>();
-            speed = GetComponent<StatsComponent>().MovementSpeed;  
+            speed = GetComponent<StatsComponent>().Speed.Value;  
             speedModifier = 1.0f;
         }
 
@@ -29,7 +29,8 @@ namespace TDS
             var netDirection = direction * netSpeed;
             var position = (Vector2) transform.position;
             
-            rigidbody2D.MovePosition(position + netDirection);
+            //rigidbody2D.MovePosition(position + netDirection);
+            rigidbody2D.velocity = netDirection;
         }
     }
 }
