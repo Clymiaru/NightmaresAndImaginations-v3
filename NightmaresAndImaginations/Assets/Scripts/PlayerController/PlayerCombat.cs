@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+using TDS;
+
 public class PlayerCombat : MonoBehaviour
 {
     public Animator animator;
@@ -53,7 +56,7 @@ public class PlayerCombat : MonoBehaviour
 
         Collider2D[] hitEnemies = null; ;
         
-        Debug.Log($"{this.movementRef.GetAttackDirection()} !!");
+
         if (this.movementRef.GetAttackDirection() == 0)
             hitEnemies = Physics2D.OverlapCircleAll(this.attackPointLeft.position, this.attackRange, this.enemyLayers);
         else if(this.movementRef.GetAttackDirection() > 0)
@@ -68,7 +71,7 @@ public class PlayerCombat : MonoBehaviour
                 Debug.Log("Hit enemy " + hitEnemies[i].name);
                 
                 //do damage calculation here
-                hitEnemies[i].GetComponent<TDS.Mask>().TakeDamage(10);
+                hitEnemies[i].GetComponent<Mask>().TakeDamage(10);
             }
         }
     }

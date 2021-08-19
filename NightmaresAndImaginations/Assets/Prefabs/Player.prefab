@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 7064913732075040696}
   - component: {fileID: 7064913732075040697}
   - component: {fileID: 7064913732075040703}
+  - component: {fileID: 5037501656791463052}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -191,7 +192,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 7064913732075040678}
   animator: {fileID: 7064913732075040696}
-  moveSpeed: 5
   headPoint: {fileID: 7064913732276685810}
   platformLayers:
     serializedVersion: 2
@@ -219,6 +219,22 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &5037501656791463052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7064913732075040679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fac63cb94110aa49aeab7c6de9c8f24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseHealth: 10
+  basePower: 10
+  baseDefense: 10
+  baseSpeed: 5
 --- !u!1 &7064913732276685811
 GameObject:
   m_ObjectHideFlags: 0
