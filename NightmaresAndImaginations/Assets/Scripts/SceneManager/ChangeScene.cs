@@ -38,7 +38,7 @@ public class ChangeScene : MonoBehaviour
 
     public void StageOne()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(1);
     }
 
     public void QuitGame()

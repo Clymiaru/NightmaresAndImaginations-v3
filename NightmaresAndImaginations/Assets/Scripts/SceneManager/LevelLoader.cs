@@ -13,6 +13,16 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
+    public void GameOver()
+    {
+        StartCoroutine(LoadLevel(3));
+    }
+
+    public void PlayerWin()
+    {
+        StartCoroutine(LoadLevel(4));
+    }
+
     IEnumerator LoadLevel(int levelIndex)
     {
         // Play anim
@@ -22,4 +32,6 @@ public class LevelLoader : MonoBehaviour
         // Load Scene
         SceneManager.LoadScene(levelIndex);
     }
+
+    
 }

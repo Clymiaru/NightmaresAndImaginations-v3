@@ -30,17 +30,20 @@ namespace TDS
         {
             if (!isAttacking)
                 return;
-            
-            if (currentTime > attackInterval)
-            {
-                var enemyStats = other.gameObject.GetComponent<StatsComponent>();
-                enemyStats.Health.TakeDamage(stats.Power.Value, enemyStats.Defense.Value);
-                Debug.Log($"Hit! {enemyStats.Health.Value}");
-                currentTime = 0.0f;
-                return;
-            }
 
-            currentTime += Time.deltaTime;
+            if (other.gameObject.CompareTag("Player"))
+            {
+                if (currentTime > attackInterval)
+                {
+                    var enemyStats = other.gameObject.GetComponent<StatsComponent>();
+                    enemyStats.Health.TakeDamage(stats.Power.Value, enemyStats.Defense.Value);
+                    Debug.Log($"Hit! {enemyStats.Health.Value}");
+                    currentTime = 0.0f;
+                    return;
+                }
+
+                currentTime += Time.deltaTime;
+            }
         }
 
         private void OnTriggerExit2D(Collider2D other)
