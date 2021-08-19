@@ -59,9 +59,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if(!this.isDashing)
             this.rb.velocity = new Vector2(this.movement * this.playerStats.Speed.Value, rb.velocity.y);
-
-        Debug.Log(Time.fixedDeltaTime);
-        
     }
 
     private void Update()
