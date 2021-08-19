@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+using TDS;
 
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Animator animator;
-
+    private StatsComponent playerStats;
 
     //general movement
-    public float moveSpeed = 100f;
     bool canMove = true;
     float lastMove = 1.0f;
 
@@ -47,6 +47,9 @@ public class PlayerMovement : MonoBehaviour
     {
         this.jumps = this.maxJumps;
         rb = this.GetComponent<Rigidbody2D>();
+
+        this.playerStats = this.GetComponent<StatsComponent>();
+
         if (rb == null)
             Debug.LogError("Missing Rigidbody2D in 'PlayerMovement' script!");
     }
@@ -55,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         if(!this.isDashing)
-            this.rb.velocity = new Vector2(this.movement * this.moveSpeed, rb.velocity.y);
+            this.rb.velocity = new Vector2(this.movement * this.playerStats.Speed.Value, rb.velocity.y);
 
         Debug.Log(Time.fixedDeltaTime);
         
@@ -91,8 +94,12 @@ public class PlayerMovement : MonoBehaviour
         //attacking, moving, dashing, idle
         animator.SetFloat("InputDirection", this.GetAttackDirection());
         animator.SetFloat("IdleDirection", this.lastMove);
+
         //jumping
-        animator.SetFloat("YVelocity", this.rb.velocity.y);
+        if(this.GroundCheck() == true && this.rb.velocity.y > 0)
+            animator.SetFloat("YVelocity", 0.0f);
+        else
+            animator.SetFloat("YVelocity", this.rb.velocity.y);
     }
 
     private void DashInput()
@@ -135,7 +142,6 @@ public class PlayerMovement : MonoBehaviour
         this.isDashing = false;
         this.rb.gravityScale = gravityScale;
     }
-
 
     private void MoveInput()
     {
@@ -190,8 +196,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-
-
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(this.headPoint.position, this.colliderRadius);
@@ -210,5 +214,10 @@ public class PlayerMovement : MonoBehaviour
     public void SetMovement(bool move)
     {
         this.canMove = move;
+        
     }
+
+
+    
+
 }

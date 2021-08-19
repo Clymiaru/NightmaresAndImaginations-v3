@@ -34,7 +34,7 @@ namespace TDS
             {
                 return;
             }
-            stats.Health.TakeDamage(amount);
+            stats.Health.TakeDamage(amount, stats.Defense.Value);
         }
 
         public void DealDamage()

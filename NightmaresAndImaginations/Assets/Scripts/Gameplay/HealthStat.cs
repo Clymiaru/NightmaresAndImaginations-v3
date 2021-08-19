@@ -11,10 +11,16 @@ namespace TDS
             this.maxValue = maxHealth;
         }
         
-        public void TakeDamage(int enemyPower)
+        public void TakeDamage(int enemyPower, int userDefense)
         {
             // Damage calculation
-            BaseValue -= enemyPower;
+            int damage = 0;
+            if (userDefense >= enemyPower)
+                damage = 1;
+            else
+                damage = enemyPower;
+
+            BaseValue -= damage;
         }
 
         public void Restore(int healAmount)

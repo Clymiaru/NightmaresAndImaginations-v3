@@ -20,7 +20,7 @@ namespace TDS.AI
             State state = State.Running;
             foreach (var node in Children)
             {
-                Debug.Log($"Node: {node.GetType()}");
+                //Debug.Log($"Node: {node.GetType()}");
                 switch (node.Update())
                 {
                     case State.Failure:
