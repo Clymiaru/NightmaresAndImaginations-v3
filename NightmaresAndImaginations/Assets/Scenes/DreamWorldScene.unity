@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 70656668}
   - component: {fileID: 70656667}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: flora folly tileset_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4344738923696281925, guid: c0c2abcdbbc57ce4eafc9ac5916df539, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 291059463}
   - component: {fileID: 291059462}
   - component: {fileID: 291059464}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,7 +467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 355430604}
   - component: {fileID: 355430605}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Platform_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -608,7 +608,7 @@ GameObject:
   - component: {fileID: 459909151}
   - component: {fileID: 459909150}
   - component: {fileID: 459909152}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FloatingIsland_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -727,7 +727,7 @@ GameObject:
   - component: {fileID: 465544624}
   - component: {fileID: 465544623}
   - component: {fileID: 465544625}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FloatingIsland_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -836,7 +836,7 @@ GameObject:
   - component: {fileID: 477551814}
   - component: {fileID: 477551813}
   - component: {fileID: 477551815}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -960,7 +960,7 @@ GameObject:
   - component: {fileID: 556927447}
   - component: {fileID: 556927448}
   - component: {fileID: 556927449}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1073,7 +1073,7 @@ GameObject:
   - component: {fileID: 702059451}
   - component: {fileID: 702059450}
   - component: {fileID: 702059452}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ceiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1278,7 +1278,7 @@ GameObject:
   - component: {fileID: 741012615}
   - component: {fileID: 741012614}
   - component: {fileID: 741012616}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FloatingIsland_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1423,7 +1423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 861213755}
   - component: {fileID: 861213756}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Platform_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23923,7 +23923,7 @@ GameObject:
   - component: {fileID: 885954562}
   - component: {fileID: 885954564}
   - component: {fileID: 885954563}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24066,7 +24066,7 @@ GameObject:
   - component: {fileID: 933738035}
   - component: {fileID: 933738034}
   - component: {fileID: 933738036}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightSidePlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24186,7 +24186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 953680022}
   - component: {fileID: 953680023}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Platform_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24384,7 +24384,7 @@ GameObject:
   - component: {fileID: 1084544503}
   - component: {fileID: 1084544502}
   - component: {fileID: 1084544504}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightSidePlatformPart_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24493,7 +24493,7 @@ GameObject:
   - component: {fileID: 1433328433}
   - component: {fileID: 1433328432}
   - component: {fileID: 1433328434}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FloatingIsland_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24603,7 +24603,7 @@ GameObject:
   - component: {fileID: 1471831260}
   - component: {fileID: 1471831259}
   - component: {fileID: 1471831261}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FloatingIsland_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24851,7 +24851,7 @@ GameObject:
   - component: {fileID: 1616436662}
   - component: {fileID: 1616436664}
   - component: {fileID: 1616436663}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FloatingIsland_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24959,7 +24959,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1715757847}
   - component: {fileID: 1715757848}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Platform_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25016,7 +25016,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1803137137}
   - component: {fileID: 1803137138}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightSidePlatformPart_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25073,7 +25073,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1937301585}
   - component: {fileID: 1937301586}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Platform_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25168,7 +25168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2020133846}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25202,7 +25202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2026997804}
   - component: {fileID: 2026997805}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Platform_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25260,7 +25260,7 @@ GameObject:
   - component: {fileID: 2119033936}
   - component: {fileID: 2119033935}
   - component: {fileID: 2119033937}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FloatingIsland_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
