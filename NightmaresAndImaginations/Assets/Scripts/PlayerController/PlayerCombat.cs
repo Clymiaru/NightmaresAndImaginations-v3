@@ -10,10 +10,10 @@ public class PlayerCombat : MonoBehaviour
     public Animator animator;
     private PlayerMovement movementRef;
 
-    public float attackRate = 5.0f;
+    public float attackRate = 2.0f;
     private float nextAttackTime = 0.0f;
 
-    float attackRange = 0.5f;
+    Vector2 attackRange;
     public Transform attackPointRight;
     public Transform attackPointLeft;
     public LayerMask enemyLayers;
@@ -25,6 +25,7 @@ public class PlayerCombat : MonoBehaviour
         if (this.movementRef == null)
             Debug.LogError("Script PlayerCombat: no reference to PlayerMovement component!");
 
+        this.attackRange = new Vector2(1.5f, 1.0f);
     }
 
     // Update is called once per frame
@@ -58,11 +59,11 @@ public class PlayerCombat : MonoBehaviour
         
 
         if (this.movementRef.GetAttackDirection() == 0)
-            hitEnemies = Physics2D.OverlapCircleAll(this.attackPointLeft.position, this.attackRange, this.enemyLayers);
+            hitEnemies = Physics2D.OverlapBoxAll(this.attackPointLeft.position, this.attackRange, this.enemyLayers);
         else if(this.movementRef.GetAttackDirection() > 0)
-            hitEnemies = Physics2D.OverlapCircleAll(this.attackPointRight.position, this.attackRange, this.enemyLayers);
+            hitEnemies = Physics2D.OverlapBoxAll(this.attackPointRight.position, this.attackRange, this.enemyLayers);
         else if (this.movementRef.GetAttackDirection() < 0)
-            hitEnemies = Physics2D.OverlapCircleAll(this.attackPointLeft.position, this.attackRange, this.enemyLayers);
+            hitEnemies = Physics2D.OverlapBoxAll(this.attackPointLeft.position, this.attackRange, this.enemyLayers);
 
         if (hitEnemies != null)
         {
@@ -79,7 +80,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireSphere(this.attackPointRight.position, this.attackRange);
-        Gizmos.DrawWireSphere(this.attackPointLeft.position, this.attackRange);
+        Gizmos.DrawWireCube(this.attackPointRight.position, this.attackRange);
+        Gizmos.DrawWireCube(this.attackPointLeft.position, this.attackRange);
     }
 }
