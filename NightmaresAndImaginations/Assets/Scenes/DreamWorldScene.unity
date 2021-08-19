@@ -1181,6 +1181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 707004180}
   - component: {fileID: 707004181}
+  - component: {fileID: 707004182}
   m_Layer: 0
   m_Name: Flora_Folly_FG
   m_TagString: Untagged
@@ -1253,6 +1254,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &707004182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707004179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24bbf1eebc7ce554f8469b2b2d20651d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxEffectMultiplier: 0.4
 --- !u!1 &741012613
 GameObject:
   m_ObjectHideFlags: 0
@@ -24229,6 +24243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 963711713}
   - component: {fileID: 963711712}
+  - component: {fileID: 963711714}
   m_Layer: 0
   m_Name: Flora Folly BG
   m_TagString: Untagged
@@ -24301,6 +24316,19 @@ Transform:
   m_Father: {fileID: 920315330}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963711714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963711711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24bbf1eebc7ce554f8469b2b2d20651d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxEffectMultiplier: 0.8
 --- !u!1 &1023889440
 GameObject:
   m_ObjectHideFlags: 0
@@ -24683,6 +24711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1577857632}
   - component: {fileID: 1577857633}
+  - component: {fileID: 1577857634}
   m_Layer: 0
   m_Name: Flora_Folly_MG
   m_TagString: Untagged
@@ -24755,6 +24784,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1577857634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577857631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24bbf1eebc7ce554f8469b2b2d20651d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxEffectMultiplier: 0.6
 --- !u!1 &1616436661
 GameObject:
   m_ObjectHideFlags: 0
