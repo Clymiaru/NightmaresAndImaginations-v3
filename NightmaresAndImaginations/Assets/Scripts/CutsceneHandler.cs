@@ -1,10 +1,8 @@
 using System;
 using System.Collections.Generic;
 using DG.Tweening;
-using DG.Tweening.Core;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Rendering.UI;
 using UnityEngine.UI;
 
 namespace TDS
@@ -28,21 +26,20 @@ namespace TDS
         
         [SerializeField] private UnityEvent OnEndCutscene;
 
+        [SerializeField] private string CurrentSceneName;
+
         [Header("Fade In/Out Info")]
         [SerializeField] private Image FadePanel;
 
         [Header("Fade In Info")] 
-        [SerializeField] private Color FadeInColor;
         [SerializeField] private float FadeInDuration;
         
         [Header("Fade Out Info")]
-        [SerializeField] private Color FadeOutColor;
         [SerializeField] private float FadeOutDuration;
 
         private Sequence enterCutsceneTween;
         private Sequence exitCutsceneTween;
         
-        private string currentSceneName = "Test";
         private Animator cutsceneAnimator;
         private AnimatorOverrideController cutsceneAnimatorOverride;
         
@@ -66,8 +63,6 @@ namespace TDS
             cutsceneAnimator = gameObject.GetComponent<Animator>();
             cutsceneAnimatorOverride = new AnimatorOverrideController(cutsceneAnimator.runtimeAnimatorController);
             cutsceneAnimator.runtimeAnimatorController = cutsceneAnimatorOverride;
-            
-            
         }
 
         private void Start()
@@ -79,6 +74,8 @@ namespace TDS
             exitCutsceneTween = DOTween.Sequence();
             
             InitializeTweenAnimation();
+            
+            PlayCutscene();
         }
         
         private void OnDestroy()
@@ -89,21 +86,23 @@ namespace TDS
 
         private void InitializeCutscene()
         {
-            cutsceneAnimatorOverride[BaseCutsceneAnimTag] = GetCutsceneOfSceneName(currentSceneName);
+            cutsceneAnimatorOverride[BaseCutsceneAnimTag] = GetCutsceneOfCurrentSceneName();
         }
 
         private void InitializeTweenAnimation()
         {
-            enterCutsceneTween.Append(FadePanel.DOColor(FadeInColor, FadeInDuration)
-                                               .OnComplete(StartCutscene));
+            enterCutsceneTween.Append(FadePanel.DOFade(0, FadeInDuration));
 
-            exitCutsceneTween.Append(FadePanel.DOColor(FadeOutColor, FadeOutDuration)
+            exitCutsceneTween.Append(FadePanel.DOFade(255, FadeOutDuration)
                                               .OnComplete(ExecuteOnEndCutsceneEvent));
         }
         
         public void PlayCutscene()
         {
             Debug.Log("Play Cutscene!");
+            
+            // Forced to take in account fade in transition?
+            cutsceneAnimator.SetTrigger(CutsceneTrigger.Playing.ToString());
             ExecuteFadeInTransition();
         }
 
@@ -137,16 +136,11 @@ namespace TDS
             exitCutsceneTween.Play();
         }
 
-        private void StartCutscene()
-        {
-            cutsceneAnimator.SetTrigger(CutsceneTrigger.Playing.ToString());
-        }
-
-        private AnimationClip GetCutsceneOfSceneName(string sceneName)
+        private AnimationClip GetCutsceneOfCurrentSceneName()
         {
             for (var i = 0; i < CutsceneInfoList.Count; i++)
             {
-                if (CutsceneInfoList[i].SceneName != sceneName)
+                if (CutsceneInfoList[i].SceneName != CurrentSceneName)
                 {
                     continue;
                 }
