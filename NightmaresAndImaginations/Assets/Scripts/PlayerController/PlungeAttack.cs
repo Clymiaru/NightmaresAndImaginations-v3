@@ -43,6 +43,7 @@ public class PlungeAttack : MonoBehaviour
         if(this.isPlungeAttacking == true)
         {
             this.animator.SetTrigger("PlungeAttack");
+
             Debug.Log("PlungeAttacking!!");
             if (this.movementRef.GroundCheck() == true)
             {
