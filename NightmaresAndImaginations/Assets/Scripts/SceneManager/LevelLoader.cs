@@ -18,6 +18,21 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 1));
     }
 
+    public void TutorialScene()
+    {
+        StartCoroutine(LoadLevel(2));
+    }
+
+    public void FollyFloraScene()
+    {
+        StartCoroutine(LoadLevel(3));
+    }
+
+    public void DesertBoxScene()
+    {
+        StartCoroutine(LoadLevel(4));
+    }
+
     public void GameOver()
     {
         StartCoroutine(LoadLevel(3));
