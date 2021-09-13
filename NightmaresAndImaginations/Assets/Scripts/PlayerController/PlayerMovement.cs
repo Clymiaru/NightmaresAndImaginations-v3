@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private StatsComponent playerStats;
 
     //general movement
-    bool canMove = true;
+    public bool canMove = true;
     float lastMove = 1.0f;
 
     //wall collision
@@ -41,7 +41,9 @@ public class PlayerMovement : MonoBehaviour
     private float dashCoolDown = 1.0f;
     private bool canDash = true;
     private bool isDashing = false;
-    
+
+
+    PlungeAttack plungeAttackRef;
 
     private void Start()
     {
@@ -52,6 +54,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (rb == null)
             Debug.LogError("Missing Rigidbody2D in 'PlayerMovement' script!");
+
+        plungeAttackRef = this.GetComponent<PlungeAttack>();
     }
 
 
@@ -59,13 +63,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if(!this.isDashing)
             this.rb.velocity = new Vector2(this.movement * this.playerStats.Speed.Value, rb.velocity.y);
-
-        Debug.Log(Time.fixedDeltaTime);
         
     }
 
     private void Update()
     {
+
         this.JumpInput();
         this.MoveInput();
         this.DashInput();
@@ -95,28 +98,33 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("InputDirection", this.GetAttackDirection());
         animator.SetFloat("IdleDirection", this.lastMove);
 
-        //jumping
-        if(this.GroundCheck() == true && this.rb.velocity.y > 0)
+
+        if (this.GroundCheck() == true && this.rb.velocity.y > 0)
             animator.SetFloat("YVelocity", 0.0f);
-        else
+        else if (this.plungeAttackRef.IsPlungeAttack() == false)
+        { 
             animator.SetFloat("YVelocity", this.rb.velocity.y);
+        }
+        
     }
 
     private void DashInput()
     {
-
-        if (Input.GetMouseButtonDown(1) || Input.GetButtonDown("Fire3"))// left shift is Fire3 for some reason
+        if(this.canMove)
         {
-            //Debug.Log("Right Click or Left Shift");
-            if (this.canDash == true)
+            if (Input.GetMouseButtonDown(1) || Input.GetButtonDown("Fire3"))// left shift is Fire3 for some reason
             {
-                //Debug.Log("can Dash!");
-                this.canDash = false;
-                StartCoroutine(Dash());
-                
-                animator.SetTrigger("Dash");  
+                //Debug.Log("Right Click or Left Shift");
+                if (this.canDash == true)
+                {
+                    //Debug.Log("can Dash!");
+                    this.canDash = false;
+                    StartCoroutine(Dash());
+
+                    animator.SetTrigger("Dash");
+                }
+
             }
-           
         }
 
         if(this.canDash == false && this.dashCDTimeCounter < this.dashCoolDown)
@@ -160,6 +168,7 @@ public class PlayerMovement : MonoBehaviour
         {
             this.movement = 0.0f;
         }
+
     }
 
     private void JumpInput()
