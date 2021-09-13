@@ -6,22 +6,29 @@ using UnityEngine.SceneManagement;
     public class Interactables : MonoBehaviour
     {
         public GameObject image;
-        public Text text;
 
         [SerializeField] private LevelLoader lvlLoader;
         [SerializeField] private bool isInsideCollider = false;
-        [SerializeField] private bool is_F_KeyPressed = false;
 
 
         private void Update()
         {
-            if (isInsideCollider)
+            if (isInsideCollider && image.name == "PopUpImageBed")
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
                     Debug.Log("GO TO DREAM WORLD");
-                    lvlLoader.NextScene();
-                    is_F_KeyPressed = true;
+                    lvlLoader.FollyFloraScene();
+                    
+                }
+            }
+
+            else if (isInsideCollider && image.name == "PopUpImageDoor")
+            {
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    Debug.Log("GO TO TUTORIAL");
+                    lvlLoader.TutorialScene();
                 }
             }
         }

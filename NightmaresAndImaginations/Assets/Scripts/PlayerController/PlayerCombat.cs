@@ -85,7 +85,10 @@ public class PlayerCombat : MonoBehaviour
                 Debug.Log("Hit enemy " + hitEnemies[i].name);
                 
                 //do damage calculation here
-                hitEnemies[i].GetComponent<Mask>().TakeDamage(10);
+                var mask = hitEnemies[i].GetComponent<Mask>();
+                var playerStats = gameObject.GetComponent<StatsComponent>();
+                if (mask != null)
+                    hitEnemies[i].GetComponent<Mask>().TakeDamage(playerStats.Power.Value);
             }
         }
     }
