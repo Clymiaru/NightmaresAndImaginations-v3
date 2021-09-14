@@ -35,12 +35,12 @@ public class LevelLoader : MonoBehaviour
 
     public void GameOver()
     {
-        StartCoroutine(LoadLevel(3));
+        StartCoroutine(LoadLevel(5));
     }
 
     public void PlayerWin()
     {
-        StartCoroutine(LoadLevel(4));
+        StartCoroutine(LoadLevel(6));
     }
 
     IEnumerator LoadLevel(int levelIndex)
@@ -52,6 +52,4 @@ public class LevelLoader : MonoBehaviour
         // Load Scene
         SceneManager.LoadScene(levelIndex);
     }
-
-    
 }
