@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 2a94fb8af9ab615438b05fd6254663f1
+guid: 5c1553f67bddf3a4f9984502d49f8297
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4619751455644812887
-    second: Key2_FloatLoop(64,64)_0
+      213: 1390232790472663046
+    second: YellowKey2_FloatLoop(64,64)_0
   - first:
-      213: 6064637465988372358
-    second: Key2_FloatLoop(64,64)_1
+      213: 537332804399050645
+    second: YellowKey2_FloatLoop(64,64)_1
   - first:
-      213: 3509868505853119685
-    second: Key2_FloatLoop(64,64)_2
+      213: -5167446759151612165
+    second: YellowKey2_FloatLoop(64,64)_2
   - first:
-      213: -7260877302728157948
-    second: Key2_FloatLoop(64,64)_3
+      213: 4708538991463197002
+    second: YellowKey2_FloatLoop(64,64)_3
   - first:
-      213: -1662343212831462426
-    second: Key2_FloatLoop(64,64)_4
+      213: 3402936504117117016
+    second: YellowKey2_FloatLoop(64,64)_4
   - first:
-      213: 7883152838360379429
-    second: Key2_FloatLoop(64,64)_5
+      213: -858815781463892198
+    second: YellowKey2_FloatLoop(64,64)_5
   - first:
-      213: 9147276266454293856
-    second: Key2_FloatLoop(64,64)_6
+      213: -620756042010615437
+    second: YellowKey2_FloatLoop(64,64)_6
   - first:
-      213: -3771164540126880301
-    second: Key2_FloatLoop(64,64)_7
+      213: -3075954099669236989
+    second: YellowKey2_FloatLoop(64,64)_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -127,7 +127,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Key2_FloatLoop(64,64)_0
+      name: YellowKey2_FloatLoop(64,64)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,14 +141,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a972bf078853efb0800000000000000
-      internalID: -4619751455644812887
+      spriteID: 600293f6b591b4310800000000000000
+      internalID: 1390232790472663046
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Key2_FloatLoop(64,64)_1
+      name: YellowKey2_FloatLoop(64,64)_1
       rect:
         serializedVersion: 2
         x: 64
@@ -162,14 +162,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68713cbb4abe92450800000000000000
-      internalID: 6064637465988372358
+      spriteID: 59fae54b65df47700800000000000000
+      internalID: 537332804399050645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Key2_FloatLoop(64,64)_2
+      name: YellowKey2_FloatLoop(64,64)_2
       rect:
         serializedVersion: 2
         x: 128
@@ -183,14 +183,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ccc4bb5fce85b030800000000000000
-      internalID: 3509868505853119685
+      spriteID: bfe46050d8a8948b0800000000000000
+      internalID: -5167446759151612165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Key2_FloatLoop(64,64)_3
+      name: YellowKey2_FloatLoop(64,64)_3
       rect:
         serializedVersion: 2
         x: 192
@@ -204,14 +204,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 405113d109e2c3b90800000000000000
-      internalID: -7260877302728157948
+      spriteID: a496d3d0447185140800000000000000
+      internalID: 4708538991463197002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Key2_FloatLoop(64,64)_4
+      name: YellowKey2_FloatLoop(64,64)_4
       rect:
         serializedVersion: 2
         x: 256
@@ -225,14 +225,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6eb2668c7ab2ee8e0800000000000000
-      internalID: -1662343212831462426
+      spriteID: 8504c1198b8a93f20800000000000000
+      internalID: 3402936504117117016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Key2_FloatLoop(64,64)_5
+      name: YellowKey2_FloatLoop(64,64)_5
       rect:
         serializedVersion: 2
         x: 320
@@ -246,14 +246,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52035906db5966d60800000000000000
-      internalID: 7883152838360379429
+      spriteID: a1f5852d89fd414f0800000000000000
+      internalID: -858815781463892198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Key2_FloatLoop(64,64)_6
+      name: YellowKey2_FloatLoop(64,64)_6
       rect:
         serializedVersion: 2
         x: 384
@@ -267,14 +267,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06d9e5ccc47a1fe70800000000000000
-      internalID: 9147276266454293856
+      spriteID: 371a7cf2ba1a267f0800000000000000
+      internalID: -620756042010615437
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Key2_FloatLoop(64,64)_7
+      name: YellowKey2_FloatLoop(64,64)_7
       rect:
         serializedVersion: 2
         x: 448
@@ -288,8 +288,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dd103cc4d12aabc0800000000000000
-      internalID: -3771164540126880301
+      spriteID: 3030fcf1b040055d0800000000000000
+      internalID: -3075954099669236989
       vertices: []
       indices: 
       edges: []
