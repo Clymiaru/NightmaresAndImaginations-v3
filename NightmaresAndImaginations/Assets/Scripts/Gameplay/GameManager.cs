@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 3)
+        if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             this.enemyCount = GameObject.FindObjectsOfType<Enemy>().Length;
         }
@@ -57,9 +57,8 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        //Debug.Log(this.enemyCount);
 
-        if (SceneManager.GetActiveScene().buildIndex == 3)
+        if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             if (lvlLoader == null)
             {
@@ -88,6 +87,7 @@ public class GameManager : MonoBehaviour
     {
         //do gameover here
         lvlLoader.GameOver();
+        //this.enemyCount = 8;
     }
 
     private void PlayerWin()

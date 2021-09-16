@@ -9,7 +9,9 @@ namespace TDS
         private float speed;
         private float speedModifier = 1.0f;
         
-        private Rigidbody2D rigidbody2D;
+        private new Rigidbody2D rigidbody2D;
+
+        private Vector2 netDirection;
 
         private void Start()
         {
@@ -26,10 +28,11 @@ namespace TDS
         public void Move(Vector2 direction)
         {
             var netSpeed = speed * speedModifier * Time.fixedDeltaTime;
-            var netDirection = direction * netSpeed;
-            var position = (Vector2) transform.position;
-            
-            //rigidbody2D.MovePosition(position + netDirection);
+            netDirection = direction * netSpeed;
+        }
+
+        public void FixedUpdate()
+        {
             rigidbody2D.velocity = netDirection;
         }
     }

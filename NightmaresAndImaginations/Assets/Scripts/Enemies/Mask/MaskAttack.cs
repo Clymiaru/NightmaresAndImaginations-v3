@@ -37,7 +37,7 @@ namespace TDS
                 {
                     var enemyStats = other.gameObject.GetComponent<StatsComponent>();
                     enemyStats.Health.TakeDamage(stats.Power.Value, enemyStats.Defense.Value);
-                    Debug.Log($"Hit! {enemyStats.Health.Value}");
+                    //Debug.Log($"Hit! {enemyStats.Health.Value}");
                     currentTime = 0.0f;
                     return;
                 }
