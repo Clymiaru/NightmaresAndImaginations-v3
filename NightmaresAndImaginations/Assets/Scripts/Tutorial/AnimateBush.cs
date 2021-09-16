@@ -7,7 +7,6 @@ public class AnimateBush : MonoBehaviour
     private Animator animatorBush;
     public GameObject gameObj;
     [SerializeField] private bool isInsideCollider = false;
-    private int counter = 0;
 
     private void Start()
     {
@@ -23,6 +22,11 @@ public class AnimateBush : MonoBehaviour
                 Debug.Log("Trigger Animation of Attacked Bush");
                 // Animate once
                 animatorBush.Play("Bush");
+            }
+
+            else if (Input.GetMouseButtonUp(0))
+            {
+                animatorBush.Play("Idle");
             }
         }
 
