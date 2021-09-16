@@ -387,7 +387,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1141298107
 MonoBehaviour:
@@ -757,7 +757,7 @@ Transform:
   m_Children:
   - {fileID: 1574065947}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1702301468
 GameObject:
@@ -904,7 +904,7 @@ Transform:
   m_Children:
   - {fileID: 319671983}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &1841980865
 CapsuleCollider2D:
@@ -973,7 +973,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1932381405
 MonoBehaviour:
@@ -1241,7 +1241,7 @@ Transform:
   m_Children:
   - {fileID: 4500677603645664179}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4500677604268695429
 MonoBehaviour:
@@ -1289,10 +1289,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fac63cb94110aa49aeab7c6de9c8f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
-  defense: 0
-  power: 0
-  movementSpeed: 0
+  baseHealth: 0
+  basePower: 0
+  baseDefense: 0
+  baseSpeed: 0
 --- !u!1001 &5982948526079708049
 PrefabInstance:
   m_ObjectHideFlags: 0
