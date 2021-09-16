@@ -1,4 +1,3 @@
-using UnityEngine;
 
 namespace TDS.AI
 {
@@ -17,12 +16,13 @@ namespace TDS.AI
 
             State = OnUpdate();
 
-            if (State == State.Success ||
-                State == State.Failure)
+            if (State != State.Success && State != State.Failure)
             {
-                OnStop();
-                hasStarted = false;
+                return State;
             }
+            
+            OnStop();
+            hasStarted = false;
 
             return State;
         }

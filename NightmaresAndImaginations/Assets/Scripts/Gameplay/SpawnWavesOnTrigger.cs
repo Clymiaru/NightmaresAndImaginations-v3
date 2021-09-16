@@ -93,7 +93,7 @@ namespace TDS
         {
             foreach (var spawn in ToSpawn)
             {
-                spawn.Spawn();
+                //spawn.Spawn();
             }
             
             HasSpawned = true;

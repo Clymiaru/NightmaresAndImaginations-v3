@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 671209851428507224}
   - component: {fileID: 671209851428507227}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FarRangeSensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ SpriteRenderer:
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.25, y: 1.25}
+  m_Size: {x: 2.5, y: 2.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -180,7 +180,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.5, y: 2.5}
-    newSize: {x: 1.25, y: 1.25}
+    newSize: {x: 2.5, y: 2.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -274,7 +274,7 @@ GameObject:
   - component: {fileID: 671209852184482352}
   - component: {fileID: 671209852184482354}
   - component: {fileID: 671209852184482355}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PathSensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,7 +348,7 @@ GameObject:
   - component: {fileID: 6514928060749364009}
   - component: {fileID: 8805919315420829079}
   - component: {fileID: 2669812390065283301}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BodyBound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
