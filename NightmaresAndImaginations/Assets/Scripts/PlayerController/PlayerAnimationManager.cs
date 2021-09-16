@@ -14,15 +14,14 @@ public class PlayerAnimationManager : MonoBehaviour
     public const string PLAYER_JUMP = "Player_Jump_Right";
     public const string PLAYER_JUMP_FALL = "Player_Fall_Right";
     public const string PLAYER_ATTACK = "Player_Attack_Right";
-    //public const string PLAYER_AIR_ATTACK = "Player_air_attack";
+    public const string PLAYER_AIR_ATTACK = "Player_PlungeFall_Right";
     public const string PLAYER_DASH = "Player_Dash_Right";
 
 
     // Start is called before the first frame update
     void Start()
     {
-        animator = this.GetComponent<Animator>();
-        
+        animator = this.GetComponent<Animator>();  
     }
 
 

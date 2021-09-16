@@ -14,7 +14,7 @@ public class PlayerCombat : MonoBehaviour
 
     private int attackRangeX = 2;
     private int attackRangeY = 1;
-    private Transform attackPos;
+    public Transform attackPos;
     
 
     private PlayerAnimationManager animManagerRef;
@@ -86,7 +86,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.white;
+        Gizmos.color = Color.red;
         Gizmos.DrawWireCube(attackPos.position, new Vector3(attackRangeX, attackRangeY, 1.0f));
     }
 

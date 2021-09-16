@@ -15,14 +15,15 @@ public class Dash : MonoBehaviour
     private float dashCoolDown = 1.0f;
 
     private PlayerAnimationManager animManagerRef;
-    private PlayerMovement movementRef;
+    private PlungeAttack plungeAttackRef;
+
 
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         animManagerRef = GetComponent<PlayerAnimationManager>();
-        movementRef = GetComponent<PlayerMovement>();
+        plungeAttackRef = GetComponent<PlungeAttack>();
     }
 
   
@@ -33,7 +34,7 @@ public class Dash : MonoBehaviour
         {
             
             //Debug.Log("Right Click or Left Shift");
-            if (this.canDash == true)
+            if (this.canDash == true && !plungeAttackRef.IsPlungeAttack())
             {
                 //Debug.Log("Dash!");
                 animManagerRef.ChangeAnimationState(PlayerAnimationManager.PLAYER_DASH);

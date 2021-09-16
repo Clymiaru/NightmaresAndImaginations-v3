@@ -12,6 +12,7 @@ public class Jump : MonoBehaviour
 
     private PlayerAnimationManager animManagerRef;
     private PlayerMovement movementRef;
+    private PlungeAttack plungeAttackRef;
 
     int platformMask;
     RaycastHit2D platformHit;
@@ -26,6 +27,7 @@ public class Jump : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         animManagerRef = GetComponent<PlayerAnimationManager>();
         movementRef = GetComponent<PlayerMovement>();
+        plungeAttackRef = GetComponent<PlungeAttack>();
 
         platformMask = 1 << LayerMask.NameToLayer("Platform");
     }
@@ -40,7 +42,7 @@ public class Jump : MonoBehaviour
         }
 
         //Check if trying to jump 
-        if (isJumpPressed && currentJumpCount > 0)
+        if (isJumpPressed && currentJumpCount > 0 && !plungeAttackRef.IsPlungeAttack())
         {
             rb2d.velocity = new Vector2(this.rb2d.velocity.x, 0);
             rb2d.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
@@ -74,7 +76,7 @@ public class Jump : MonoBehaviour
         {
             if (rb2d.velocity.y > 0)
                 animManagerRef.ChangeAnimationState(PlayerAnimationManager.PLAYER_JUMP);
-            else if (rb2d.velocity.y < -1.0f)
+            else if (rb2d.velocity.y < -1.0f && !plungeAttackRef.IsPlungeAttack())
                 animManagerRef.ChangeAnimationState(PlayerAnimationManager.PLAYER_JUMP_FALL);
         }
        
