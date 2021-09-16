@@ -1,0 +1,1800 @@
+fileFormatVersion: 2
+guid: dbd7efca25d1e3e41a53dfc6a1005b9b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1498803170967661840
+    second: Desert_Box_0
+  - first:
+      213: -7886941649256970207
+    second: Desert_Box_1
+  - first:
+      213: 1422165227688547300
+    second: Desert_Box_2
+  - first:
+      213: -1004469150802797681
+    second: Desert_Box_3
+  - first:
+      213: 7905707990457008903
+    second: Desert_Box_4
+  - first:
+      213: -8425807141969385618
+    second: Desert_Box_5
+  - first:
+      213: -13920993988579049
+    second: Desert_Box_6
+  - first:
+      213: -7018843590746839022
+    second: Desert_Box_7
+  - first:
+      213: 3830202200541169295
+    second: Desert_Box_8
+  - first:
+      213: 7785486410723964635
+    second: Desert_Box_9
+  - first:
+      213: -5911289759983782913
+    second: Desert_Box_10
+  - first:
+      213: 5584891728967825782
+    second: Desert_Box_11
+  - first:
+      213: 4496732750568645226
+    second: Desert_Box_12
+  - first:
+      213: -6603715019621197060
+    second: Desert_Box_13
+  - first:
+      213: -5261576204433467117
+    second: Desert_Box_14
+  - first:
+      213: 4271825954514368345
+    second: Desert_Box_15
+  - first:
+      213: 8664818105267440376
+    second: Desert_Box_16
+  - first:
+      213: -1853609848846303803
+    second: Desert_Box_17
+  - first:
+      213: 1196949679190996592
+    second: Desert_Box_18
+  - first:
+      213: -863923468613287815
+    second: Desert_Box_19
+  - first:
+      213: -5719977212277523246
+    second: Desert_Box_20
+  - first:
+      213: -1731513446559053753
+    second: Desert_Box_21
+  - first:
+      213: -2309415547063703095
+    second: Desert_Box_22
+  - first:
+      213: 3143095832950546882
+    second: Desert_Box_23
+  - first:
+      213: -66925113067822761
+    second: Desert_Box_24
+  - first:
+      213: 8522199491486987354
+    second: Desert_Box_25
+  - first:
+      213: -3436695736392336283
+    second: Desert_Box_26
+  - first:
+      213: -1131606593662020632
+    second: Desert_Box_27
+  - first:
+      213: -4429370582191876066
+    second: Desert_Box_28
+  - first:
+      213: 2722053017661327904
+    second: Desert_Box_29
+  - first:
+      213: 3678213721100695441
+    second: Desert_Box_30
+  - first:
+      213: -2293785819575240395
+    second: Desert_Box_31
+  - first:
+      213: -8188663683398532347
+    second: Desert_Box_32
+  - first:
+      213: -975899035762498655
+    second: Desert_Box_33
+  - first:
+      213: -4044141058387407376
+    second: Desert_Box_34
+  - first:
+      213: 154080837483296841
+    second: Desert_Box_35
+  - first:
+      213: 7171743689892995258
+    second: Desert_Box_36
+  - first:
+      213: -8512457953725097176
+    second: Desert_Box_37
+  - first:
+      213: -586305989355181012
+    second: Desert_Box_38
+  - first:
+      213: -9000850359997571197
+    second: Desert_Box_39
+  - first:
+      213: -6569026330488706832
+    second: Desert_Box_40
+  - first:
+      213: 8608234384317229481
+    second: Desert_Box_41
+  - first:
+      213: -2313868897941905667
+    second: Desert_Box_42
+  - first:
+      213: 6479611005565220996
+    second: Desert_Box_43
+  - first:
+      213: -4864446777987746848
+    second: Desert_Box_44
+  - first:
+      213: 4117823216003680621
+    second: Desert_Box_45
+  - first:
+      213: -3799300021418087883
+    second: Desert_Box_46
+  - first:
+      213: -8303772408930519483
+    second: Desert_Box_47
+  - first:
+      213: 702435835127070562
+    second: Desert_Box_48
+  - first:
+      213: -8294561268760565489
+    second: Desert_Box_49
+  - first:
+      213: 1906967109269927279
+    second: Desert_Box_50
+  - first:
+      213: -3313020430930485983
+    second: Desert_Box_51
+  - first:
+      213: 1413686969898366406
+    second: Desert_Box_52
+  - first:
+      213: -5028776290604688887
+    second: Desert_Box_53
+  - first:
+      213: 3474083640980231692
+    second: Desert_Box_54
+  - first:
+      213: 5370105563153381620
+    second: Desert_Box_55
+  - first:
+      213: -4390541872315649219
+    second: Desert_Box_56
+  - first:
+      213: -3941780664181956805
+    second: Desert_Box_57
+  - first:
+      213: 8749317122629288766
+    second: Desert_Box_58
+  - first:
+      213: 3377641910214885137
+    second: Desert_Box_59
+  - first:
+      213: -6017016157876199940
+    second: Desert_Box_60
+  - first:
+      213: 8305575781065275387
+    second: Desert_Box_61
+  - first:
+      213: 3802226697333686788
+    second: Desert_Box_62
+  - first:
+      213: 4614474527539968583
+    second: Desert_Box_63
+  - first:
+      213: 6722555089283122223
+    second: Desert_Box_64
+  - first:
+      213: -9103167891677281403
+    second: Desert_Box_65
+  - first:
+      213: -3194610446880352284
+    second: Desert_Box_66
+  - first:
+      213: -557879363022376680
+    second: Desert_Box_67
+  - first:
+      213: -2359305760750234683
+    second: Desert_Box_68
+  - first:
+      213: 8498536698232584765
+    second: Desert_Box_69
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Desert_Box_0
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1472
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01da1c10b81dcc410800000000000000
+      internalID: 1498803170967661840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_1
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 1472
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1280ec75b54fb8290800000000000000
+      internalID: -7886941649256970207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_2
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 1472
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3d9485dbb8cb310800000000000000
+      internalID: 1422165227688547300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_3
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 1472
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b9f8611a86f02f0800000000000000
+      internalID: -1004469150802797681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_4
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 1472
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7034825f787b6bd60800000000000000
+      internalID: 7905707990457008903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_5
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 1472
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6727f4db05811b80800000000000000
+      internalID: -8425807141969385618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_6
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1472
+        width: 65
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711f3620eea8ecff0800000000000000
+      internalID: -13920993988579049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_7
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1472
+        width: 66
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 218e18f01fe089e90800000000000000
+      internalID: -7018843590746839022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_8
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 1472
+        width: 66
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f860d2dab9c972530800000000000000
+      internalID: 3830202200541169295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_9
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 1472
+        width: 66
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd635da24aa9b0c60800000000000000
+      internalID: 7785486410723964635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_10
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 1472
+        width: 65
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff333cb5841e6fda0800000000000000
+      internalID: -5911289759983782913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_11
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 1472
+        width: 66
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679f42eff65818d40800000000000000
+      internalID: 5584891728967825782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_12
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 1472
+        width: 66
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a626287ac9a976e30800000000000000
+      internalID: 4496732750568645226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_13
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1472
+        width: 65
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfa11997d24ea54a0800000000000000
+      internalID: -6603715019621197060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_14
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1391
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3195810b1502bf6b0800000000000000
+      internalID: -5261576204433467117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_15
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 1391
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9577f119213984b30800000000000000
+      internalID: 4271825954514368345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_16
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 1391
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fac6d7982e9f3870800000000000000
+      internalID: 8664818105267440376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_17
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 1391
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cdb95fc9a7a646e0800000000000000
+      internalID: -1853609848846303803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_18
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 1391
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 076723a346b6c9010800000000000000
+      internalID: 1196949679190996592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_19
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 1391
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9708e2cbe2ab204f0800000000000000
+      internalID: -863923468613287815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_20
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1391
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc7edaf70f8e90b0800000000000000
+      internalID: -5719977212277523246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_21
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1391
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 748090eb1bd68f7e0800000000000000
+      internalID: -1731513446559053753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_22
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 1391
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9e086bbce43ffd0800000000000000
+      internalID: -2309415547063703095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_23
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 1391
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c1270ad1058e9b20800000000000000
+      internalID: 3143095832950546882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_24
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 1391
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7512a09d6fb321ff0800000000000000
+      internalID: -66925113067822761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_25
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 1391
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a54b813f84fe44670800000000000000
+      internalID: 8522199491486987354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_26
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 1391
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56c3c37af676e40d0800000000000000
+      internalID: -3436695736392336283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_27
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1391
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e3194f6cc9bb40f0800000000000000
+      internalID: -1131606593662020632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_28
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 1391
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1853ed5ce6b782c0800000000000000
+      internalID: -4429370582191876066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_29
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1311
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02acb792ccca6c520800000000000000
+      internalID: 2722053017661327904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_30
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 1311
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 197bc2e24e3ab0330800000000000000
+      internalID: 3678213721100695441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_31
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 1311
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 539b36933f5da20e0800000000000000
+      internalID: -2293785819575240395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_32
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 1311
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50383ede3c50c5e80800000000000000
+      internalID: -8188663683398532347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_33
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 1311
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a3eabc5ff8e472f0800000000000000
+      internalID: -975899035762498655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_34
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 1311
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fd0f39522350e7c0800000000000000
+      internalID: -4044141058387407376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_35
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1311
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 948f2e094b7632200800000000000000
+      internalID: 154080837483296841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_36
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1311
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab0a83073e6278360800000000000000
+      internalID: 7171743689892995258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_37
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 1311
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82b54ce879cadd980800000000000000
+      internalID: -8512457953725097176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_38
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 1311
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2cecce1fc50dd7f0800000000000000
+      internalID: -586305989355181012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_39
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 1311
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38fd5ef394e861380800000000000000
+      internalID: -9000850359997571197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_40
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 1311
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f8680b4b5126d4a0800000000000000
+      internalID: -6569026330488706832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_41
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 1311
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9288c6097967770800000000000000
+      internalID: 8608234384317229481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_42
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1311
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe19592f7c73efd0800000000000000
+      internalID: -2313868897941905667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_43
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 1311
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4883d6d01e33ce950800000000000000
+      internalID: 6479611005565220996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_44
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1231
+        width: 59
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e33f39ad630e7cb0800000000000000
+      internalID: -4864446777987746848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_45
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 1231
+        width: 66
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6981c5d562752930800000000000000
+      internalID: 4117823216003680621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_46
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 1231
+        width: 51
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53aad3492cc264bc0800000000000000
+      internalID: -3799300021418087883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_47
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1231
+        width: 58
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 546b1064df213cc80800000000000000
+      internalID: -8303772408930519483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_48
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 1231
+        width: 56
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ff04e9bad8fb900800000000000000
+      internalID: 702435835127070562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_49
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1231
+        width: 29
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0920d7f87cc3ec80800000000000000
+      internalID: -8294561268760565489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_50
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1231
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65336a7b78e67a10800000000000000
+      internalID: 1906967109269927279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_51
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1231
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12dd6c0a879c502d0800000000000000
+      internalID: -3313020430930485983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_52
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 1231
+        width: 67
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c5f3602fcc6e9310800000000000000
+      internalID: 1413686969898366406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_53
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 1231
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ad9977b92363ab0800000000000000
+      internalID: -5028776290604688887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_54
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 1231
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c065f9c3aac663030800000000000000
+      internalID: 3474083640980231692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_55
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 1231
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f83b12ce82768a40800000000000000
+      internalID: 5370105563153381620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_56
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 1231
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33b521ed69a113c0800000000000000
+      internalID: -4390541872315649219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_57
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1231
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3f5ee0de5bfb49c0800000000000000
+      internalID: -3941780664181956805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_58
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 1231
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33cf813191db6970800000000000000
+      internalID: 8749317122629288766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_59
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1151
+        width: 59
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f74dcfb6bcfde20800000000000000
+      internalID: 3377641910214885137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_60
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1151
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfdd0061fa34f7ca0800000000000000
+      internalID: -6017016157876199940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_61
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1151
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf7bb750b25534370800000000000000
+      internalID: 8305575781065275387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_62
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 1151
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 402c412490934c430800000000000000
+      internalID: 3802226697333686788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_63
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 1151
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74abb1f5228e90040800000000000000
+      internalID: 4614474527539968583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_64
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 1151
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2407bf6c305b4d50800000000000000
+      internalID: 6722555089283122223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_65
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 1151
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58385dd780d0ba180800000000000000
+      internalID: -9103167891677281403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_66
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1151
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e7d1fd69b67aa3d0800000000000000
+      internalID: -3194610446880352284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_67
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 1151
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 811b783dca30248f0800000000000000
+      internalID: -557879363022376680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_68
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 255
+        width: 1985
+        height: 642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c313f529ef024fd0800000000000000
+      internalID: -2359305760750234683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Box_69
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 897
+        width: 1320
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a36c0991ed0f570800000000000000
+      internalID: 8498536698232584765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

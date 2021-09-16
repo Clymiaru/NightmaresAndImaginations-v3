@@ -46,6 +46,8 @@ GameObject:
   - component: {fileID: 7064913732075040697}
   - component: {fileID: 7064913732075040703}
   - component: {fileID: 5037501656791463052}
+  - component: {fileID: 7589020593805679613}
+  - component: {fileID: 240258260150926147}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -213,7 +215,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7064913732075040696}
-  attackRate: 2
   attackPointRight: {fileID: 7064913733083214022}
   attackPointLeft: {fileID: 7064913733630796710}
   enemyLayers:
@@ -235,6 +236,30 @@ MonoBehaviour:
   basePower: 10
   baseDefense: 10
   baseSpeed: 5
+--- !u!114 &7589020593805679613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7064913732075040679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653ee807885b58d47b55e674e0b29d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &240258260150926147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7064913732075040679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e13adb68bb512b744a7a9e0633bc6b8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7064913732276685811
 GameObject:
   m_ObjectHideFlags: 0

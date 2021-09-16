@@ -13,14 +13,34 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
-    public void GameOver()
+    public void PrevScene()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 1));
+    }
+
+    public void TutorialScene()
+    {
+        StartCoroutine(LoadLevel(2));
+    }
+
+    public void FollyFloraScene()
     {
         StartCoroutine(LoadLevel(3));
     }
 
-    public void PlayerWin()
+    public void DesertBoxScene()
     {
         StartCoroutine(LoadLevel(4));
+    }
+
+    public void GameOver()
+    {
+        StartCoroutine(LoadLevel(5));
+    }
+
+    public void PlayerWin()
+    {
+        StartCoroutine(LoadLevel(6));
     }
 
     IEnumerator LoadLevel(int levelIndex)
@@ -32,6 +52,4 @@ public class LevelLoader : MonoBehaviour
         // Load Scene
         SceneManager.LoadScene(levelIndex);
     }
-
-    
 }

@@ -57,10 +57,10 @@ public class PlayerCombat : MonoBehaviour
        {
             this.movementRef.SetMovement(false);
        }
-       else
+       else if(this.canAttack)
        {
             this.movementRef.SetMovement(true);
-        }
+       }
 
     }
 
