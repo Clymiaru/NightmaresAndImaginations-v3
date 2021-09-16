@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 671209851428507224}
   - component: {fileID: 671209851428507227}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: FarRangeSensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,7 +274,7 @@ GameObject:
   - component: {fileID: 671209852184482352}
   - component: {fileID: 671209852184482354}
   - component: {fileID: 671209852184482355}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: PathSensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,7 +348,7 @@ GameObject:
   - component: {fileID: 6514928060749364009}
   - component: {fileID: 8805919315420829079}
   - component: {fileID: 2669812390065283301}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: BodyBound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
