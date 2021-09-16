@@ -38,7 +38,8 @@ public class PlungeAttack : MonoBehaviour
         {
             if(Input.GetMouseButtonDown(0) && this.isPlungeAttacking == false)
             {
-                //Put Sound
+                //Put Ground Attack Airtime Sound
+
 
                 this.rb2d.velocity = new Vector2(0, 0);
                 this.rb2d.AddForce(new Vector2(0, this.dropDownForce), ForceMode2D.Impulse);
@@ -50,7 +51,6 @@ public class PlungeAttack : MonoBehaviour
         if(this.isPlungeAttacking == true)
         {
             animManagerRef.ChangeAnimationState(PlayerAnimationManager.PLAYER_AIR_ATTACK);
-            Debug.Log("PlungeAttacking!!");
             if (this.movementRef.IsGrounded() == true)
             {
                 this.DamageEnemies();
@@ -61,14 +61,15 @@ public class PlungeAttack : MonoBehaviour
 
     private void DamageEnemies()
     {
+        // Put Ground Hit Sound
+
         Collider2D[] enemiesHit = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, enemyLayerMask);
         if (enemiesHit != null)
         {
+           
+
             for (int i = 0; i < enemiesHit.Length; i++)
             {
-                //Put Sound
-
-
                 //first attempt on knockback
 
                 /*Rigidbody2D enemyRB = enemiesHit[i].GetComponent<Rigidbody2D>();

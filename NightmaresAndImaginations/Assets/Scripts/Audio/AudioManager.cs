@@ -33,9 +33,6 @@ public class AudioManager : MonoBehaviour
 
 			s.source.outputAudioMixerGroup = mixerGroup;
 		}
-
-		//Play("BGM");
-		//Stop("BGM");
 	}
 
 	public void Play(string sound)
