@@ -9,13 +9,26 @@ public class PlayerAnimationManager : MonoBehaviour
 
 
     //Animation states
-    public const string PLAYER_PLUNGE_FALLING = "Player_PlungeFall_Right";
+    public const string PLAYER_IDLE = "Player_Idle_Right";
+    public const string PLAYER_RUN = "Player_Walk_Right";
+    public const string PLAYER_JUMP = "Player_Jump_Right";
+    public const string PLAYER_JUMP_FALL = "Player_Fall_Right";
+    public const string PLAYER_ATTACK = "Player_Attack_Right";
+    //public const string PLAYER_AIR_ATTACK = "Player_air_attack";
+    public const string PLAYER_DASH = "Player_Dash_Right";
 
 
     // Start is called before the first frame update
     void Start()
     {
         animator = this.GetComponent<Animator>();
+        
+    }
+
+
+    private void Update()
+    {
+        Debug.Log(currentState);
     }
 
     public void ChangeAnimationState(string newState)
@@ -27,5 +40,10 @@ public class PlayerAnimationManager : MonoBehaviour
 
 
         currentState = newState; // set current state to new state
+    }
+
+    public Animator GetAnimator()
+    {
+        return animator;
     }
 }

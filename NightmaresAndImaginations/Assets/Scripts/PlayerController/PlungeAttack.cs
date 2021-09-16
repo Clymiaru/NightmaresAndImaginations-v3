@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlungeAttack : MonoBehaviour
 {
-    PlayerMovement movementRef;
+    /*PlayerMovement movementRef;
     Rigidbody2D rb;
     PlayerAnimationManager playerAnimRef;
     Animator animator;
@@ -56,6 +56,6 @@ public class PlungeAttack : MonoBehaviour
     public bool IsPlungeAttack()
     {
         return this.isPlungeAttacking;
-    }
+    }*/
 
 }

@@ -57,7 +57,6 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(this.enemyCount);
 
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
