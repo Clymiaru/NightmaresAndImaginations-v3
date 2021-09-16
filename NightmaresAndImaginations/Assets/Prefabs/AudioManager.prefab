@@ -44,4 +44,94 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixerGroup: {fileID: 0}
-  sounds: []
+  sounds:
+  - name: MainMenuBGM
+    clip: {fileID: 8300000, guid: 06330d023bf15714a93f229b6ae6ee34, type: 3}
+    volume: 0.5
+    volumeVariance: 0.5
+    pitch: 0.1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Level1BGM
+    clip: {fileID: 8300000, guid: fbcaad79a721ed6418931b847c1964bf, type: 3}
+    volume: 0.5
+    volumeVariance: 0.5
+    pitch: 0.1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Level2BGM
+    clip: {fileID: 8300000, guid: 72d3438e93f324c43ac0dc8012c4f107, type: 3}
+    volume: 0.5
+    volumeVariance: 0.5
+    pitch: 0.1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: BossLevelBGM
+    clip: {fileID: 8300000, guid: 8ce496d3f4760e749a9996175465d9dc, type: 3}
+    volume: 0.5
+    volumeVariance: 0.5
+    pitch: 0.1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: TutorialBGM
+    clip: {fileID: 8300000, guid: b1247a9b3385fd441a443ecb725d62f1, type: 3}
+    volume: 0.5
+    volumeVariance: 0.5
+    pitch: 0.1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: DashSFX
+    clip: {fileID: 8300000, guid: 08186f427f65948428d963ed320035b2, type: 3}
+    volume: 0.5
+    volumeVariance: 0.5
+    pitch: 0.1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: JumpSFX
+    clip: {fileID: 8300000, guid: fa32d5ed15da4d340a7ba6d8b5913599, type: 3}
+    volume: 0.5
+    volumeVariance: 0.5
+    pitch: 0.1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: GroundAttackSFX
+    clip: {fileID: 8300000, guid: 808420fa889e6e64d9ddb126767360e8, type: 3}
+    volume: 0.5
+    volumeVariance: 0.5
+    pitch: 0.1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: SwordSlashSFX
+    clip: {fileID: 8300000, guid: 96afdacc064c4304fb89d29b784da557, type: 3}
+    volume: 0.5
+    volumeVariance: 0.5
+    pitch: 0.1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: PlayerFailSFX
+    clip: {fileID: 8300000, guid: e856ffc068f107e4c898a824b9d10f84, type: 3}
+    volume: 0.5
+    volumeVariance: 0.5
+    pitch: 0.1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
