@@ -36,6 +36,9 @@ public class Dash : MonoBehaviour
             //Debug.Log("Right Click or Left Shift");
             if (this.canDash == true && !plungeAttackRef.IsPlungeAttack())
             {
+                //Put Sound
+
+
                 //Debug.Log("Dash!");
                 animManagerRef.ChangeAnimationState(PlayerAnimationManager.PLAYER_DASH);
                 this.canDash = false;

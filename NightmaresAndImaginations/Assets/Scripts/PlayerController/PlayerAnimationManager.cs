@@ -25,11 +25,6 @@ public class PlayerAnimationManager : MonoBehaviour
     }
 
 
-    private void Update()
-    {
-        Debug.Log(currentState);
-    }
-
     public void ChangeAnimationState(string newState)
     {
         if (currentState == newState) // to stop the animation from interrupting itself

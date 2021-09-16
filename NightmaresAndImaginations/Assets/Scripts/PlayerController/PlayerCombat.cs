@@ -65,12 +65,16 @@ public class PlayerCombat : MonoBehaviour
         {
             for(int i = 0; i < enemiesHit.Length; i++)
             {
+                //Put Sound
+
+
                 //first attempt on knockback
 
-                /*Rigidbody2D enemyRB = enemiesHit[i].GetComponent<Rigidbody2D>();
-                enemyRB.velocity = new Vector2(0, 0);
-                enemyRB.AddForce(new Vector2(85.0f, 5.0f), ForceMode2D.Impulse);
-                Debug.Log(enemiesHit[i].name);*/
+                Rigidbody2D enemyRB = enemiesHit[i].GetComponent<Rigidbody2D>();
+                //enemyRB.velocity = new Vector2(0, 0);
+                enemyRB.AddForce(new Vector2(850.0f, 5.0f), ForceMode2D.Impulse);
+                Debug.Log(enemiesHit[i].name);
+
                 enemiesHit[i].GetComponent<Mask>().TakeDamage(playerStats.Power.Value);
                
             }

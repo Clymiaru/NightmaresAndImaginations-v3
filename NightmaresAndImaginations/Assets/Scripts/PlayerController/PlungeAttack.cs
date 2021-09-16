@@ -38,7 +38,8 @@ public class PlungeAttack : MonoBehaviour
         {
             if(Input.GetMouseButtonDown(0) && this.isPlungeAttacking == false)
             {
-                
+                //Put Sound
+
                 this.rb2d.velocity = new Vector2(0, 0);
                 this.rb2d.AddForce(new Vector2(0, this.dropDownForce), ForceMode2D.Impulse);
                 this.isPlungeAttacking = true;
@@ -65,6 +66,9 @@ public class PlungeAttack : MonoBehaviour
         {
             for (int i = 0; i < enemiesHit.Length; i++)
             {
+                //Put Sound
+
+
                 //first attempt on knockback
 
                 /*Rigidbody2D enemyRB = enemiesHit[i].GetComponent<Rigidbody2D>();
@@ -72,7 +76,6 @@ public class PlungeAttack : MonoBehaviour
                 enemyRB.AddForce(new Vector2(85.0f, 5.0f), ForceMode2D.Impulse);
                 Debug.Log(enemiesHit[i].name);*/
                 enemiesHit[i].GetComponent<Mask>().TakeDamage(playerStats.Power.Value);
-
             }
         }
     }

@@ -44,12 +44,13 @@ public class Jump : MonoBehaviour
         //Check if trying to jump 
         if (isJumpPressed && currentJumpCount > 0 && !plungeAttackRef.IsPlungeAttack())
         {
+            //Put Sound
+
+
             rb2d.velocity = new Vector2(this.rb2d.velocity.x, 0);
             rb2d.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             currentJumpCount--;
             isJumpPressed = false;
-            
-
         }
 
         //disable platforms when jumping from below them
