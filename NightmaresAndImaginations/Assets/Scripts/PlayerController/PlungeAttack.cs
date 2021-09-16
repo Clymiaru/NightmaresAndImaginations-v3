@@ -21,6 +21,9 @@ public class PlungeAttack : MonoBehaviour
     private int attackRangeY = 1;
     private int enemyLayerMask;
 
+    private Transform attackEffectSpawnPoint;
+    public GameObject shockWave;
+
     private void Start()
     {
         movementRef = this.GetComponent<PlayerMovement>();
@@ -29,6 +32,7 @@ public class PlungeAttack : MonoBehaviour
         attackPos = this.transform.GetChild(1).transform;
         enemyLayerMask = 1 << LayerMask.NameToLayer("Enemy");
         playerStats = GetComponent<StatsComponent>();
+        attackEffectSpawnPoint = this.transform.GetChild(3).transform;
     }
 
 
@@ -50,9 +54,11 @@ public class PlungeAttack : MonoBehaviour
         if(this.isPlungeAttacking == true)
         {
             animManagerRef.ChangeAnimationState(PlayerAnimationManager.PLAYER_AIR_ATTACK);
-            Debug.Log("PlungeAttacking!!");
             if (this.movementRef.IsGrounded() == true)
             {
+                GameObject temp = Instantiate(shockWave, attackEffectSpawnPoint.position, Quaternion.identity);
+                //temp.transform.parent = gameObject.transform;
+
                 this.DamageEnemies();
                 this.isPlungeAttacking = false;
             }
