@@ -21,7 +21,7 @@ public class AnimateBush : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 Debug.Log("Trigger Animation of Attacked Bush");
-                // Animate
+                // Animate once
                 animatorBush.Play("Bush");
             }
         }
