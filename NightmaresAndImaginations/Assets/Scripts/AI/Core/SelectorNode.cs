@@ -7,7 +7,7 @@ namespace TDS.AI
 {
     public class SelectorNode : CompositeNode
     {
-        public SelectorNode(List<Node> children) : base(children)
+        public SelectorNode(List<Node> children, Enemy owner) : base(children, owner)
         {
         }
         

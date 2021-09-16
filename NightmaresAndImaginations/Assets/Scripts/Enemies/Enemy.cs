@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TDS
 {
@@ -9,16 +8,19 @@ namespace TDS
     public abstract class Enemy : MonoBehaviour
     {
         private StatsComponent stats;
-        private string currentState;
-        private Animator animator;
+
         private SpriteRenderer sprite;
+
+        private Animator animator;
+        private string currentAnimState;
 
         private void Awake()
         {
             stats = GetComponent<StatsComponent>();
-            animator = GetComponent<Animator>();
             sprite = GetComponent<SpriteRenderer>();
-            currentState = "Default";
+            
+            animator = GetComponent<Animator>();
+            currentAnimState = "Default";
         }
 
         private void Update()
@@ -40,9 +42,6 @@ namespace TDS
             
             // Flicker sprite
             
-            
-            
-            
             stats.Health.TakeDamage(amount, stats.Defense.Value);
         }
 
@@ -53,8 +52,14 @@ namespace TDS
 
         public void ChangeAnimationState(string nextState)
         {
-            if (nextState == currentState)
+            if (nextState == currentAnimState)
+            {
+                return;
+            }
+            
             animator.Play(nextState);
+
+            currentAnimState = nextState;
         }
         
     }

@@ -7,7 +7,7 @@ namespace TDS
     {
         private readonly Mover mover;
 
-        public MoveNode(Mover moveComponent)
+        public MoveNode(Mover moveComponent, Enemy owner) : base(owner)
         {
             mover = moveComponent;
 
@@ -15,6 +15,7 @@ namespace TDS
         
         protected override void OnStart()
         {
+            Owner.ChangeAnimationState("Idle");
         }
 
         protected override State OnUpdate()

@@ -2,10 +2,16 @@ using TDS.AI;
 
 namespace TDS
 {
-    public class DoNothingNode : ActionNode
+    public class IdleNode : ActionNode
     {
+        public IdleNode(Enemy owner) : base(owner)
+        {
+            
+        }
+        
         protected override void OnStart()
         {
+            // Play Idle Animation
         }
 
         protected override State OnUpdate()
@@ -15,6 +21,7 @@ namespace TDS
 
         protected override void OnStop()
         {
+            
         }
     }
 }

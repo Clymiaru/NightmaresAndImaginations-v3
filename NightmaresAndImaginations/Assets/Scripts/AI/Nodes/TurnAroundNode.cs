@@ -7,7 +7,7 @@ namespace TDS.AI
     {
         private readonly Transform transform;
         
-        public TurnAroundNode(Transform transform)
+        public TurnAroundNode(Enemy owner, Transform transform) : base(owner)
         {
             this.transform = transform;
         }

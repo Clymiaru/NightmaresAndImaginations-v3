@@ -6,7 +6,7 @@ namespace TDS.AI
     {
         private PathSensor sensor;
         
-        public IsPathBlockedNode(Node child, PathSensor sensor) : base(child)
+        public IsPathBlockedNode(Node child, Enemy owner, PathSensor sensor) : base(child, owner)
         {
             this.sensor = sensor;
         }

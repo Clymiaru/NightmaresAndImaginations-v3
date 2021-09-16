@@ -9,7 +9,7 @@ namespace TDS.AI
     {
         private int currentNodeIndex;
         
-        public SequenceNode(List<Node> children) : base(children)
+        public SequenceNode(List<Node> children, Enemy owner) : base(children, owner)
         {
             currentNodeIndex = 0;
         }

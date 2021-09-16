@@ -6,7 +6,7 @@ namespace TDS.AI
     {
         protected readonly Node Child;
 
-        public DecoratorNode(Node child)
+        public DecoratorNode(Node child, Enemy owner) : base(owner)
         {
             Child = child;
         }

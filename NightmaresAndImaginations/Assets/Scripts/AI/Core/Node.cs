@@ -5,6 +5,12 @@ namespace TDS.AI
     {
         public State State { get; protected set; } = State.Running;
         private bool hasStarted = false;
+        protected readonly Enemy Owner;
+
+        protected Node(Enemy owner)
+        {
+            Owner = owner;
+        }
 
         public State Update()
         {

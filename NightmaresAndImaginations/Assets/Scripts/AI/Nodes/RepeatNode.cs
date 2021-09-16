@@ -10,7 +10,7 @@ namespace TDS.AI
 
         private int currentCount;
 
-        public RepeatNode(int repeatCount, Node child) : base(child)
+        public RepeatNode(int repeatCount, Node child, Enemy owner) : base(child, owner)
         {
             this.repeatCount = repeatCount;
             Assert.IsTrue(this.repeatCount >= 0, "this.repeatCount >= 0. Must be either 0 or a positive number!");

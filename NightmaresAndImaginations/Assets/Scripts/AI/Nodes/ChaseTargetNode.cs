@@ -7,7 +7,7 @@ namespace TDS.AI
         private Mover mover;
         private Sensor sensor;
         
-        public ChaseTargetNode(Mover mover, Sensor sensor) : base()
+        public ChaseTargetNode(Enemy owner, Mover mover, Sensor sensor) : base(owner)
         {
             this.mover = mover;
             this.sensor = sensor;

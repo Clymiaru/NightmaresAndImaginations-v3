@@ -6,7 +6,7 @@ namespace TDS.AI
     {
         private readonly Sensor sensor;
         
-        public IsTargetInRangeNode(Node child, Sensor sensor) : base(child)
+        public IsTargetInRangeNode(Node child, Enemy owner, Sensor sensor) : base(child, owner)
         {
             this.sensor = sensor;
         }

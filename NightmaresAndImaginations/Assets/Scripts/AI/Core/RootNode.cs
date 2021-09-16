@@ -6,7 +6,7 @@ namespace TDS.AI
     {
         private readonly Node child;
 
-        public RootNode(Node child)
+        public RootNode(Node child, Enemy owner) : base(owner)
         {
             this.child = child;
         }
