@@ -7,96 +7,88 @@ using TDS;
 
 public class PlayerCombat : MonoBehaviour
 {
-    public Animator animator;
+    private bool isAttackPressed = false;
+    private bool isAttacking = false;
+    private float attackDelay = 0.0f;
+    private int enemyLayerMask;
+
+    private int attackRangeX = 2;
+    private int attackRangeY = 1;
+    public Transform attackPos;
+    
+
+    private PlayerAnimationManager animManagerRef;
     private PlayerMovement movementRef;
-
-    private float attackCD = 0.2f;
-    private float attackTimeCounter = 0.0f;
-    private bool canAttack = true;
-
-    Vector2 attackRange;
-    public Transform attackPointRight;
-    public Transform attackPointLeft;
-    public LayerMask enemyLayers;
-
-    // Start is called before the first frame update
-    void Start()
+    StatsComponent playerStats;
+    private void Start()
     {
-        this.movementRef = this.GetComponent<PlayerMovement>();
-        if (this.movementRef == null)
-            Debug.LogError("Script PlayerCombat: no reference to PlayerMovement component!");
-
-        this.attackRange = new Vector2(0.5f, 1.0f);
+        animManagerRef = GetComponent<PlayerAnimationManager>();
+        movementRef = GetComponent<PlayerMovement>();
+        enemyLayerMask = 1 << LayerMask.NameToLayer("Enemy");
+        playerStats = GetComponent<StatsComponent>();
+        attackPos = this.transform.GetChild(0).transform;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
-       if (Input.GetMouseButtonDown(0) && this.movementRef.GroundCheck() == true)
-       {
-           if (this.canAttack)
-           {
-                this.canAttack = false;
-                Attack();
-           }
-             
-       }
+        //space Atatck key pressed?
 
-       if (this.canAttack == false && this.attackTimeCounter < this.attackCD)
-       {
-            this.attackTimeCounter += Time.deltaTime;
-       }
-       else
-       {
-            this.canAttack = true;
-            this.attackTimeCounter = 0.0f;
-       }
-
-       if(this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
-       {
-            this.movementRef.SetMovement(false);
-       }
-       else if(this.canAttack)
-       {
-            this.movementRef.SetMovement(true);
-       }
-
-    }
-
-    private void Attack()
-    {
-        animator.SetTrigger("Attack");
-
-        Collider2D[] hitEnemies = null; ;
-        
-
-        if (this.movementRef.GetAttackDirection() == 0)
-            hitEnemies = Physics2D.OverlapBoxAll(this.attackPointLeft.position, this.attackRange, this.enemyLayers);
-        else if(this.movementRef.GetAttackDirection() > 0)
-            hitEnemies = Physics2D.OverlapBoxAll(this.attackPointRight.position, this.attackRange, this.enemyLayers);
-        else if (this.movementRef.GetAttackDirection() < 0)
-            hitEnemies = Physics2D.OverlapBoxAll(this.attackPointLeft.position, this.attackRange, this.enemyLayers);
-
-        if (hitEnemies != null)
+        if (movementRef.IsGrounded()) // can only do this when grounded
         {
-            for (int i = 0; i < hitEnemies.Length; i++)
+            if (Input.GetMouseButtonDown(0))
             {
-                Debug.Log("Hit enemy " + hitEnemies[i].name);
-                
-                //do damage calculation here
-                var mask = hitEnemies[i].GetComponent<Mask>();
-                var playerStats = gameObject.GetComponent<StatsComponent>();
-                if (mask != null)
-                    hitEnemies[i].GetComponent<Mask>().TakeDamage(playerStats.Power.Value);
+                isAttackPressed = true;
+            }
+
+            //attack
+            if (isAttackPressed)
+            {
+                isAttackPressed = false;
+
+                if (!isAttacking)
+                {
+                    isAttacking = true;
+
+                    animManagerRef.ChangeAnimationState(PlayerAnimationManager.PLAYER_ATTACK);
+                    attackDelay = animManagerRef.GetAnimator().GetCurrentAnimatorStateInfo(0).length;
+                    Invoke("AttackComplete", attackDelay);
+                }
+            }
+        }
+    }
+
+    private void AttackComplete()
+    {
+        isAttacking = false;
+        Collider2D[] enemiesHit = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, enemyLayerMask);
+        if(enemiesHit != null)
+        {
+            for(int i = 0; i < enemiesHit.Length; i++)
+            {
+                //first attempt on knockback
+
+                /*Rigidbody2D enemyRB = enemiesHit[i].GetComponent<Rigidbody2D>();
+                enemyRB.velocity = new Vector2(0, 0);
+                enemyRB.AddForce(new Vector2(85.0f, 5.0f), ForceMode2D.Impulse);
+                Debug.Log(enemiesHit[i].name);*/
+                enemiesHit[i].GetComponent<Mask>().TakeDamage(playerStats.Power.Value);
+               
             }
         }
     }
 
 
+    public bool IsAttacking()
+    {
+        return this.isAttacking;
+    }
+
+
     private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireCube(this.attackPointRight.position, this.attackRange * 2.0f);
-        Gizmos.DrawWireCube(this.attackPointLeft.position, this.attackRange * 2.0f);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(attackPos.position, new Vector3(attackRangeX, attackRangeY, 1.0f));
     }
+
+
 }
