@@ -82,7 +82,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: TutorialBGM
-    clip: {fileID: 8300000, guid: b1247a9b3385fd441a443ecb725d62f1, type: 3}
+    clip: {fileID: 8300000, guid: 6665679f9204d954abb9a82b9c8ba558, type: 3}
     volume: 0.5
     volumeVariance: 0.5
     pitch: 0.1
@@ -110,7 +110,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: GroundAttackSFX
     clip: {fileID: 8300000, guid: 808420fa889e6e64d9ddb126767360e8, type: 3}
-    volume: 0.5
+    volume: 1
     volumeVariance: 0.5
     pitch: 0.1
     pitchVariance: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: SwordSlashSFX
     clip: {fileID: 8300000, guid: 96afdacc064c4304fb89d29b784da557, type: 3}
-    volume: 0.5
+    volume: 1
     volumeVariance: 0.5
     pitch: 0.1
     pitchVariance: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
   - name: PlayerFailSFX
     clip: {fileID: 8300000, guid: e856ffc068f107e4c898a824b9d10f84, type: 3}
     volume: 0.5
-    volumeVariance: 0.5
+    volumeVariance: 0.25
     pitch: 0.1
     pitchVariance: 0
     loop: 1
