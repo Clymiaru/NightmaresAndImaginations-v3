@@ -36,7 +36,7 @@ public class Jump : MonoBehaviour
     void Update()
     {
         //space jump key pressed?
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && currentJumpCount > 0)
         {
             isJumpPressed = true;
         }
@@ -47,10 +47,10 @@ public class Jump : MonoBehaviour
             //Put Sound
 
 
+            isJumpPressed = false;
             rb2d.velocity = new Vector2(this.rb2d.velocity.x, 0);
             rb2d.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             currentJumpCount--;
-            isJumpPressed = false;
         }
 
         //disable platforms when jumping from below them
@@ -69,7 +69,7 @@ public class Jump : MonoBehaviour
         }
         
 
-        if (movementRef.IsGrounded())
+        if (movementRef.IsGrounded() && this.rb2d.velocity.y <= 0.0)
         {
             currentJumpCount = maxJump;
         }
