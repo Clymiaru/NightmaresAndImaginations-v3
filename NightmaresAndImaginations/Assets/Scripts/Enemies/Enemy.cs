@@ -14,6 +14,8 @@ namespace TDS
         private Animator animator;
         private string currentAnimState;
 
+        public bool IsFinishedAttacking { get; set; } = false;
+        
         private void Awake()
         {
             stats = GetComponent<StatsComponent>();
@@ -21,14 +23,6 @@ namespace TDS
             
             animator = GetComponent<Animator>();
             currentAnimState = "Default";
-        }
-
-        private void Update()
-        {
-            if (!stats.IsDead)
-                return;
-
-            OnDeath();
         }
 
         protected abstract void OnDeath();
@@ -50,6 +44,11 @@ namespace TDS
             Destroy(gameObject);
         }
 
+        public void BroadcastFinishAttacking()
+        {
+            IsFinishedAttacking = true;
+        }
+        
         public void ChangeAnimationState(string nextState)
         {
             if (nextState == currentAnimState)
