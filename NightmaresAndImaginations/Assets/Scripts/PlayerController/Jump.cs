@@ -11,7 +11,7 @@ public class Jump : MonoBehaviour
     private int maxJump;
 
     private PlayerAnimationManager animManagerRef;
-    private PlayerMovement movementRef;
+    private PlayerStatsManager playerRef;
     private PlungeAttack plungeAttackRef;
 
     int platformMask;
@@ -20,14 +20,14 @@ public class Jump : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentJumpCount = maxJump;
         jumpForce = 15.0f;
         maxJump = 2;
-        currentJumpCount = maxJump;
 
-        rb2d = GetComponent<Rigidbody2D>();
-        animManagerRef = GetComponent<PlayerAnimationManager>();
-        movementRef = GetComponent<PlayerMovement>();
         plungeAttackRef = GetComponent<PlungeAttack>();
+        animManagerRef = GetComponent<PlayerAnimationManager>();
+        playerRef = GetComponent<PlayerStatsManager>();
+        rb2d = GetComponent<Rigidbody2D>();
 
         platformMask = 1 << LayerMask.NameToLayer("Platform");
     }
@@ -42,7 +42,7 @@ public class Jump : MonoBehaviour
         }
 
         //Check if trying to jump 
-        if (isJumpPressed && currentJumpCount > 0 && !plungeAttackRef.IsPlungeAttack())
+        if (isJumpPressed && currentJumpCount > 0 && !playerRef.IsPlungeAttacking() && !playerRef.IsTakingDamage())
         {
             //Put Sound
 
@@ -69,15 +69,15 @@ public class Jump : MonoBehaviour
         }
         
 
-        if (movementRef.IsGrounded() && this.rb2d.velocity.y <= 0.0)
+        if (playerRef.IsGrounded() && this.rb2d.velocity.y <= 0.0)
         {
             currentJumpCount = maxJump;
         }
-        else if(!movementRef.IsGrounded())
+        else if(!playerRef.IsGrounded())
         {
             if (rb2d.velocity.y > 0)
                 animManagerRef.ChangeAnimationState(PlayerAnimationManager.PLAYER_JUMP);
-            else if (rb2d.velocity.y < -1.0f && !plungeAttackRef.IsPlungeAttack())
+            else if (rb2d.velocity.y < -1.0f && !playerRef.IsPlungeAttacking())
                 animManagerRef.ChangeAnimationState(PlayerAnimationManager.PLAYER_JUMP_FALL);
         }
        

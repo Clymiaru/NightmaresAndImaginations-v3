@@ -35,9 +35,12 @@ namespace TDS
             {
                 if (currentTime > attackInterval)
                 {
-                    var enemyStats = other.gameObject.GetComponent<StatsComponent>();
-                    enemyStats.Health.TakeDamage(stats.Power.Value, enemyStats.Defense.Value);
+                    //var enemyStats = other.gameObject.GetComponent<StatsComponent>();
+                    //enemyStats.Health.TakeDamage(stats.Power.Value, enemyStats.Defense.Value);
                     //Debug.Log($"Hit! {enemyStats.Health.Value}");
+                    var enemyStats = other.gameObject.GetComponent<PlayerResponse>();
+                    enemyStats.TakeDamage(stats.Power.Value, transform.localScale.x) ;
+
                     currentTime = 0.0f;
                     return;
                 }

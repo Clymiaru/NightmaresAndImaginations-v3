@@ -8,7 +8,6 @@ using TDS;
 public class PlayerCombat : MonoBehaviour
 {
     private bool isAttackPressed = false;
-    private bool isAttacking = false;
     private float attackDelay = 0.0f;
     private int enemyLayerMask;
 
@@ -25,15 +24,17 @@ public class PlayerCombat : MonoBehaviour
 
     //dependencies
     private PlayerAnimationManager animManagerRef;
-    private PlayerMovement movementRef;
-    StatsComponent playerStats;
+    private PlayerStatsManager playerRef;
+    private StatsComponent playerStats;
 
     private void Start()
     {
         animManagerRef = GetComponent<PlayerAnimationManager>();
-        movementRef = GetComponent<PlayerMovement>();
-        enemyLayerMask = 1 << LayerMask.NameToLayer("Enemy");
         playerStats = GetComponent<StatsComponent>();
+        playerRef = GetComponent<PlayerStatsManager>();
+
+        enemyLayerMask = 1 << LayerMask.NameToLayer("Enemy");
+        
         attackPos = this.transform.GetChild(0).transform;
     }
 
@@ -41,8 +42,11 @@ public class PlayerCombat : MonoBehaviour
     {
         //space Atatck key pressed?
 
-        if (movementRef.IsGrounded()) // can only do this when grounded
+        if (playerRef.IsGrounded() && !playerRef.IsTakingDamage()) // can only do this when grounded
         {
+            
+
+
             if (Input.GetMouseButtonDown(0))
             {
                 isAttackPressed = true;
@@ -55,9 +59,9 @@ public class PlayerCombat : MonoBehaviour
                 isComboReset = false;
 
                 isAttackPressed = false;
-                if (!isAttacking)
+                if (!playerRef.IsAttacking())
                 {
-                    isAttacking = true;
+                    playerRef.IsAttacking(true);
                     animCount++;
 
                     if (animCount == 0)
@@ -72,6 +76,7 @@ public class PlayerCombat : MonoBehaviour
 
                     attackDelay = animManagerRef.GetAnimator().GetCurrentAnimatorStateInfo(0).length * 0.68f;
                     Invoke("AttackComplete", attackDelay);
+
                 }
             }
             else
@@ -89,14 +94,16 @@ public class PlayerCombat : MonoBehaviour
             {
                 animCount = -1;
             }
+
+                
         }
     }
 
     private void AttackComplete()
     {
-        isAttacking = false;
+        Debug.Log("ATTACKING!");
         Collider2D[] enemiesHit = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, enemyLayerMask);
-        if(enemiesHit != null)
+        if(enemiesHit != null && playerRef.IsAttacking())
         {
             for(int i = 0; i < enemiesHit.Length; i++)
             {
@@ -108,18 +115,16 @@ public class PlayerCombat : MonoBehaviour
                 Rigidbody2D enemyRB = enemiesHit[i].GetComponent<Rigidbody2D>();
                 //enemyRB.velocity = new Vector2(0, 0);
                 enemyRB.AddForce(new Vector2(850.0f, 5.0f), ForceMode2D.Impulse);
-                Debug.Log(enemiesHit[i].name);
+                //Debug.Log(enemiesHit[i].name);
 
                 enemiesHit[i].GetComponent<Mask>().TakeDamage(playerStats.Power.Value);
                
             }
         }
-    }
 
 
-    public bool IsAttacking()
-    {
-        return this.isAttacking;
+
+        playerRef.IsAttacking(false);
     }
 
 

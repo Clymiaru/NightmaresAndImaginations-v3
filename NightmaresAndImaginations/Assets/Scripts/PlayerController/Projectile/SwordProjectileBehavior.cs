@@ -83,7 +83,6 @@ public class SwordProjectileBehavior : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.layer);
 
         if (collision.GetComponent<Mask>() != null)
         {
