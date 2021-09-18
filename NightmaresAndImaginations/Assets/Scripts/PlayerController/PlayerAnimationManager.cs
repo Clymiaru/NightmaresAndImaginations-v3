@@ -14,6 +14,8 @@ public class PlayerAnimationManager : MonoBehaviour
     public const string PLAYER_JUMP = "Player_Jump_Right";
     public const string PLAYER_JUMP_FALL = "Player_Fall_Right";
     public const string PLAYER_ATTACK = "Player_Attack_Right";
+    public const string PLAYER_ATTACK2 = "Player_Attack2_Right";
+    public const string PLAYER_ATTACK3 = "Player_Attack3_Right";
     public const string PLAYER_AIR_ATTACK = "Player_PlungeFall_Right";
     public const string PLAYER_DASH = "Player_Dash_Right";
 

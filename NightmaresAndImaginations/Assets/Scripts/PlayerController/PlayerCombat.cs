@@ -12,14 +12,22 @@ public class PlayerCombat : MonoBehaviour
     private float attackDelay = 0.0f;
     private int enemyLayerMask;
 
+    //hit box
     private int attackRangeX = 2;
     private int attackRangeY = 1;
     public Transform attackPos;
-    
 
+    //anim change reset
+    private int animCount = -1;
+    private float resetTime = 1.0f;
+    private float resetCounter = 0.0f;
+    private bool isComboReset = false;
+
+    //dependencies
     private PlayerAnimationManager animManagerRef;
     private PlayerMovement movementRef;
     StatsComponent playerStats;
+
     private void Start()
     {
         animManagerRef = GetComponent<PlayerAnimationManager>();
@@ -43,16 +51,43 @@ public class PlayerCombat : MonoBehaviour
             //attack
             if (isAttackPressed)
             {
-                isAttackPressed = false;
+                resetCounter = 0.0f;
+                isComboReset = false;
 
+                isAttackPressed = false;
                 if (!isAttacking)
                 {
                     isAttacking = true;
+                    animCount++;
 
-                    animManagerRef.ChangeAnimationState(PlayerAnimationManager.PLAYER_ATTACK);
-                    attackDelay = animManagerRef.GetAnimator().GetCurrentAnimatorStateInfo(0).length;
+                    if (animCount == 0)
+                        animManagerRef.ChangeAnimationState(PlayerAnimationManager.PLAYER_ATTACK);
+                    else if (animCount == 1)
+                        animManagerRef.ChangeAnimationState(PlayerAnimationManager.PLAYER_ATTACK2);
+                    else if (animCount == 2)
+                    {
+                        animManagerRef.ChangeAnimationState(PlayerAnimationManager.PLAYER_ATTACK3);
+                        animCount = -1;
+                    }
+
+                    attackDelay = animManagerRef.GetAnimator().GetCurrentAnimatorStateInfo(0).length * 0.68f;
                     Invoke("AttackComplete", attackDelay);
                 }
+            }
+            else
+            {
+                if (isComboReset == false)
+                {
+                    if (resetCounter < resetTime)
+                        resetCounter += Time.deltaTime;
+                    else
+                        isComboReset = true;
+                }
+            }
+
+            if(isComboReset)
+            {
+                animCount = -1;
             }
         }
     }
