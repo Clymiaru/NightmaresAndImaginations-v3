@@ -19,8 +19,6 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
   
 
-    
-
     private PlayerAnimationManager animManagerRef;
     private PlayerCombat combatRef;
     private Dash dashRef;
