@@ -64,13 +64,16 @@ public class PlayerResponse : MonoBehaviour
 
     public void Die()
     {
-        Component[] components = gameObject.GetComponents(typeof(Component));
-        for(int i = 0; i < components.Length; i++)
+        Behaviour[] components = gameObject.GetComponents<Behaviour>();
+
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        gameObject.GetComponent<Rigidbody2D>().gravityScale = 0.0f;
+        for (int i = 0; i < components.Length; i++)
         {
-            if(components[i].GetType() != typeof(Transform))
-                Destroy(components[i]);
+            components[i].enabled = false;
+
         }
-        
+    
     }
 
     IEnumerator KnockBack(float scaleX)
