@@ -120,7 +120,7 @@ public class PlungeAttack : MonoBehaviour
                 enemyRB.velocity = new Vector2(0, 0);
                 enemyRB.AddForce(new Vector2(85.0f, 5.0f), ForceMode2D.Impulse);
                 Debug.Log(enemiesHit[i].name);*/
-                enemiesHit[i].GetComponent<Mask>().TakeDamage(playerStats.Power.Value);
+                enemiesHit[i].GetComponent<Enemy>().TakeDamage(playerStats.Power.Value);
             }
         }
     }

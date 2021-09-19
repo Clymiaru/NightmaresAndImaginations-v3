@@ -84,9 +84,9 @@ public class SwordProjectileBehavior : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.GetComponent<Mask>() != null)
+        if (collision.GetComponent<Enemy>() != null)
         {
-            collision.GetComponent<Mask>().TakeDamage(10);
+            collision.GetComponent<Enemy>().TakeDamage(10);
         }
 
         if(collision.gameObject.name != "Player")

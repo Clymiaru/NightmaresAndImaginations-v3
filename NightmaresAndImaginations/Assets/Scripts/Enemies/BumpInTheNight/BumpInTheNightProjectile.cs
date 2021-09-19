@@ -16,8 +16,8 @@ namespace TDS
                 if (other.CompareTag("Player"))
                 {
                     // Player takes damage
-                    var playerStats = other.GetComponent<StatsComponent>();
-                    playerStats.Health.TakeDamage(5, playerStats.Defense.Value);
+                    var playerStats = other.GetComponent<PlayerResponse>();
+                    playerStats.TakeDamage(5, transform.position.x);
                 }
             
                 // SFX Hit projectile

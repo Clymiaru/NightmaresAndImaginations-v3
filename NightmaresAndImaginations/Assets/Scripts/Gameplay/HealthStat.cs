@@ -21,6 +21,7 @@ namespace TDS
                 damage = enemyPower;
 
             BaseValue -= damage;
+            Debug.Log($"Health: {BaseValue}");
         }
 
         public void Restore(int healAmount)

@@ -55,14 +55,14 @@ namespace TDS
             Destroy(gameObject);
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
-        {
-            if (other.CompareTag("Player"))
-            {
-                var playerStats = other.GetComponent<StatsComponent>();
-                playerStats.Health.TakeDamage(stats.Power.Value, playerStats.Defense.Value);
-            }
-        }
+        // private void OnTriggerEnter2D(Collider2D other)
+        // {
+        //     if (other.CompareTag("Player"))
+        //     {
+        //         var playerStats = other.GetComponent<PlayerResponse>();
+        //         playerStats.TakeDamage(stats.Power.Value, transform.position.x);
+        //     }
+        // }
 
         public void ChangeAnimationState(string nextState)
         {

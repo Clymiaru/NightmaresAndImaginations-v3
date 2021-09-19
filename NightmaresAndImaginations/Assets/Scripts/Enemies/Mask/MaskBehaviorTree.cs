@@ -9,6 +9,7 @@ namespace TDS.AI
         [SerializeField] private Sensor FarRangeSensor;
         [SerializeField] private AttackRangeSensor AttackRangeSensor;
         [SerializeField] private MaskAttack MaskAttack;
+        
         private StatsComponent stats;
         private Mover mover;
         private SpriteRenderer sprite;
@@ -20,17 +21,6 @@ namespace TDS.AI
 
             // Depth 3
             var chasePlayerNode = new ChaseTargetNode(owner, mover, FarRangeSensor);
-            
-            // // Depth 2
-            
-            
-            // // var isTargetNearNode
-            // // var attackNode
-            //
-            // var isPathBlockedNode = new IsPathBlockedNode(turnAroundNode,
-            //                                               owner,
-            //                                               PathSensorObj); 
-            //
             
             // Depth 4
             var doNothingNode = new DoNothingNode(owner);

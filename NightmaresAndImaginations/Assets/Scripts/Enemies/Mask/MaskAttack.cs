@@ -16,8 +16,8 @@ namespace TDS
         public void Attack()
         {
             Debug.Log("Activate!");
-            var playerStats = target.GetComponent<StatsComponent>();
-            playerStats.Health.TakeDamage(maskStats.Power.Value, playerStats.Defense.Value);
+            var playerStats = target.GetComponent<PlayerResponse>();
+            playerStats.TakeDamage(maskStats.Power.Value, transform.position.x);
             Debug.Log("Damaged!");
         }
     }

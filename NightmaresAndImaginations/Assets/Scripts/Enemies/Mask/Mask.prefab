@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 849099387880893578}
   - component: {fileID: 849099387880893576}
   - component: {fileID: 849099387880893577}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: AttackArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,9 +82,9 @@ GameObject:
   - component: {fileID: 849099388623201795}
   - component: {fileID: 849099388623201793}
   - component: {fileID: 849099388623201794}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: AttackRangeSensor
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
