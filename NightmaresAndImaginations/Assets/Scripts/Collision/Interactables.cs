@@ -31,6 +31,24 @@ using UnityEngine.SceneManagement;
                     lvlLoader.TutorialScene();
                 }
             }
+
+            else if (isInsideCollider && image.name == "PopUpImageOutsideDoor")
+            {
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    Debug.Log("GO TO SETUP SCENE");
+                    lvlLoader.SetupScene();
+                }
+            }
+
+            else if (isInsideCollider && image.name == "PopUpImageQuitGame")
+            {
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    Debug.Log("QUIT GAME");
+                    lvlLoader.QuitGame();
+                }
+            }
         }
 
 

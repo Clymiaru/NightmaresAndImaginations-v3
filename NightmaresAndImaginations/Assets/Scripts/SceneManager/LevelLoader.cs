@@ -8,6 +8,11 @@ public class LevelLoader : MonoBehaviour
     public Animator transition;
     public float transitionTime = 2f;
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     public void NextScene()
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
@@ -16,6 +21,11 @@ public class LevelLoader : MonoBehaviour
     public void PrevScene()
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 1));
+    }
+
+    public void SetupScene()
+    {
+        StartCoroutine(LoadLevel(0));
     }
 
     public void TutorialScene()
