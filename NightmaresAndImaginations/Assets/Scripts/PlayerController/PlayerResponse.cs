@@ -30,22 +30,31 @@ public class PlayerResponse : MonoBehaviour
             
     }
 
-    public void TakeDamage(int damage, float directionX)
+    public void TakeDamage(int damage, float positionX)
     {
         if(!this.playerRef.IsTakingDamage() && this.playerRef.CanTakeDamage())
         {
+            float xDirection = positionX - transform.position.x;
+            xDirection = xDirection / Mathf.Abs(xDirection);
+
+
             //cancel attacks when damaged
             playerRef.IsAttacking(false);
-            playerRef.IsPlungeAttacking(false);
 
 
             this.playerRef.CanTakeDamage(false);
             this.playerRef.IsTakingDamage(true);
+            
             //deal damage calc
             playerStats.Health.TakeDamage(damage, playerStats.Defense.Value);
-            
+            rb2d.transform.localScale = new Vector3(xDirection, 1, 1);
+
             if (playerStats.IsDead)
             {
+                //stop player from moving
+                gameObject.GetComponent<Rigidbody2D>().gravityScale = 0.0f;
+                rb2d.velocity = new Vector2(0, 0);
+
                 animManagerRef.ChangeAnimationState(PlayerAnimationManager.PLAYER_DEATH);
                 float delayTime = animManagerRef.GetAnimator().GetCurrentAnimatorStateInfo(0).length;
                 Invoke("Die", delayTime);
@@ -54,8 +63,7 @@ public class PlayerResponse : MonoBehaviour
             else
             {
                 animManagerRef.ChangeAnimationState(PlayerAnimationManager.PLAYER_TAKE_DAMAGE);
-                rb2d.transform.localScale = new Vector3(-directionX, 1, 1);
-                StartCoroutine(KnockBack(directionX));
+                StartCoroutine(KnockBack(-xDirection));
             }
             
         }
@@ -67,7 +75,6 @@ public class PlayerResponse : MonoBehaviour
         Behaviour[] components = gameObject.GetComponents<Behaviour>();
 
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
-        gameObject.GetComponent<Rigidbody2D>().gravityScale = 0.0f;
         for (int i = 0; i < components.Length; i++)
         {
             components[i].enabled = false;

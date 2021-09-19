@@ -51,6 +51,9 @@ public class PlungeAttack : MonoBehaviour
             {
                 //Put Ground Attack Airtime Sound
 
+
+
+                this.playerRef.CanTakeDamage(false);
                 this.canAttack = false;
                 this.rb2d.velocity = new Vector2(0, 0);
                 this.rb2d.AddForce(new Vector2(0, this.dropDownForce), ForceMode2D.Impulse);
@@ -69,6 +72,7 @@ public class PlungeAttack : MonoBehaviour
 
                 this.DamageEnemies();
                 this.playerRef.IsPlungeAttacking(false);
+                this.playerRef.CanTakeDamage(true);
             }
         }
 
