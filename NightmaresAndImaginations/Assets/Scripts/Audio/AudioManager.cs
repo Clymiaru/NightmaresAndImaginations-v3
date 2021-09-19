@@ -1,15 +1,18 @@
 using UnityEngine.Audio;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
-
 	public static AudioManager instance;
-
 	public AudioMixerGroup mixerGroup;
-
 	public Sound[] sounds;
+
+	public const string MAIN_MENU_BGM = "MainMenuBGM";
+	public const string LEVEL_1_BGM = "Level1BGM";
+	public const string LEVEL_2_BGM = "Level2BGM";
+
 
 	void Awake()
 	{
@@ -35,7 +38,8 @@ public class AudioManager : MonoBehaviour
 		}
 	}
 
-	public void Play(string sound)
+
+    public void Play(string sound)
 	{
 		Sound s = Array.Find(sounds, item => item.name == sound);
 		if (s == null)

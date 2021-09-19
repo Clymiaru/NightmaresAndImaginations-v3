@@ -37,7 +37,7 @@ public class KeyHolder : MonoBehaviour
         return keyList.Contains(keyType);
     }
 
-    public void RemoveAllKeys()
+    public void ClearKeyList()
     {
         RemoveKey(Key.KeyType.First);
         RemoveKey(Key.KeyType.Second);
@@ -70,8 +70,8 @@ public class KeyHolder : MonoBehaviour
             {
                 Debug.Log("Player Got All Keys");
                 // Currently holding Key to open this door
-                // RemoveKey(keyDoor.GetKeyType());
-                keyDoor.OpenDoor();
+                //keyDoor.OpenDoor();
+                //ClearKeyList();
                 // load next level
             }
 

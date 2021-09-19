@@ -4,29 +4,38 @@ using UnityEngine;
 
 public class KeyDoor : MonoBehaviour
 {
-    //[SerializeField] private Key.KeyType keyType;
-
-    private DoorAnims doorAnims;
+    private Animator doorAnimator;
+    private bool isOpened = false;
 
     private void Awake()
     {
-        doorAnims = GetComponent<DoorAnims>();
+        doorAnimator = GetComponent<Animator>();
     }
 
-    /*
-    public Key.KeyType GetKeyType()
+    private void Update()
     {
-        return keyType;
-    }
-    */
-
-    public void OpenDoor()
-    {
-        doorAnims.OpenDoor();
+        if (isOpened)
+        {
+            doorAnimator.Play("OpenedDoor");
+        }
     }
 
-    public void PlayOpenFailAnim()
+    private void StayOpened()
     {
-        doorAnims.PlayOpenFailAnim();
+        isOpened = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.name == "Player" && !isOpened)
+        {
+            KeyHolder keyHolder = collider.gameObject.GetComponent<KeyHolder>();
+            if (keyHolder.ContainsAllKeys())
+            {
+                doorAnimator.Play("DoorOpen");
+                float delayTime = doorAnimator.GetCurrentAnimatorStateInfo(0).length * 0.9f;
+                Invoke("StayOpened", delayTime);
+            }
+        }
     }
 }

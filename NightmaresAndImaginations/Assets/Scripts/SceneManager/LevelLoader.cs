@@ -8,6 +8,11 @@ public class LevelLoader : MonoBehaviour
     public Animator transition;
     public float transitionTime = 2f;
 
+
+    private void Start()
+    {
+    }
+
     public void QuitGame()
     {
         Application.Quit();
@@ -25,6 +30,7 @@ public class LevelLoader : MonoBehaviour
 
     public void SetupScene()
     {
+        //audioManagerRef.Play("MainMenuBGM");
         StartCoroutine(LoadLevel(0));
     }
 
