@@ -20,27 +20,27 @@ public class LevelLoader : MonoBehaviour
 
     public void TutorialScene()
     {
-        StartCoroutine(LoadLevel(2));
+        StartCoroutine(LoadLevel(1));
     }
 
     public void FollyFloraScene()
     {
-        StartCoroutine(LoadLevel(3));
+        StartCoroutine(LoadLevel(2));
     }
 
     public void DesertBoxScene()
     {
-        StartCoroutine(LoadLevel(4));
+        StartCoroutine(LoadLevel(3));
     }
 
     public void GameOver()
     {
-        StartCoroutine(LoadLevel(5));
+        StartCoroutine(LoadLevel(4));
     }
 
     public void PlayerWin()
     {
-        StartCoroutine(LoadLevel(6));
+        StartCoroutine(LoadLevel(5));
     }
 
     IEnumerator LoadLevel(int levelIndex)
