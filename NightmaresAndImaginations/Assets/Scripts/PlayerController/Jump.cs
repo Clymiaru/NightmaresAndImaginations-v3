@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Jump : MonoBehaviour
 {
+    private AudioManager audioManagerRef;
     private bool isJumpPressed;
     private Rigidbody2D rb2d;
     private float jumpForce;
@@ -20,6 +21,12 @@ public class Jump : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (audioManagerRef == null)
+        {
+            audioManagerRef = GameObject.FindObjectOfType<AudioManager>();
+            audioManagerRef = audioManagerRef.GetComponent<AudioManager>();
+        }
+
         currentJumpCount = maxJump;
         jumpForce = 15.0f;
         maxJump = 2;
@@ -45,7 +52,7 @@ public class Jump : MonoBehaviour
         if (isJumpPressed && currentJumpCount > 0 && !playerRef.IsPlungeAttacking() && !playerRef.IsTakingDamage())
         {
             //Put Sound
-
+            audioManagerRef.Play(AudioManager.JUMP_SFX);
 
             isJumpPressed = false;
             rb2d.velocity = new Vector2(this.rb2d.velocity.x, 0);

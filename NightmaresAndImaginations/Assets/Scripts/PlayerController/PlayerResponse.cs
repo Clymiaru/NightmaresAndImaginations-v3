@@ -7,6 +7,7 @@ using TDS;
 
 public class PlayerResponse : MonoBehaviour
 {
+    private AudioManager audioManagerRef;
     private PlayerAnimationManager animManagerRef;
     private PlayerStatsManager playerRef;
     private StatsComponent playerStats;
@@ -18,6 +19,12 @@ public class PlayerResponse : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (audioManagerRef == null)
+        {
+            audioManagerRef = GameObject.FindObjectOfType<AudioManager>();
+            audioManagerRef = audioManagerRef.GetComponent<AudioManager>();
+        }
+
         animManagerRef = GetComponent<PlayerAnimationManager>();
         playerStats = GetComponent<StatsComponent>();
         playerRef = GetComponent<PlayerStatsManager>();
@@ -72,6 +79,7 @@ public class PlayerResponse : MonoBehaviour
 
     public void Die()
     {
+        audioManagerRef.Play(AudioManager.PLAYER_FAIL_SFX);
         Behaviour[] components = gameObject.GetComponents<Behaviour>();
 
         gameObject.GetComponent<SpriteRenderer>().enabled = false;

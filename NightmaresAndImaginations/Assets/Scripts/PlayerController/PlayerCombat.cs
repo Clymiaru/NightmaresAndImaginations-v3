@@ -7,6 +7,7 @@ using TDS;
 
 public class PlayerCombat : MonoBehaviour
 {
+    private AudioManager audioManagerRef;
     private bool isAttackPressed = false;
     private float attackDelay = 0.0f;
     private int enemyLayerMask;
@@ -29,6 +30,12 @@ public class PlayerCombat : MonoBehaviour
 
     private void Start()
     {
+        if (audioManagerRef == null)
+        {
+            audioManagerRef = GameObject.FindObjectOfType<AudioManager>();
+            audioManagerRef = audioManagerRef.GetComponent<AudioManager>();
+        }
+
         animManagerRef = GetComponent<PlayerAnimationManager>();
         playerStats = GetComponent<StatsComponent>();
         playerRef = GetComponent<PlayerStatsManager>();
@@ -77,6 +84,7 @@ public class PlayerCombat : MonoBehaviour
                     attackDelay = animManagerRef.GetAnimator().GetCurrentAnimatorStateInfo(0).length * 0.68f;
                     Invoke("AttackComplete", attackDelay);
 
+                    audioManagerRef.Play(AudioManager.SWORD_SLASH_SFX);
                 }
             }
             else
@@ -108,7 +116,6 @@ public class PlayerCombat : MonoBehaviour
             for(int i = 0; i < enemiesHit.Length; i++)
             {
                 //Put Sound
-
 
                 //first attempt on knockback
 

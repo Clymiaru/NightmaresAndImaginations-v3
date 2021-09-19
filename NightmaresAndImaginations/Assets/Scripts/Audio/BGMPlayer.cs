@@ -9,12 +9,22 @@ public class BGMPlayer : MonoBehaviour
 
 	void Start()
     {
-		audioManagerRef = GameObject.FindObjectOfType<AudioManager>();
-		audioManagerRef = audioManagerRef.GetComponent<AudioManager>();
+        if (audioManagerRef == null)
+        {
+			audioManagerRef = GameObject.FindObjectOfType<AudioManager>();
+			audioManagerRef = audioManagerRef.GetComponent<AudioManager>();
+		}
 
-		if (SceneManager.GetActiveScene().buildIndex == 0) // Setup scne
+		if (SceneManager.GetActiveScene().buildIndex == 0) // Setup Scene
 		{
+			audioManagerRef.Stop(AudioManager.TUTORIAL_LEVEL_BGM);
 			audioManagerRef.Play(AudioManager.MAIN_MENU_BGM);
+		}
+
+		else if (SceneManager.GetActiveScene().buildIndex == 1) // Tutorial
+		{
+			audioManagerRef.Stop(AudioManager.MAIN_MENU_BGM);
+			audioManagerRef.Play(AudioManager.TUTORIAL_LEVEL_BGM);
 		}
 
 		else if (SceneManager.GetActiveScene().buildIndex == 2) // Level 1
@@ -27,6 +37,18 @@ public class BGMPlayer : MonoBehaviour
 		{
 			audioManagerRef.Stop(AudioManager.LEVEL_1_BGM);
 			audioManagerRef.Play(AudioManager.LEVEL_2_BGM);
+		}
+
+		else if (SceneManager.GetActiveScene().buildIndex == 4) // Level 3
+		{
+			audioManagerRef.Stop(AudioManager.LEVEL_1_BGM);
+			audioManagerRef.Play(AudioManager.LEVEL_2_BGM);
+		}
+
+		else if (SceneManager.GetActiveScene().buildIndex == 5) // Boss Level
+		{
+			audioManagerRef.Stop(AudioManager.LEVEL_2_BGM);
+			audioManagerRef.Play(AudioManager.BOSS_LEVEL_BGM);
 		}
 	}
 }

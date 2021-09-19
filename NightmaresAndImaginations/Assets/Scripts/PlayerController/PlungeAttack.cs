@@ -7,6 +7,7 @@ using TDS;
 
 public class PlungeAttack : MonoBehaviour
 {
+    private AudioManager audioManagerRef;
     PlayerAnimationManager animManagerRef;
     PlayerStatsManager playerRef;
     StatsComponent playerStats;
@@ -31,6 +32,12 @@ public class PlungeAttack : MonoBehaviour
 
     private void Start()
     {
+        if (audioManagerRef == null)
+        {
+            audioManagerRef = GameObject.FindObjectOfType<AudioManager>();
+            audioManagerRef = audioManagerRef.GetComponent<AudioManager>();
+        }
+
         animManagerRef = this.GetComponent<PlayerAnimationManager>();
         playerStats = GetComponent<StatsComponent>();
         playerRef = this.GetComponent<PlayerStatsManager>();
@@ -98,6 +105,7 @@ public class PlungeAttack : MonoBehaviour
     private void DamageEnemies()
     {
         // Put Ground Hit Sound
+        audioManagerRef.Play(AudioManager.GROUND_ATTACK_SFX);
 
         Collider2D[] enemiesHit = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, enemyLayerMask);
         if (enemiesHit != null)

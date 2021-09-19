@@ -70,15 +70,12 @@ public class KeyHolder : MonoBehaviour
             {
                 Debug.Log("Player Got All Keys");
                 // Currently holding Key to open this door
-                //keyDoor.OpenDoor();
-                //ClearKeyList();
-                // load next level
+                // ClearKeyList();
             }
 
             else
             {
                 Debug.Log("Player Does Not Have All Keys");
-                //keyDoor.PlayOpenFailAnim();
             }
         }
     }

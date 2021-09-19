@@ -8,9 +8,11 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private LevelLoader lvlLoader;
     [SerializeField] private StatsComponent playerStats;
+    private KeyHolder keyHolder;
 
     private static GameManager _instance;
     private int enemyCount = 0;
+    public bool isAllEnemiesDead = false;
 
     public static GameManager Instance
     {
@@ -41,8 +43,13 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         this.playerStats = GameObject.Find("Player").GetComponent<StatsComponent>();
+        this.keyHolder = GameObject.Find("Player").GetComponent<KeyHolder>();
+
         if (this.playerStats == null)
             Debug.LogError("Script GameManager, playerStats is null!");
+
+        if (this.keyHolder == null)
+            Debug.LogError("Script GameManager, keyHolder is null!");
 
         this.enemyCount = GameObject.FindObjectsOfType<Enemy>().Length;
     }
@@ -53,12 +60,21 @@ public class GameManager : MonoBehaviour
         {
             this.enemyCount = GameObject.FindObjectsOfType<Enemy>().Length;
         }
+
+        else if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            this.enemyCount = GameObject.FindObjectsOfType<Enemy>().Length;
+        }
+
+        else if (SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            this.enemyCount = GameObject.FindObjectsOfType<Enemy>().Length;
+        }
     }
 
     private void Update()
     {
-
-        if (SceneManager.GetActiveScene().buildIndex == 2) // Level 1
+        if (SceneManager.GetActiveScene().buildIndex == 2 || SceneManager.GetActiveScene().buildIndex == 3 || SceneManager.GetActiveScene().buildIndex == 4) // Level 1
         {
             if (lvlLoader == null)
             {
@@ -77,22 +93,56 @@ public class GameManager : MonoBehaviour
 
             if (this.enemyCount == 0)
             {
-                this.PlayerWin();
+                isAllEnemiesDead = true;
+            }
+
+            else if (this.enemyCount != 0)
+            {
+                isAllEnemiesDead = false;
             }
         }
     }
 
-
-    private void GameOver()
+    public void GameOver()
     {
         //do gameover here
-        lvlLoader.GameOver();
-        //this.enemyCount = 8;
+        if (SceneManager.GetActiveScene().buildIndex == 2) // Level 1
+        {
+            lvlLoader.FollyFloraScene();
+        }
+
+        else if (SceneManager.GetActiveScene().buildIndex == 3) // Level 2
+        {
+            lvlLoader.DesertBoxScene();
+        }
+
+        else if (SceneManager.GetActiveScene().buildIndex == 3) // Level 3
+        {
+            lvlLoader.PreBossScene();
+        }
+
+        else if (SceneManager.GetActiveScene().buildIndex == 4) // Boss Level
+        {
+            lvlLoader.BossScene();
+        }
     }
 
-    private void PlayerWin()
+    public void PlayerWin()
     {
         //do win here
-        lvlLoader.PlayerWin();
+        if (SceneManager.GetActiveScene().buildIndex == 2) // Level 2
+        {
+            lvlLoader.DesertBoxScene();
+        }
+
+        else if (SceneManager.GetActiveScene().buildIndex == 3) // Level 3
+        {
+            lvlLoader.PreBossScene();
+        }
+
+        else if (SceneManager.GetActiveScene().buildIndex == 4) // Boss Level
+        {
+            lvlLoader.BossScene();
+        }
     }
 }

@@ -82,36 +82,36 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: DashSFX
     clip: {fileID: 8300000, guid: 08186f427f65948428d963ed320035b2, type: 3}
-    volume: 0.3
+    volume: 1
     pitch: 1
-    loop: 1
+    loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: JumpSFX
     clip: {fileID: 8300000, guid: fa32d5ed15da4d340a7ba6d8b5913599, type: 3}
-    volume: 0.3
+    volume: 0.5
     pitch: 1
-    loop: 1
+    loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: GroundAttackSFX
     clip: {fileID: 8300000, guid: 808420fa889e6e64d9ddb126767360e8, type: 3}
     volume: 1
     pitch: 1
-    loop: 1
+    loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: SwordSlashSFX
     clip: {fileID: 8300000, guid: 96afdacc064c4304fb89d29b784da557, type: 3}
     volume: 1
     pitch: 1
-    loop: 1
+    loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: PlayerFailSFX
     clip: {fileID: 8300000, guid: e856ffc068f107e4c898a824b9d10f84, type: 3}
     volume: 0.5
     pitch: 1
-    loop: 1
+    loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}

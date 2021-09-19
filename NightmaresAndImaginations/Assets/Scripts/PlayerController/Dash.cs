@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Dash : MonoBehaviour
 {
+    private AudioManager audioManagerRef;
     private bool canDash = true;
     private float dashForce = 15.0f;
     private Rigidbody2D rb2d;
@@ -19,6 +20,12 @@ public class Dash : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (audioManagerRef == null)
+        {
+            audioManagerRef = GameObject.FindObjectOfType<AudioManager>();
+            audioManagerRef = audioManagerRef.GetComponent<AudioManager>();
+        }
+
         rb2d = GetComponent<Rigidbody2D>();
         animManagerRef = GetComponent<PlayerAnimationManager>();
         playerRef = GetComponent<PlayerStatsManager>();
@@ -35,7 +42,7 @@ public class Dash : MonoBehaviour
             if (this.canDash == true && !playerRef.IsPlungeAttacking() && !playerRef.IsTakingDamage())
             {
                 //Put Sound
-
+                audioManagerRef.Play(AudioManager.DASH_SFX);
 
                 //Debug.Log("Dash!");
                 animManagerRef.ChangeAnimationState(PlayerAnimationManager.PLAYER_DASH);
