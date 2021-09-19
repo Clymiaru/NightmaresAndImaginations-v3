@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 2)
+        if (SceneManager.GetActiveScene().buildIndex == 2) // Level 1
         {
             this.enemyCount = GameObject.FindObjectsOfType<Enemy>().Length;
         }
@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
 
-        if (SceneManager.GetActiveScene().buildIndex == 2)
+        if (SceneManager.GetActiveScene().buildIndex == 2) // Level 1
         {
             if (lvlLoader == null)
             {
