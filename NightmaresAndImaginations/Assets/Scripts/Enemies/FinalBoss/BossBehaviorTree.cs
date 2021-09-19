@@ -1,18 +1,68 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossBehaviorTree : MonoBehaviour
+namespace TDS.AI
 {
-    // Start is called before the first frame update
-    void Start()
+    public class BossBehaviorTree : BehaviorTree
     {
+        private Enemy owner;
+        private GameObject target;
         
-    }
+        protected override RootNode CreateBehaviorTree()
+        {
+            
+            var idleNode = new IdleNode(owner);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            var doNothingNode = new DoNothingNode(owner);
+
+            var isDeadNode = new IsDeadNode(doNothingNode, owner, "Death");
+            
+            // Slash attack
+            var slashSequenceNode = new SequenceNode(new List<Node>
+                                                     {
+                                                         new BossSlashArmUpNode(owner),
+                                                         new BossSlashChargingNode(owner),
+                                                         new BossSlashNode(owner)
+                                                     }, 
+                                                     owner);
+            
+            var slamSequenceNode = new SequenceNode(new List<Node>
+                                                    {
+                                                        new BossSlamArmUpNode(owner),
+                                                        new BossSlamChargingNode(owner),
+                                                        new BossSlamNode(owner)
+                                                    },
+                                                    owner);
+
+            var randomActionNode = new RandomActionSelectionNode(new List<Node>
+                                                                 {
+                                                                     slashSequenceNode,
+                                                                     slamSequenceNode,
+                                                                     idleNode,
+                                                                     idleNode
+                                                                 },
+                                                                 owner);
+
+            
+            var selectNode = new SelectorNode(new List<Node>
+                                              {
+                                                  isDeadNode,
+                                                  // isTargetInRange,
+                                                  randomActionNode,
+                                                  idleNode
+                                              },
+                                              owner);
+            
+            
+            var repeatNode = new RepeatNode(selectNode, owner, 0);
+            
+            return new RootNode(repeatNode, owner);
+        }
+
+        private void Awake()
+        {
+            owner = GetComponent<Enemy>();
+            target = GameObject.FindGameObjectWithTag("Player");
+        }
     }
 }
