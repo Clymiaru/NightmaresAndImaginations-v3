@@ -27,7 +27,7 @@ public class PlayerAnimationManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(currentState);
+        //Debug.Log(currentState);
     }
 
     public void ChangeAnimationState(string newState)

@@ -1,28 +1,33 @@
+using UnityEngine;
+
 namespace TDS.AI
 {
-    public class AttackNode : ActionNode
+    public class ShootNode : ActionNode
     {
         private string attackAnimationClipName;
+        private ShootProjectile attack;
         
-        public AttackNode(Enemy owner, string attackAnimClipName) : base(owner)
+        public ShootNode(string attackAnimClipName, ShootProjectile shootProjectile, Enemy owner) : base(owner)
         {
             attackAnimationClipName = attackAnimClipName;
+            attack = shootProjectile;
         }
 
         protected override void OnStart()
         {
-            Owner.IsFinishedAttacking = false;
+            Owner.StartAttacking();
+            // SFX for shooting
+            Owner.ChangeAnimationState(attackAnimationClipName);
         }
 
         protected override State OnUpdate()
         {
-            // Deal damage function
-            if (Owner.IsFinishedAttacking)
+            if (!Owner.IsAttacking)
             {
+                attack.Shoot();
                 return State.Success;
             }
-            
-            Owner.ChangeAnimationState(attackAnimationClipName);
+
             return State.Running;
         }
 

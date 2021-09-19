@@ -1,20 +1,28 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace TDS.AI
 {
-    public class DelayNode : DecoratorNode
+    public class ChargeNode : DecoratorNode
     {
-        private float elapsedTime;
         private readonly float duration;
+        private float elapsedTime;
+
+        private const string ChargeState = "Charge";
         
-        public DelayNode(float duration, Node child, Enemy owner) : base(child, owner)
+        public ChargeNode(float chargeDuration, Node child, Enemy owner) : base(child, owner)
         {
-            this.duration = duration;
+            duration = chargeDuration;
         }
-        
+
         protected override void OnStart()
         {
             elapsedTime = 0.0f;
+            Owner.ChangeAnimationState(ChargeState);
+            
+            Debug.Log("Charge State");
+
         }
 
         protected override State OnUpdate()
@@ -24,6 +32,7 @@ namespace TDS.AI
                 elapsedTime += Time.deltaTime;
                 return State.Running;
             }
+
             
             return Child.Update();
         }
@@ -32,4 +41,6 @@ namespace TDS.AI
         {
         }
     }
+
 }
+

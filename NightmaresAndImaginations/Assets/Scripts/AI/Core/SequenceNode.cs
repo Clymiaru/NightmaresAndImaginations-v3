@@ -13,6 +13,7 @@ namespace TDS.AI
         {
             currentNodeIndex = 0;
         }
+        
         // public override NodeState Evaluate()
         // {
         //     if (currentNodeIndex >= nodes.Count)
@@ -67,7 +68,6 @@ namespace TDS.AI
 
         protected override void OnStop()
         {
-            throw new NotImplementedException();
         }
     }
 }

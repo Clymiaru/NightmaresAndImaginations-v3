@@ -5,31 +5,31 @@ namespace TDS
     [RequireComponent(typeof(StatsComponent),
                       typeof(Animator),
                       typeof(SpriteRenderer))]
-    public abstract class Enemy : MonoBehaviour
+    public class Enemy : MonoBehaviour
     {
+        [Header("Enemy Info")] 
+        [SerializeField] private bool IsKillable;
+
         private StatsComponent stats;
-
         private SpriteRenderer sprite;
-
         private Animator animator;
         private string currentAnimState;
 
-        public bool IsFinishedAttacking { get; set; } = false;
+        public bool IsAttacking { get; private set; }
         
         private void Awake()
         {
             stats = GetComponent<StatsComponent>();
             sprite = GetComponent<SpriteRenderer>();
-            
             animator = GetComponent<Animator>();
             currentAnimState = "Default";
-        }
 
-        protected abstract void OnDeath();
+            IsAttacking = false;
+        }
 
         public void TakeDamage(int amount)
         {
-            if (stats.IsDead)
+            if (stats.IsDead || !IsKillable)
             {
                 return;
             }
@@ -39,6 +39,16 @@ namespace TDS
             stats.Health.TakeDamage(amount, stats.Defense.Value);
         }
 
+        public void StartAttacking()
+        {
+            IsAttacking = true;
+        }
+
+        public void StopAttacking()
+        {
+            IsAttacking = false;
+        }
+
         public void Death()
         {
             Destroy(gameObject);
@@ -46,7 +56,6 @@ namespace TDS
 
         public void BroadcastFinishAttacking()
         {
-            IsFinishedAttacking = true;
         }
         
         public void ChangeAnimationState(string nextState)
@@ -57,7 +66,7 @@ namespace TDS
             }
             
             animator.Play(nextState);
-
+            //Debug.Log(currentAnimState);
             currentAnimState = nextState;
         }
         

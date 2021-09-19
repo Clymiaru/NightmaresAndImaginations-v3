@@ -3,14 +3,12 @@ using UnityEngine;
 
 namespace TDS.AI
 {
-    [RequireComponent(typeof(Mask))]
     public class MaskBehaviorTree : BehaviorTree
     {
         [SerializeField] private Sensor FarRangeSensor;
         [SerializeField] private PathSensor PathSensorObj; 
         
         // Requirements
-        private Mask owner;
         private StatsComponent stats;
         private Mover mover;
         private SpriteRenderer sprite;
@@ -37,29 +35,29 @@ namespace TDS.AI
             // var moveForwardNode = new MoveNode(mover, owner);
             //
             
-            // Depth 4
-            var doNothingNode = new DoNothingNode(owner);
-            
-            // Depth 3
-            var destroyDelayNode = new DelayNode(doNothingNode, owner, 0.1f);
-            var attackNode = new AttackNode(owner, "MaskAttackAnim");
-            
-            // Depth 2
-            var isDeadNode = new IsDeadNode(destroyDelayNode, owner, "MaskDeathAnim");
-            var isTargetInAttackRange = new IsTargetInAttackRangeNode(attackNode, owner);
-            
-            // Depth 1
-            var selectNode = new SelectorNode(new List<Node>
-                                              {
-                                                  isDeadNode
-                                              },
-                                              owner);
-            
-            // Depth 0
-            var repeatNode = new RepeatNode(selectNode, owner, 0);
-            
+            // // Depth 4
+            // var doNothingNode = new DoNothingNode(owner);
+            //
+            // // Depth 3
+            // var destroyDelayNode = new DelayNode(doNothingNode, owner, 0.1f);
+            // var attackNode = new AttackNode(owner, "MaskAttackAnim");
+            //
+            // // Depth 2
+            // var isDeadNode = new IsDeadNode(destroyDelayNode, owner, "MaskDeathAnim");
+            // var isTargetInAttackRange = new IsTargetInAttackRangeNode(attackNode, owner);
+            //
+            // // Depth 1
+            // var selectNode = new SelectorNode(new List<Node>
+            //                                   {
+            //                                       isDeadNode
+            //                                   },
+            //                                   owner);
+            //
+            // // Depth 0
+            // var repeatNode = new RepeatNode(selectNode, owner, 0);
+            //
 
-            return new RootNode(repeatNode, owner);
+            return new RootNode(null, null);
         }
 
         private void InitializeRequirements()
@@ -67,7 +65,6 @@ namespace TDS.AI
             stats = GetComponent<StatsComponent>();
             mover = GetComponent<Mover>();
             sprite = GetComponent<SpriteRenderer>();
-            owner = GetComponent<Mask>();
         }
         
     }
