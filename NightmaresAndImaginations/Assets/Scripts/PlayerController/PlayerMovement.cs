@@ -54,27 +54,30 @@ public class PlayerMovement : MonoBehaviour
         //Check update movement based on input
         Vector2 vel = new Vector2(0, rb2d.velocity.y);
        
-        if (xAxis < 0)
+        if(!playerRef.IsDashing())
         {
-            vel.x = -walkSpeed;
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-        else if (xAxis > 0)
-        {
-            vel.x = walkSpeed;
-            transform.localScale = new Vector3(1, 1, 1);
+            if (xAxis < 0)
+            {
+                vel.x = -walkSpeed;
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
+            else if (xAxis > 0)
+            {
+                vel.x = walkSpeed;
+                transform.localScale = new Vector3(1, 1, 1);
 
-        }
-        else
-        {
-            vel.x = 0;
+            }
+            else
+            {
+                vel.x = 0;
 
-        }
-        
+            }
 
-        //assign the new velocity to the rigidbody
-        if(!playerRef.IsDashing() && !playerRef.IsTakingDamage())
-            rb2d.velocity = vel;
+
+            //assign the new velocity to the rigidbody
+            if (!playerRef.IsTakingDamage())
+                rb2d.velocity = vel;
+        }   
     }
 
    

@@ -74,6 +74,8 @@ public class Dash : MonoBehaviour
         this.rb2d.AddForce(new Vector2(this.dashForce * transform.localScale.x, 0), ForceMode2D.Impulse);
         this.rb2d.gravityScale = 0.0f;
         yield return new WaitForSeconds(this.dashTime);
+
+        //after dash
         this.playerRef.IsDashing(false);
         this.playerRef.CanTakeDamage(true);
         this.rb2d.gravityScale = gravityScale;
