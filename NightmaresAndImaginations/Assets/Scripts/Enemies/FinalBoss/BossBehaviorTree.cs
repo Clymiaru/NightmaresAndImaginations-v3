@@ -5,6 +5,8 @@ namespace TDS.AI
 {
     public class BossBehaviorTree : BehaviorTree
     {
+        [SerializeField] private Mover mover;
+        
         private Enemy owner;
         private GameObject target;
         
@@ -12,6 +14,8 @@ namespace TDS.AI
         {
             
             var idleNode = new IdleNode(owner);
+            
+            var delayedFollowTargetNode = new DelayedFollowTargetNode(target, mover, owner);
 
             var doNothingNode = new DoNothingNode(owner);
 
@@ -25,7 +29,7 @@ namespace TDS.AI
                                                          new BossSlashNode(owner)
                                                      }, 
                                                      owner);
-            
+            // Slam attack
             var slamSequenceNode = new SequenceNode(new List<Node>
                                                     {
                                                         new BossSlamArmUpNode(owner),
@@ -38,7 +42,7 @@ namespace TDS.AI
                                                                  {
                                                                      slashSequenceNode,
                                                                      slamSequenceNode,
-                                                                     idleNode,
+                                                                     delayedFollowTargetNode,
                                                                      idleNode
                                                                  },
                                                                  owner);
@@ -47,7 +51,6 @@ namespace TDS.AI
             var selectNode = new SelectorNode(new List<Node>
                                               {
                                                   isDeadNode,
-                                                  // isTargetInRange,
                                                   randomActionNode,
                                                   idleNode
                                               },

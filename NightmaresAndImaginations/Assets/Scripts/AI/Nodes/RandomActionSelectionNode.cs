@@ -16,7 +16,7 @@ namespace TDS.AI
         
         protected override void OnStart()
         {
-            index = Random.Range(0, Children.Count );
+            index = Random.Range(0, Children.Count);
         }
 
         protected override State OnUpdate()
