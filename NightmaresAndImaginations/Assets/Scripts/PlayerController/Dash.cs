@@ -4,26 +4,31 @@ using UnityEngine;
 
 public class Dash : MonoBehaviour
 {
+    private AudioManager audioManagerRef;
     private bool canDash = true;
-    private bool isDashing = false;
     private float dashForce = 15.0f;
     private Rigidbody2D rb2d;
-    private float dashTime = 0.15f;
+    private float dashTime = 0.2f;
 
 
     private float dashCDTimeCounter = 0.0f;
     private float dashCoolDown = 1.0f;
 
     private PlayerAnimationManager animManagerRef;
-    private PlungeAttack plungeAttackRef;
-
+    private PlayerStatsManager playerRef;
 
     // Start is called before the first frame update
     void Start()
     {
+        if (audioManagerRef == null)
+        {
+            audioManagerRef = GameObject.FindObjectOfType<AudioManager>();
+            audioManagerRef = audioManagerRef.GetComponent<AudioManager>();
+        }
+
         rb2d = GetComponent<Rigidbody2D>();
         animManagerRef = GetComponent<PlayerAnimationManager>();
-        plungeAttackRef = GetComponent<PlungeAttack>();
+        playerRef = GetComponent<PlayerStatsManager>();
     }
 
   
@@ -34,8 +39,11 @@ public class Dash : MonoBehaviour
         {
             
             //Debug.Log("Right Click or Left Shift");
-            if (this.canDash == true && !plungeAttackRef.IsPlungeAttack())
+            if (this.canDash == true && !playerRef.IsPlungeAttacking() && !playerRef.IsTakingDamage())
             {
+                //Put Sound
+                audioManagerRef.Play(AudioManager.DASH_SFX);
+
                 //Debug.Log("Dash!");
                 animManagerRef.ChangeAnimationState(PlayerAnimationManager.PLAYER_DASH);
                 this.canDash = false;
@@ -60,19 +68,18 @@ public class Dash : MonoBehaviour
     IEnumerator Dashing()
     {
         float gravityScale = this.rb2d.gravityScale;
-        this.isDashing = true;
+        this.playerRef.IsDashing(true);
+        this.playerRef.CanTakeDamage(false);
         this.rb2d.velocity = new Vector2(this.rb2d.velocity.x, 0);
         this.rb2d.AddForce(new Vector2(this.dashForce * transform.localScale.x, 0), ForceMode2D.Impulse);
         this.rb2d.gravityScale = 0.0f;
         yield return new WaitForSeconds(this.dashTime);
-        this.isDashing = false;
+
+        //after dash
+        this.playerRef.IsDashing(false);
+        this.playerRef.CanTakeDamage(true);
         this.rb2d.gravityScale = gravityScale;
     }
 
-
-    public bool IsDashing()
-    {
-        return this.isDashing;
-    }
 
 }

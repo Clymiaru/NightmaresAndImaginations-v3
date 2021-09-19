@@ -1,15 +1,28 @@
 using UnityEngine.Audio;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
-
 	public static AudioManager instance;
-
 	public AudioMixerGroup mixerGroup;
-
 	public Sound[] sounds;
+
+	// BGM
+	public const string MAIN_MENU_BGM = "MainMenuBGM";
+	public const string TUTORIAL_LEVEL_BGM = "TutorialBGM";
+	public const string LEVEL_1_BGM = "Level1BGM";
+	public const string LEVEL_2_BGM = "Level2BGM";
+	public const string BOSS_LEVEL_BGM = "BossLevelBGM";
+
+	// SFX
+	public const string DASH_SFX = "DashSFX";
+	public const string JUMP_SFX = "JumpSFX";
+	public const string GROUND_ATTACK_SFX = "GroundAttackSFX";
+	public const string SWORD_SLASH_SFX = "SwordSlashSFX";
+	public const string PLAYER_FAIL_SFX = "PlayerFailSFX";
+
 
 	void Awake()
 	{
@@ -33,12 +46,10 @@ public class AudioManager : MonoBehaviour
 
 			s.source.outputAudioMixerGroup = mixerGroup;
 		}
-
-		//Play("BGM");
-		//Stop("BGM");
 	}
 
-	public void Play(string sound)
+
+    public void Play(string sound)
 	{
 		Sound s = Array.Find(sounds, item => item.name == sound);
 		if (s == null)

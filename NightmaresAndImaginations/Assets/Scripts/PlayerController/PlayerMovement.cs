@@ -12,27 +12,16 @@ public class PlayerMovement : MonoBehaviour
 
     private float xAxis;
     private Rigidbody2D rb2d;
-   
-    private int groundMask;
-    private int platformMask;
-
-    private bool isGrounded;
-  
-
-    
 
     private PlayerAnimationManager animManagerRef;
-    private PlayerCombat combatRef;
-    private Dash dashRef;
+    private PlayerStatsManager playerRef;
+
 
     void Start()
     {
-        rb2d = GetComponent<Rigidbody2D>();
-        groundMask = 1 << LayerMask.NameToLayer("Ground");
-        platformMask = 1 << LayerMask.NameToLayer("Platform");
         animManagerRef = GetComponent<PlayerAnimationManager>();
-        combatRef = GetComponent<PlayerCombat>();
-        dashRef = GetComponent<Dash>();
+        playerRef = GetComponent<PlayerStatsManager>();
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     
@@ -41,10 +30,10 @@ public class PlayerMovement : MonoBehaviour
         //Checking for inputs
         xAxis = 0;
 
-        if ((combatRef.IsAttacking() && !this.IsGrounded()) || !combatRef.IsAttacking())
+        if ((playerRef.IsAttacking() && !playerRef.IsGrounded() && !playerRef.IsTakingDamage()&& !playerRef.IsTakingDamage()) || !playerRef.IsAttacking())
             xAxis = Input.GetAxisRaw("Horizontal");
 
-        if(this.IsGrounded() && !combatRef.IsAttacking() && !dashRef.IsDashing())
+        if(playerRef.IsGrounded() && !playerRef.IsAttacking() && !playerRef.IsDashing() && !playerRef.IsTakingDamage())
         {
             if (xAxis != 0)
             {
@@ -65,55 +54,36 @@ public class PlayerMovement : MonoBehaviour
         //Check update movement based on input
         Vector2 vel = new Vector2(0, rb2d.velocity.y);
        
-        if (xAxis < 0)
+        if(!playerRef.IsDashing())
         {
-            vel.x = -walkSpeed;
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-        else if (xAxis > 0)
-        {
-            vel.x = walkSpeed;
-            transform.localScale = new Vector3(1, 1, 1);
+            if (xAxis < 0)
+            {
+                vel.x = -walkSpeed;
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
+            else if (xAxis > 0)
+            {
+                vel.x = walkSpeed;
+                transform.localScale = new Vector3(1, 1, 1);
 
-        }
-        else
-        {
-            vel.x = 0;
+            }
+            else
+            {
+                vel.x = 0;
 
-        }
-        
+            }
 
-        //assign the new velocity to the rigidbody
-        if(!dashRef.IsDashing())
-            rb2d.velocity = vel;
+
+            //assign the new velocity to the rigidbody
+            if (!playerRef.IsTakingDamage())
+                rb2d.velocity = vel;
+        }   
     }
 
-    public bool IsGrounded()
-    {
-        //check if player is on the ground
-        RaycastHit2D hit = Physics2D.Raycast(this.transform.position, Vector2.down, 1.1f, this.groundMask);
-        RaycastHit2D hit2 = Physics2D.Raycast(this.transform.position, Vector2.down, 1.1f, this.platformMask);
-
-        if (hit.collider != null || hit2.collider != null)
-        {
-            //Debug.Log("Grounded!");
-            isGrounded = true;
-        }
-        else
-        {
-            //Debug.Log("Not Grounded!");
-            isGrounded = false;
-        }
-
-        return this.isGrounded;
-    }
-
+   
     public float GetHorizontalAxis()
     {
         return this.xAxis;
     }
-
-    
-
 
 }

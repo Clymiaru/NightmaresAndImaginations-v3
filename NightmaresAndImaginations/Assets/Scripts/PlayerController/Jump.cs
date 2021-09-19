@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Jump : MonoBehaviour
 {
+    private AudioManager audioManagerRef;
     private bool isJumpPressed;
     private Rigidbody2D rb2d;
     private float jumpForce;
@@ -11,7 +12,7 @@ public class Jump : MonoBehaviour
     private int maxJump;
 
     private PlayerAnimationManager animManagerRef;
-    private PlayerMovement movementRef;
+    private PlayerStatsManager playerRef;
     private PlungeAttack plungeAttackRef;
 
     int platformMask;
@@ -20,14 +21,20 @@ public class Jump : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (audioManagerRef == null)
+        {
+            audioManagerRef = GameObject.FindObjectOfType<AudioManager>();
+            audioManagerRef = audioManagerRef.GetComponent<AudioManager>();
+        }
+
+        currentJumpCount = maxJump;
         jumpForce = 15.0f;
         maxJump = 2;
-        currentJumpCount = maxJump;
 
-        rb2d = GetComponent<Rigidbody2D>();
-        animManagerRef = GetComponent<PlayerAnimationManager>();
-        movementRef = GetComponent<PlayerMovement>();
         plungeAttackRef = GetComponent<PlungeAttack>();
+        animManagerRef = GetComponent<PlayerAnimationManager>();
+        playerRef = GetComponent<PlayerStatsManager>();
+        rb2d = GetComponent<Rigidbody2D>();
 
         platformMask = 1 << LayerMask.NameToLayer("Platform");
     }
@@ -36,20 +43,21 @@ public class Jump : MonoBehaviour
     void Update()
     {
         //space jump key pressed?
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && currentJumpCount > 0)
         {
             isJumpPressed = true;
         }
 
         //Check if trying to jump 
-        if (isJumpPressed && currentJumpCount > 0 && !plungeAttackRef.IsPlungeAttack())
+        if (isJumpPressed && currentJumpCount > 0 && !playerRef.IsPlungeAttacking() && !playerRef.IsTakingDamage())
         {
+            //Put Sound
+            audioManagerRef.Play(AudioManager.JUMP_SFX);
+
+            isJumpPressed = false;
             rb2d.velocity = new Vector2(this.rb2d.velocity.x, 0);
             rb2d.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             currentJumpCount--;
-            isJumpPressed = false;
-            
-
         }
 
         //disable platforms when jumping from below them
@@ -68,15 +76,15 @@ public class Jump : MonoBehaviour
         }
         
 
-        if (movementRef.IsGrounded())
+        if (playerRef.IsGrounded() && this.rb2d.velocity.y <= 0.0)
         {
             currentJumpCount = maxJump;
         }
-        else if(!movementRef.IsGrounded())
+        else if(!playerRef.IsGrounded())
         {
             if (rb2d.velocity.y > 0)
                 animManagerRef.ChangeAnimationState(PlayerAnimationManager.PLAYER_JUMP);
-            else if (rb2d.velocity.y < -1.0f && !plungeAttackRef.IsPlungeAttack())
+            else if (rb2d.velocity.y < -1.0f && !playerRef.IsPlungeAttacking())
                 animManagerRef.ChangeAnimationState(PlayerAnimationManager.PLAYER_JUMP_FALL);
         }
        

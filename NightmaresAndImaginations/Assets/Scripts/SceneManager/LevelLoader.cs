@@ -8,6 +8,11 @@ public class LevelLoader : MonoBehaviour
     public Animator transition;
     public float transitionTime = 2f;
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     public void NextScene()
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
@@ -18,29 +23,34 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 1));
     }
 
+    public void SetupScene()
+    {
+        StartCoroutine(LoadLevel(0));
+    }
+
     public void TutorialScene()
     {
-        StartCoroutine(LoadLevel(2));
+        StartCoroutine(LoadLevel(1));
     }
 
     public void FollyFloraScene()
     {
-        StartCoroutine(LoadLevel(3));
+        StartCoroutine(LoadLevel(2));
     }
 
     public void DesertBoxScene()
     {
+        StartCoroutine(LoadLevel(3));
+    }
+
+    public void PreBossScene()
+    {
         StartCoroutine(LoadLevel(4));
     }
 
-    public void GameOver()
+    public void BossScene()
     {
         StartCoroutine(LoadLevel(5));
-    }
-
-    public void PlayerWin()
-    {
-        StartCoroutine(LoadLevel(6));
     }
 
     IEnumerator LoadLevel(int levelIndex)
