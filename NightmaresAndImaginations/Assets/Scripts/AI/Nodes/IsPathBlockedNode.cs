@@ -6,7 +6,7 @@ namespace TDS.AI
     {
         private PathSensor sensor;
         
-        public IsPathBlockedNode(Node child, Enemy owner, PathSensor sensor) : base(child, owner)
+        public IsPathBlockedNode(PathSensor sensor, Node child, Enemy owner) : base(child, owner)
         {
             this.sensor = sensor;
         }
@@ -19,10 +19,15 @@ namespace TDS.AI
         {
             var isPathBlocked = sensor.IsBlocked;
 
-            if (!isPathBlocked) return State.Failure;
+            if (!isPathBlocked)
+            {
+                return State.Failure;
+            }
             
-            Child.Update();
-            return State.Success;
+            
+            Debug.Log("Path is blocked!");
+            
+            return Child.Update();
         }
 
         protected override void OnStop()

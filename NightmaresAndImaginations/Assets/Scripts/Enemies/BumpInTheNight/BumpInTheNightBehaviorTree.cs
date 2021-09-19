@@ -21,8 +21,10 @@ namespace TDS.AI
 
         protected override RootNode CreateBehaviorTree()
         {
-            // Depth 4 & 5
+            // Depth 5
             var lauchProjectile = new ShootNode("Shoot", ShootOrigin, owner);
+
+            // Depth 4
             var chargeNode = new ChargeNode(ChargeTime, lauchProjectile, owner);
 
             // Depth 3

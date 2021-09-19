@@ -1,4 +1,5 @@
 using UnityEngine;
+using Vector2 = UnityEngine.Vector2;
 
 namespace TDS
 {
@@ -29,6 +30,11 @@ namespace TDS
         {
             var netSpeed = speed * speedModifier * Time.fixedDeltaTime;
             netDirection = direction * netSpeed;
+        }
+
+        public void Stop()
+        {
+            netDirection = Vector2.zero;
         }
 
         public void FixedUpdate()

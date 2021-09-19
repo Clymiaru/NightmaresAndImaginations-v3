@@ -5,13 +5,11 @@ namespace TDS
 {
     public class PathSensor : MonoBehaviour
     {
-        // TODO: Crowd management
-        
         private bool isBlocked;
         private bool isAtEdge;
 
         [Min(0.01f), SerializeField] 
-        private float groundDetectionDistance;
+        private float GroundDetectionDistance;
         
         [SerializeField] private LayerMask ObstaclesLayer;
 
@@ -19,25 +17,25 @@ namespace TDS
 
         private void Update()
         {
-            var hit = Physics2D.Raycast(transform.position, Vector2.down, groundDetectionDistance, ObstaclesLayer);
-            isAtEdge = !hit.collider;
-        }
-
-        private void OnTriggerEnter2D(Collider2D other)
-        {
-            if (!other.gameObject.CompareTag("Player"))
+            var origin = transform.position;
+            var edgeChecker = Physics2D.Raycast(origin, 
+                                                Vector2.down, 
+                                                GroundDetectionDistance, 
+                                                ObstaclesLayer);
+            
+            isAtEdge = edgeChecker.collider == null;
+            
+            if (edgeChecker.collider != null &&
+                edgeChecker.collider.gameObject.CompareTag("Player"))
+            {
                 isBlocked = true;
-        }
-
-        private void OnTriggerExit2D(Collider2D other)
-        {
-            if (!other.gameObject.CompareTag("Player"))
-                isBlocked = false;
+            }
         }
 
         private void OnDrawGizmos()
         {
-            Gizmos.DrawRay(transform.position, Vector3.down * groundDetectionDistance);
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawRay(transform.position, Vector3.down * GroundDetectionDistance);
         }
     }
 }

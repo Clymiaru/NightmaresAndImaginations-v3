@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace TDS
 {
@@ -54,10 +55,15 @@ namespace TDS
             Destroy(gameObject);
         }
 
-        public void BroadcastFinishAttacking()
+        private void OnTriggerEnter2D(Collider2D other)
         {
+            if (other.CompareTag("Player"))
+            {
+                var playerStats = other.GetComponent<StatsComponent>();
+                playerStats.Health.TakeDamage(stats.Power.Value, playerStats.Defense.Value);
+            }
         }
-        
+
         public void ChangeAnimationState(string nextState)
         {
             if (nextState == currentAnimState)

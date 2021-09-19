@@ -10,7 +10,8 @@ namespace TDS
 
         public void Shoot()
         {
-            Instantiate(ProjectileTemplate, transform.position, Quaternion.identity);
+            var obj = Instantiate(ProjectileTemplate, transform.position, Quaternion.identity);
+            obj.transform.parent = gameObject.transform;
         }
     }    
 }
