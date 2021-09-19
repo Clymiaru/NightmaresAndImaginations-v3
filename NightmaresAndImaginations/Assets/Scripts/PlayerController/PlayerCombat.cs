@@ -101,7 +101,6 @@ public class PlayerCombat : MonoBehaviour
 
     private void AttackComplete()
     {
-        Debug.Log("ATTACKING!");
         Collider2D[] enemiesHit = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, enemyLayerMask);
         if(enemiesHit != null && playerRef.IsAttacking())
         {
