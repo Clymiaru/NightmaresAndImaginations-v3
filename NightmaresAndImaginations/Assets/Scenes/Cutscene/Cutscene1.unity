@@ -399,6 +399,10 @@ PrefabInstance:
       propertyPath: Screen
       value: 
       objectReference: {fileID: 729374819}
+    - target: {fileID: 613248784951377531, guid: 2759cfc40f9f88745a694e335fbda460, type: 3}
+      propertyPath: CutsceneClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 1c0c9d00f95f62b47b1c3061995acf2d, type: 3}
     - target: {fileID: 613248784951377532, guid: 2759cfc40f9f88745a694e335fbda460, type: 3}
       propertyPath: m_Name
       value: CutsceneHandler

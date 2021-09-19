@@ -83,4 +83,4 @@ MonoBehaviour:
   OnEndCutscene:
     m_PersistentCalls:
       m_Calls: []
-  FadeOutDuration: 3
+  FadeOutDuration: 1
