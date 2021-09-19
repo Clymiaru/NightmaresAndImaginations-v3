@@ -12,11 +12,19 @@ public class SwordProjectileBehavior : MonoBehaviour
     private float travelSpeed = 15.0f;
 
     private Rigidbody2D rb2d;
+
+    private float lifeTime = 10.0f;
+    private float timer = 0.0f;
+    private bool hasCountDownStarted = false;
+
+    private BoxCollider2D swordCollider;
+
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
+        swordCollider = GetComponent<BoxCollider2D>();
     }
 
 
@@ -37,8 +45,29 @@ public class SwordProjectileBehavior : MonoBehaviour
             animator.Play("SwordTravel");
             rb2d.velocity = new Vector2(travelSpeed * rb2d.transform.localScale.x, 0);
             swordState++;
+            hasCountDownStarted = true;
         }
 
+        if(hasCountDownStarted == true)
+        {
+            if(timer < lifeTime)
+            {
+                timer += Time.deltaTime;
+            }
+            else
+            {
+                SwordHit();
+            }
+        }
+
+    }
+
+    private void SwordHit()
+    {
+        swordCollider.enabled = false;
+        animator.Play("SwordHit");
+        float animTime = animator.GetCurrentAnimatorStateInfo(0).length;
+        Invoke("DestroySword", animTime);
     }
 
     private void DestroySword()
@@ -51,9 +80,9 @@ public class SwordProjectileBehavior : MonoBehaviour
         return animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1;
     }
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.layer);
 
         if (collision.GetComponent<Mask>() != null)
         {
@@ -63,9 +92,7 @@ public class SwordProjectileBehavior : MonoBehaviour
         if(collision.gameObject.name != "Player")
         {
             rb2d.velocity = new Vector2(0, 0);
-            animator.Play("SwordHit");
-            float animTime = animator.GetCurrentAnimatorStateInfo(0).length;
-            Invoke("DestroySword", animTime);
+            SwordHit();
         }
 
     }

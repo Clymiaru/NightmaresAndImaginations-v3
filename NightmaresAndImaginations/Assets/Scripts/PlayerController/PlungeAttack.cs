@@ -7,15 +7,15 @@ using TDS;
 
 public class PlungeAttack : MonoBehaviour
 {
-    PlayerMovement movementRef;
-    Rigidbody2D rb2d;
     PlayerAnimationManager animManagerRef;
+    PlayerStatsManager playerRef;
     StatsComponent playerStats;
-
+    Rigidbody2D rb2d;
+    
     //plunge attack physics
     float dropDownForce = -20.0f;
-    bool isPlungeAttacking = false;
-
+    
+    //hit box
     public Transform attackPos;
     private int attackRangeX = 4;
     private int attackRangeY = 1;
@@ -24,46 +24,75 @@ public class PlungeAttack : MonoBehaviour
     private Transform attackEffectSpawnPoint;
     public GameObject shockWave;
 
+
+    private float cd = 1.5f;
+    private float cdCounter = 0.0f;
+    private bool canAttack = true;
+
     private void Start()
     {
-        movementRef = this.GetComponent<PlayerMovement>();
-        rb2d = this.GetComponent<Rigidbody2D>();
         animManagerRef = this.GetComponent<PlayerAnimationManager>();
-        attackPos = this.transform.GetChild(1).transform;
-        enemyLayerMask = 1 << LayerMask.NameToLayer("Enemy");
         playerStats = GetComponent<StatsComponent>();
+        playerRef = this.GetComponent<PlayerStatsManager>();
+        rb2d = this.GetComponent<Rigidbody2D>();
+         
         attackEffectSpawnPoint = this.transform.GetChild(3).transform;
+        attackPos = this.transform.GetChild(1).transform;
+
+        enemyLayerMask = 1 << LayerMask.NameToLayer("Enemy");
     }
 
 
     private void Update()
     {
-        if (this.movementRef.IsGrounded() == false)
+        if (!this.playerRef.IsGrounded() && !playerRef.IsTakingDamage() && canAttack)
         {
-            if(Input.GetMouseButtonDown(0) && this.isPlungeAttacking == false)
+            if(Input.GetMouseButtonDown(0) && !this.playerRef.IsPlungeAttacking())
             {
                 //Put Ground Attack Airtime Sound
 
 
+
+                this.playerRef.CanTakeDamage(false);
+                this.canAttack = false;
                 this.rb2d.velocity = new Vector2(0, 0);
                 this.rb2d.AddForce(new Vector2(0, this.dropDownForce), ForceMode2D.Impulse);
-                this.isPlungeAttacking = true;
+                this.playerRef.IsPlungeAttacking(true);
                 
             }
         }
 
-        if(this.isPlungeAttacking == true)
+        if(this.playerRef.IsPlungeAttacking() == true)
         {
             animManagerRef.ChangeAnimationState(PlayerAnimationManager.PLAYER_AIR_ATTACK);
-            if (this.movementRef.IsGrounded() == true)
+                
+            if (this.playerRef.IsGrounded() == true)
             {
                 GameObject temp = Instantiate(shockWave, attackEffectSpawnPoint.position, Quaternion.identity);
-                //temp.transform.parent = gameObject.transform;
 
                 this.DamageEnemies();
-                this.isPlungeAttacking = false;
+                this.playerRef.IsPlungeAttacking(false);
+                this.playerRef.CanTakeDamage(true);
             }
         }
+
+        //CD
+        if(!canAttack)
+        {
+            if(cdCounter < cd)
+            {
+                cdCounter += Time.deltaTime;
+            }
+            else
+            {
+                cdCounter = 0.0f;
+                canAttack = true;
+            }
+        }
+
+
+
+
     }
 
     private void DamageEnemies()
@@ -86,11 +115,6 @@ public class PlungeAttack : MonoBehaviour
                 enemiesHit[i].GetComponent<Mask>().TakeDamage(playerStats.Power.Value);
             }
         }
-    }
-
-    public bool IsPlungeAttack()
-    {
-        return this.isPlungeAttacking;
     }
 
     private void OnDrawGizmosSelected()
