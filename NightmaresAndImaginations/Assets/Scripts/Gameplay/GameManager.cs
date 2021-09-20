@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 2 || SceneManager.GetActiveScene().buildIndex == 3 || SceneManager.GetActiveScene().buildIndex == 4) // Level 1
+        if (SceneManager.GetActiveScene().buildIndex == 2 || SceneManager.GetActiveScene().buildIndex == 3 || SceneManager.GetActiveScene().buildIndex == 4 || SceneManager.GetActiveScene().buildIndex == 5) // Level 1
         {
             if (lvlLoader == null)
             {
