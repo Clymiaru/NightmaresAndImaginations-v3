@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 2 || SceneManager.GetActiveScene().buildIndex == 3 || SceneManager.GetActiveScene().buildIndex == 4 || SceneManager.GetActiveScene().buildIndex == 5) // Level 1
+        if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2 || SceneManager.GetActiveScene().buildIndex == 3 || SceneManager.GetActiveScene().buildIndex == 4 || SceneManager.GetActiveScene().buildIndex == 5) // Level 1
         {
             if (lvlLoader == null)
             {
@@ -117,7 +117,13 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         //do gameover here
-        if (SceneManager.GetActiveScene().buildIndex == 2) // Level 1
+
+        if (SceneManager.GetActiveScene().buildIndex == 1) // Tutorial
+        {
+            lvlLoader.TutorialScene();
+        }
+
+        else if (SceneManager.GetActiveScene().buildIndex == 2) // Level 1
         {
             lvlLoader.FollyFloraScene();
         }
