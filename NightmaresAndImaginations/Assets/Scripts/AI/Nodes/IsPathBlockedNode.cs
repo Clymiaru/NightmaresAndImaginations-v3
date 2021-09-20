@@ -1,10 +1,9 @@
-using UnityEngine;
 
 namespace TDS.AI
 {
     public class IsPathBlockedNode : DecoratorNode
     {
-        private PathSensor sensor;
+        private readonly PathSensor sensor;
         
         public IsPathBlockedNode(PathSensor sensor, Node child, Enemy owner) : base(child, owner)
         {
@@ -18,16 +17,7 @@ namespace TDS.AI
         protected override State OnUpdate()
         {
             var isPathBlocked = sensor.IsBlocked;
-
-            if (!isPathBlocked)
-            {
-                return State.Failure;
-            }
-            
-            
-            Debug.Log("Path is blocked!");
-            
-            return Child.Update();
+            return !isPathBlocked ? State.Failure : Child.Update();
         }
 
         protected override void OnStop()
