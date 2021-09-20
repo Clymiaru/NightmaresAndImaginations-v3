@@ -116,12 +116,12 @@ public class GameManager : MonoBehaviour
             lvlLoader.DesertBoxScene();
         }
 
-        else if (SceneManager.GetActiveScene().buildIndex == 3) // Level 3
+        else if (SceneManager.GetActiveScene().buildIndex == 4) // Level 3
         {
             lvlLoader.PreBossScene();
         }
 
-        else if (SceneManager.GetActiveScene().buildIndex == 4) // Boss Level
+        else if (SceneManager.GetActiveScene().buildIndex == 5) // Boss Level
         {
             lvlLoader.BossScene();
         }
