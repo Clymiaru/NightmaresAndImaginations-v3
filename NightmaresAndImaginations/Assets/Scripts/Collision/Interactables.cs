@@ -13,7 +13,7 @@ public class Interactables : MonoBehaviour
 
     private void Update()
     {
-        if (isInsideCollider && image.name == "PopUpImageBed")
+        if (isInsideCollider && image.name == "BedInteractable")
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
@@ -22,7 +22,7 @@ public class Interactables : MonoBehaviour
             }
         }
 
-        else if (isInsideCollider && image.name == "PopUpImageDoor")
+        else if (isInsideCollider && image.name == "DoorInteractable")
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
@@ -31,7 +31,7 @@ public class Interactables : MonoBehaviour
             }
         }
 
-        else if (isInsideCollider && image.name == "PopUpImageOutsideDoor")
+        else if (isInsideCollider && image.name == "OutsideDoorText")
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
@@ -40,7 +40,7 @@ public class Interactables : MonoBehaviour
             }
         }
 
-        else if (isInsideCollider && image.name == "PopUpImageQuitGame")
+        else if (isInsideCollider && image.name == "TableInteractable")
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
