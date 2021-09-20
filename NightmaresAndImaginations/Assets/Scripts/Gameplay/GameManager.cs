@@ -70,6 +70,11 @@ public class GameManager : MonoBehaviour
         {
             this.enemyCount = GameObject.FindObjectsOfType<Enemy>().Length;
         }
+
+        else if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            this.enemyCount = GameObject.FindObjectsOfType<Enemy>().Length;
+        }
     }
 
     private void Update()
@@ -100,6 +105,12 @@ public class GameManager : MonoBehaviour
             {
                 isAllEnemiesDead = false;
             }
+        }
+
+        else if (SceneManager.GetActiveScene().buildIndex == 5 && this.enemyCount == 0) // and killed all enemies  (&& gameManager.isAllEnemiesDead)
+        {
+            keyHolder.ClearKeyList();
+            PlayerWin();
         }
     }
 
@@ -142,7 +153,12 @@ public class GameManager : MonoBehaviour
 
         else if (SceneManager.GetActiveScene().buildIndex == 4) // Boss Level
         {
-            lvlLoader.BossScene();
+            lvlLoader.Cutscene4Scene();
+        }
+        
+        else if (SceneManager.GetActiveScene().buildIndex == 5) // Boss Level
+        {
+            lvlLoader.Cutscene5Scene();
         }
     }
 }

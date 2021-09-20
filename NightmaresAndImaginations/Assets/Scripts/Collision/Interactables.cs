@@ -18,8 +18,7 @@ public class Interactables : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F))
             {
                 Debug.Log("GO TO DREAM WORLD");
-                lvlLoader.FollyFloraScene();
-                    
+                lvlLoader.Cutscene3Scene();
             }
         }
 
@@ -28,7 +27,7 @@ public class Interactables : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F))
             {
                 Debug.Log("GO TO TUTORIAL");
-                lvlLoader.TutorialScene();
+                lvlLoader.Cutscene1Scene();
             }
         }
 
@@ -54,6 +53,11 @@ public class Interactables : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (SceneManager.GetActiveScene().buildIndex == 1 && image.name == "PlaceHolder") // Tutorial
+        {
+            lvlLoader.Cutscene2Scene();
+        }
+
         this.image.SetActive(true);
         this.isInsideCollider = true;
     }

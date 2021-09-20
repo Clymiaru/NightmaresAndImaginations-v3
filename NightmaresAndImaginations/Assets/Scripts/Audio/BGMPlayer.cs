@@ -18,6 +18,7 @@ public class BGMPlayer : MonoBehaviour
 		if (SceneManager.GetActiveScene().buildIndex == 0) // Setup Scene
 		{
 			audioManagerRef.Stop(AudioManager.TUTORIAL_LEVEL_BGM);
+			audioManagerRef.Stop(AudioManager.BOSS_LEVEL_BGM);
 			audioManagerRef.Play(AudioManager.MAIN_MENU_BGM);
 		}
 
@@ -49,6 +50,36 @@ public class BGMPlayer : MonoBehaviour
 		{
 			audioManagerRef.Stop(AudioManager.LEVEL_2_BGM);
 			audioManagerRef.Play(AudioManager.BOSS_LEVEL_BGM);
+		}
+
+		else if (SceneManager.GetActiveScene().buildIndex == 6) // Cutscene 1
+		{
+			audioManagerRef.Stop(AudioManager.MAIN_MENU_BGM);
+			audioManagerRef.Play(AudioManager.TUTORIAL_LEVEL_BGM);
+		}
+
+		else if (SceneManager.GetActiveScene().buildIndex == 7) // Cutscene 2
+		{
+			audioManagerRef.Stop(AudioManager.TUTORIAL_LEVEL_BGM);
+			audioManagerRef.Play(AudioManager.BOSS_LEVEL_BGM);
+		}
+
+		else if (SceneManager.GetActiveScene().buildIndex == 8) // Cutscene 3
+		{
+			audioManagerRef.Stop(AudioManager.MAIN_MENU_BGM);
+			audioManagerRef.Play(AudioManager.LEVEL_1_BGM);
+		}
+
+		else if (SceneManager.GetActiveScene().buildIndex == 9) // Cutscene 4
+		{
+			audioManagerRef.Stop(AudioManager.LEVEL_2_BGM);
+			audioManagerRef.Play(AudioManager.BOSS_LEVEL_BGM);
+		}
+
+		else if (SceneManager.GetActiveScene().buildIndex == 10) // Final Win | Cutscene 5
+		{
+			//audioManagerRef.Stop(AudioManager.LEVEL_2_BGM);
+			//audioManagerRef.Play(AudioManager.BOSS_LEVEL_BGM);
 		}
 	}
 }
