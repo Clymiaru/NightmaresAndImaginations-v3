@@ -5,7 +5,6 @@ using UnityEngine;
 public class Dash : MonoBehaviour
 {
     private AudioManager audioManagerRef;
-    private bool canDash = true;
     private float dashForce = 15.0f;
     private Rigidbody2D rb2d;
     private float dashTime = 0.2f;
@@ -38,28 +37,28 @@ public class Dash : MonoBehaviour
         if (Input.GetMouseButtonDown(1) || Input.GetButtonDown("Fire3"))// left shift is Fire3 for some reason
         {
             
-            //Debug.Log("Right Click or Left Shift");
-            if (this.canDash == true && !playerRef.IsPlungeAttacking() && !playerRef.IsTakingDamage())
+            Debug.Log("Right Click or Left Shift + " + playerRef.CanDash());
+            if (playerRef.CanDash() == true && !playerRef.IsPlungeAttacking() && !playerRef.IsTakingDamage())
             {
                 //Put Sound
                 audioManagerRef.Play(AudioManager.DASH_SFX);
 
                 //Debug.Log("Dash!");
                 animManagerRef.ChangeAnimationState(PlayerAnimationManager.PLAYER_DASH);
-                this.canDash = false;
+                playerRef.CanDash(false);
                 StartCoroutine(Dashing());
             }
 
         }
 
 
-        if (this.canDash == false && this.dashCDTimeCounter < this.dashCoolDown)
+        if (playerRef.CanDash() == false && this.dashCDTimeCounter < this.dashCoolDown)
         {
             this.dashCDTimeCounter += Time.deltaTime;
         }
         else
         {
-            this.canDash = true;
+            playerRef.CanDash(true);
             this.dashCDTimeCounter = 0.0f;
         }
 

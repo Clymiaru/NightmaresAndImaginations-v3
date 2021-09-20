@@ -6,7 +6,6 @@ public class ThrowSword : MonoBehaviour
 {
     private AudioManager audioManagerRef;
     bool isPressed = false;
-    bool canThrow = true;
     float abilityCD = 3.0f;
     float cdCounter = 0.0f;
 
@@ -14,6 +13,8 @@ public class ThrowSword : MonoBehaviour
     public GameObject sword;
 
     private Rigidbody2D rb2d;
+
+    private PlayerStatsManager playerRef;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,31 +25,32 @@ public class ThrowSword : MonoBehaviour
         }
 
         rb2d = GetComponent<Rigidbody2D>();
+        playerRef = GetComponent<PlayerStatsManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && canThrow)
+        if(Input.GetKeyDown(KeyCode.E) && playerRef.CanThrow())
         {
             isPressed = true;
         }
 
-        if (isPressed && canThrow)
+        if (isPressed && playerRef.CanThrow())
         {
             isPressed = false;
-            canThrow = false;
+            playerRef.CanThrow(false);
             this.SpawnSword();
         }
 
 
-        if(!canThrow && cdCounter < abilityCD)
+        if(!playerRef.CanThrow() && cdCounter < abilityCD)
         {
             cdCounter += Time.deltaTime;
         }
         else
         {
-            canThrow = true;
+            playerRef.CanThrow(true);
             cdCounter = 0.0f;
         }
 
