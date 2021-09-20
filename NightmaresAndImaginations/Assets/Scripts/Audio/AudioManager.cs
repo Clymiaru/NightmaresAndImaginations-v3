@@ -25,6 +25,7 @@ public class AudioManager : MonoBehaviour
 	public const string DAMAGE_SFX = "DamageSFX";
 	public const string HEAL_SFX = "HealSFX";
 	public const string SHOOT_SFX = "ShootSFX";
+	public const string PICK_UP_SFX = "PickUpSFX";
 
 
 
