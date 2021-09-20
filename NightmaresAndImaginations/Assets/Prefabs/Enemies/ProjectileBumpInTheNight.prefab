@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3818957300903133283}
   - component: {fileID: 3818957300903133308}
   - component: {fileID: 3818957300903133282}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: ProjectileBumpInTheNight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
