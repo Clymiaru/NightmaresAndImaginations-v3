@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1753827295382755265}
   - component: {fileID: 1753827295382755264}
   - component: {fileID: 1827553887500624743}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: BumpInTheNight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   m_Component:
   - component: {fileID: 666082747499238947}
   - component: {fileID: 2889968071750403150}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ShootOrigin
   m_TagString: Untagged
   m_Icon: {fileID: 0}

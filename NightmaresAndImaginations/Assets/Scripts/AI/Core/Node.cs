@@ -1,4 +1,6 @@
 
+using UnityEngine;
+
 namespace TDS.AI
 {
     public abstract class Node

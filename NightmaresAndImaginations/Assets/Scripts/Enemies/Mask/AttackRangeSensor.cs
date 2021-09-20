@@ -13,6 +13,14 @@ namespace TDS
                 InRange = true;
             }
         }
+        
+        private void OnTriggerStay2D(Collider2D other)
+        {
+            if (!InRange && other.CompareTag("Player"))
+            {
+                InRange = true;
+            }
+        }
 
         private void OnTriggerExit2D(Collider2D other)
         {

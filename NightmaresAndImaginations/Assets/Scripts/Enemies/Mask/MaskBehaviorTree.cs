@@ -52,8 +52,6 @@ namespace TDS.AI
             
             var moveForwardNode = new MoveNode(mover, owner);
 
-            var idleNode = new IdleNode(owner);
-            
             // Depth 1
             var selectNode = new SelectorNode(new List<Node>
                                               {
@@ -61,8 +59,7 @@ namespace TDS.AI
                                                   isPathBlocked,
                                                   isTargetInAttackRange,
                                                   isTargetInSightNode,
-                                                  moveForwardNode,
-                                                  idleNode
+                                                  moveForwardNode
                                               },
                                               owner);
             
