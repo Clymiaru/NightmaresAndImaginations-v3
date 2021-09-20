@@ -1,21 +1,21 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace TDS.AI
 {
     public class BossBehaviorTree : BehaviorTree
     {
         [SerializeField] private Mover mover;
-        
+        [SerializeField] private TargetPositionChecker positionChecker;
+
         private Enemy owner;
         private GameObject target;
+        private Sensor sensor;
         
         protected override RootNode CreateBehaviorTree()
         {
-            
             var idleNode = new IdleNode(owner);
-            
-            var delayedFollowTargetNode = new DelayedFollowTargetNode(target, mover, owner);
 
             var doNothingNode = new DoNothingNode(owner);
 
@@ -37,21 +37,38 @@ namespace TDS.AI
                                                         new BossSlamNode(owner)
                                                     },
                                                     owner);
-
-            var randomActionNode = new RandomActionSelectionNode(new List<Node>
-                                                                 {
-                                                                     slashSequenceNode,
-                                                                     slamSequenceNode,
-                                                                     delayedFollowTargetNode,
-                                                                     idleNode
-                                                                 },
-                                                                 owner);
-
             
+            var delayNode = new DelayNode(1.2f, doNothingNode,
+                                                    owner);
+            
+
+            var patternA = new SequenceNode(new List<Node>
+                                            {
+                                                slashSequenceNode,
+                                                delayNode,
+                                                slashSequenceNode,
+                                            },
+                                            owner);
+            
+            var patternB = new SequenceNode(new List<Node>
+                                            {
+                                                slamSequenceNode,
+                                                delayNode,
+                                                slamSequenceNode
+                                            },
+                                            owner);
+            
+            var actionSequence = new SequenceNode(new List<Node>
+                                                  {
+                                                      patternA,
+                                                      patternB
+                                                  },
+                                                  owner);
+
             var selectNode = new SelectorNode(new List<Node>
                                               {
                                                   isDeadNode,
-                                                  randomActionNode,
+                                                  actionSequence,
                                                   idleNode
                                               },
                                               owner);

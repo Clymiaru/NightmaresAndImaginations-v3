@@ -32,7 +32,7 @@ namespace TDS.AI
             
             var turnAroundNode = new TurnAroundNode(owner, transform);
 
-            var attackDelayNode = new DelayNode(0.8f, attackNode, owner);
+            var attackDelayNode = new DelayNode(0.2f, attackNode, owner);
 
             
             // Depth 2
