@@ -6,16 +6,15 @@ namespace TDS.AI
 {
     public class DelayedFollowTargetNode : ActionNode
     {
-        private Vector2 moveDirection;
-        private GameObject target;
         private Mover mover;
+        private TargetPositionChecker positionChecker;
 
         private float elapsedTime;
         private float duration = 1.0f;
 
-        public DelayedFollowTargetNode(GameObject target, Mover mover, Enemy owner) : base(owner)
+        public DelayedFollowTargetNode(TargetPositionChecker positionChecker, Mover mover, Enemy owner) : base(owner)
         {
-            this.target = target;
+            this.positionChecker = positionChecker;
             this.mover = mover;
         }
 
@@ -33,7 +32,7 @@ namespace TDS.AI
             }
 
             elapsedTime += Time.deltaTime;
-            mover.Move((target.transform.position - Owner.transform.position).normalized);
+            mover.Move(positionChecker.DirectionOffset);
             
             return State.Running;
         }
