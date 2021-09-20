@@ -20,9 +20,6 @@ namespace TDS.AI
         {
             elapsedTime = 0.0f;
             Owner.ChangeAnimationState(ChargeState);
-            
-            Debug.Log("Charge State");
-
         }
 
         protected override State OnUpdate()

@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2 || SceneManager.GetActiveScene().buildIndex == 3 || SceneManager.GetActiveScene().buildIndex == 4 || SceneManager.GetActiveScene().buildIndex == 5) // Level 1
+        if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2 || SceneManager.GetActiveScene().buildIndex == 3 || SceneManager.GetActiveScene().buildIndex == 4) // Level 1
         {
             if (lvlLoader == null)
             {
@@ -107,10 +107,27 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        else if (SceneManager.GetActiveScene().buildIndex == 5 && this.enemyCount == 0) // and killed all enemies  (&& gameManager.isAllEnemiesDead)
+        else if (SceneManager.GetActiveScene().buildIndex == 5)
         {
-            keyHolder.ClearKeyList();
-            PlayerWin();
+            if (lvlLoader == null)
+            {
+                lvlLoader = GameObject.FindObjectOfType<LevelLoader>();
+            }
+
+            if (playerStats == null)
+            {
+                playerStats = GameObject.Find("Player").GetComponent<StatsComponent>();
+            }
+
+            if (this.playerStats.IsDead)
+            {
+                this.GameOver();
+            }
+
+            if (this.enemyCount == 0)
+            {
+                PlayerWin();
+            }
         }
     }
 
