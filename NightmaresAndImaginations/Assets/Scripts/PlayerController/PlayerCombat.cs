@@ -122,9 +122,11 @@ public class PlayerCombat : MonoBehaviour
                 // //enemyRB.velocity = new Vector2(0, 0);
                 // enemyRB.AddForce(new Vector2(850.0f, 5.0f), ForceMode2D.Impulse);
                 //Debug.Log(enemiesHit[i].name);
-
-                enemiesHit[i].GetComponent<Enemy>().TakeDamage(playerStats.Power.Value);
-               
+                var obj = enemiesHit[i].GetComponent<Enemy>();
+                if (obj != null)
+                {
+                    obj.TakeDamage(playerStats.Power.Value);
+                }
             }
         }
 
