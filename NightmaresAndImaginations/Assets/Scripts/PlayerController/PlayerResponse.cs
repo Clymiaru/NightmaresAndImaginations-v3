@@ -31,12 +31,6 @@ public class PlayerResponse : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-            
-    }
-
     public void TakeDamage(int damage, float positionX)
     {
         if(!this.playerRef.IsTakingDamage() && this.playerRef.CanTakeDamage())
@@ -51,7 +45,9 @@ public class PlayerResponse : MonoBehaviour
 
             this.playerRef.CanTakeDamage(false);
             this.playerRef.IsTakingDamage(true);
-            
+
+            audioManagerRef.Play(AudioManager.DAMAGE_SFX);
+
             //deal damage calc
             playerStats.Health.TakeDamage(damage, playerStats.Defense.Value);
             rb2d.transform.localScale = new Vector3(xDirection, 1, 1);

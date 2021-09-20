@@ -22,6 +22,10 @@ public class AudioManager : MonoBehaviour
 	public const string GROUND_ATTACK_SFX = "GroundAttackSFX";
 	public const string SWORD_SLASH_SFX = "SwordSlashSFX";
 	public const string PLAYER_FAIL_SFX = "PlayerFailSFX";
+	public const string DAMAGE_SFX = "DamageSFX";
+	public const string HEAL_SFX = "HealSFX";
+	public const string SHOOT_SFX = "ShootSFX";
+
 
 
 	void Awake()
