@@ -97,9 +97,6 @@ public class PlungeAttack : MonoBehaviour
             }
         }
 
-
-
-
     }
 
     private void DamageEnemies()
