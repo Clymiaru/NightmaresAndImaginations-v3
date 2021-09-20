@@ -23,4 +23,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BossLevel.unity
     guid: a0aff79079d6f8b4982866489e6ab245
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/Cutscene1.unity
+    guid: a08c03d8a60e92848860bc1175e17ec1
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/Cutscene2.unity
+    guid: e0ec75ea3e94f2843ae0984b85bb0eac
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/Cutscene3.unity
+    guid: ac6a58a2c5d93e2418bb71b9731d48e6
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/Cutscene4.unity
+    guid: 3550ecddcec72bb47bdc71c8e1bc86cd
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/Cutscene5.unity
+    guid: f03db3ad456db1e4584af4847d74e11a
   m_configObjects: {}

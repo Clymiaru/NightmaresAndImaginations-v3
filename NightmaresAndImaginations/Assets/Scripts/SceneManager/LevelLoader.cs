@@ -53,6 +53,31 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel(5));
     }
 
+    public void Cutscene1Scene()
+    {
+        StartCoroutine(LoadLevel(6));
+    }
+
+    public void Cutscene2Scene()
+    {
+        StartCoroutine(LoadLevel(7));
+    }
+    
+    public void Cutscene3Scene()
+    {
+        StartCoroutine(LoadLevel(8));
+    }
+    
+    public void Cutscene4Scene()
+    {
+        StartCoroutine(LoadLevel(9));
+    }
+    
+    public void Cutscene5Scene()
+    {
+        StartCoroutine(LoadLevel(10));
+    }
+
     IEnumerator LoadLevel(int levelIndex)
     {
         // Play anim

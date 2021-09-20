@@ -22,7 +22,7 @@ namespace TDS
 
         private void FixedUpdate()
         {
-            rigidbody2D.velocity = direction * speed * Time.fixedTime;
+            rigidbody2D.velocity = direction * speed * Time.fixedDeltaTime;
         }
 
         private void Update()
@@ -39,7 +39,7 @@ namespace TDS
         {
             if (other.CompareTag("Player"))
             {
-                other.GetComponent<PlayerResponse>().TakeDamage(4, transform.position.x);
+                other.GetComponent<PlayerResponse>().TakeDamage(2, transform.position.x);
                 Destroy(gameObject);
             }
         }

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class KeyHolder : MonoBehaviour
 {
+    private AudioManager audioManagerRef;
     public event EventHandler OnKeysChanged;
 
     private List<Key.KeyType> keyList;
@@ -12,6 +13,15 @@ public class KeyHolder : MonoBehaviour
     private void Awake()
     {
         keyList = new List<Key.KeyType>();
+    }
+
+    void Start()
+    {
+        if (audioManagerRef == null)
+        {
+            audioManagerRef = GameObject.FindObjectOfType<AudioManager>();
+            audioManagerRef = audioManagerRef.GetComponent<AudioManager>();
+        }
     }
 
     public List<Key.KeyType> GetKeyList()
@@ -60,6 +70,7 @@ public class KeyHolder : MonoBehaviour
         if (key != null)
         {
             AddKey(key.GetKeyType());
+            audioManagerRef.Play(AudioManager.PICK_UP_SFX);
             Destroy(key.gameObject);
         }
 

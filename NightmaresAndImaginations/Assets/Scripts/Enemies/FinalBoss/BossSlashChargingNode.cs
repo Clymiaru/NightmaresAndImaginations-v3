@@ -8,7 +8,7 @@ namespace TDS.AI
     {
         private float duration = 1.0f;
         private float elapsedTime;
-        
+
         protected override void OnStart()
         {
             elapsedTime = 0.0f;

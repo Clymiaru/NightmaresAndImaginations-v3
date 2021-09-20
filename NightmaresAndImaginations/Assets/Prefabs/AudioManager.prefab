@@ -115,3 +115,31 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
+  - name: ShootSFX
+    clip: {fileID: 8300000, guid: b32405a7ffa595d46b6f578169342d26, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: HealSFX
+    clip: {fileID: 8300000, guid: 830ae99b92d5cfb439cf421f5f9b9150, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: DamageSFX
+    clip: {fileID: 8300000, guid: e1f05cc3be6fd0246bb4d758fdfb156c, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: PickUpSFX
+    clip: {fileID: 8300000, guid: 07eca6f1d86050d4d9e372690a2145cf, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KeyDoor : MonoBehaviour
 {
@@ -38,7 +39,7 @@ public class KeyDoor : MonoBehaviour
         if (collider.gameObject.name == "Player" && !isOpened)
         {
             KeyHolder keyHolder = collider.gameObject.GetComponent<KeyHolder>();
-            if (keyHolder.ContainsAllKeys()) // and killed all enemies  && gameManager.isAllEnemiesDead
+            if (keyHolder.ContainsAllKeys()) // and killed all enemies  (&& gameManager.isAllEnemiesDead)
             {
                 doorAnimator.Play("DoorOpen");
                 float delayTime = doorAnimator.GetCurrentAnimatorStateInfo(0).length * 0.9f;

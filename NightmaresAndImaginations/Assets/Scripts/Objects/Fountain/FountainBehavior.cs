@@ -7,6 +7,8 @@ using TDS;
 
 public class FountainBehavior : MonoBehaviour
 {
+    private AudioManager audioManagerRef;
+
     Animator animator;
 
     private float cd = 30.0f;
@@ -29,14 +31,18 @@ public class FountainBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (audioManagerRef == null)
+        {
+            audioManagerRef = GameObject.FindObjectOfType<AudioManager>();
+            audioManagerRef = audioManagerRef.GetComponent<AudioManager>();
+        }
+
         animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-       
-      
         //update fountain anim
         if (canUse && !isUsing)
         {
@@ -87,6 +93,7 @@ public class FountainBehavior : MonoBehaviour
 
     private void UseFountain()
     {
+        audioManagerRef.Play(AudioManager.HEAL_SFX);
         canUse = false;
         isUsing = false;
 

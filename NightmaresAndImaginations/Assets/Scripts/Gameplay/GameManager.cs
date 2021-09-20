@@ -70,11 +70,16 @@ public class GameManager : MonoBehaviour
         {
             this.enemyCount = GameObject.FindObjectsOfType<Enemy>().Length;
         }
+
+        else if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            this.enemyCount = GameObject.FindObjectsOfType<Enemy>().Length;
+        }
     }
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 2 || SceneManager.GetActiveScene().buildIndex == 3 || SceneManager.GetActiveScene().buildIndex == 4) // Level 1
+        if (SceneManager.GetActiveScene().buildIndex == 2 || SceneManager.GetActiveScene().buildIndex == 3 || SceneManager.GetActiveScene().buildIndex == 4 || SceneManager.GetActiveScene().buildIndex == 5) // Level 1
         {
             if (lvlLoader == null)
             {
@@ -101,6 +106,12 @@ public class GameManager : MonoBehaviour
                 isAllEnemiesDead = false;
             }
         }
+
+        else if (SceneManager.GetActiveScene().buildIndex == 5 && this.enemyCount == 0) // and killed all enemies  (&& gameManager.isAllEnemiesDead)
+        {
+            keyHolder.ClearKeyList();
+            PlayerWin();
+        }
     }
 
     public void GameOver()
@@ -116,12 +127,12 @@ public class GameManager : MonoBehaviour
             lvlLoader.DesertBoxScene();
         }
 
-        else if (SceneManager.GetActiveScene().buildIndex == 3) // Level 3
+        else if (SceneManager.GetActiveScene().buildIndex == 4) // Level 3
         {
             lvlLoader.PreBossScene();
         }
 
-        else if (SceneManager.GetActiveScene().buildIndex == 4) // Boss Level
+        else if (SceneManager.GetActiveScene().buildIndex == 5) // Boss Level
         {
             lvlLoader.BossScene();
         }
@@ -142,7 +153,12 @@ public class GameManager : MonoBehaviour
 
         else if (SceneManager.GetActiveScene().buildIndex == 4) // Boss Level
         {
-            lvlLoader.BossScene();
+            lvlLoader.Cutscene4Scene();
+        }
+        
+        else if (SceneManager.GetActiveScene().buildIndex == 5) // Boss Level
+        {
+            lvlLoader.Cutscene5Scene();
         }
     }
 }

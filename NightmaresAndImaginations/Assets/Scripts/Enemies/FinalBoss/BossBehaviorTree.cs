@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -6,9 +7,11 @@ namespace TDS.AI
 {
     public class BossBehaviorTree : BehaviorTree
     {
-        [SerializeField] private Mover mover;
-        [SerializeField] private TargetPositionChecker positionChecker;
-
+        [SerializeField] private Mover Mover;
+        [SerializeField] private TargetPositionChecker PositionChecker;
+        [SerializeField] private BossBulletHellHandler BulletHellHandler;
+        [SerializeField] private GameObject GroundAttackCollider;
+        
         private Enemy owner;
         private GameObject target;
         private Sensor sensor;
@@ -21,12 +24,22 @@ namespace TDS.AI
 
             var isDeadNode = new IsDeadNode(doNothingNode, owner, "Death");
             
+            // Bullet hell segment
+            var bulletSequenceNode = new SequenceNode(new List<Node>
+                                                     {
+                                                         new BossSlashArmUpNode(owner),
+                                                         new BossBulletHellNode(BulletHellHandler, owner),
+                                                         new DelayNode(3.0f, doNothingNode, owner)
+                                                     }, 
+                                                     owner);
+            
             // Slash attack
             var slashSequenceNode = new SequenceNode(new List<Node>
                                                      {
                                                          new BossSlashArmUpNode(owner),
                                                          new BossSlashChargingNode(owner),
-                                                         new BossSlashNode(owner)
+                                                         new BossSlashNode(GroundAttackCollider, owner),
+                                                         new DisableObjectNode(GroundAttackCollider, owner)
                                                      }, 
                                                      owner);
             // Slam attack
@@ -34,7 +47,8 @@ namespace TDS.AI
                                                     {
                                                         new BossSlamArmUpNode(owner),
                                                         new BossSlamChargingNode(owner),
-                                                        new BossSlamNode(owner)
+                                                        new BossSlamNode(GroundAttackCollider, owner),
+                                                        new DisableObjectNode(GroundAttackCollider, owner)
                                                     },
                                                     owner);
             
@@ -45,23 +59,36 @@ namespace TDS.AI
             var patternA = new SequenceNode(new List<Node>
                                             {
                                                 slashSequenceNode,
-                                                delayNode,
                                                 slashSequenceNode,
+                                                delayNode,
                                             },
                                             owner);
             
             var patternB = new SequenceNode(new List<Node>
                                             {
                                                 slamSequenceNode,
+                                                slashSequenceNode,
                                                 delayNode,
                                                 slamSequenceNode
+                                            },
+                                            owner);
+            
+            var patternC = new SequenceNode(new List<Node>
+                                            {
+                                                slamSequenceNode,
+                                                bulletSequenceNode,
+                                                delayNode,
+                                                delayNode,
+                                                bulletSequenceNode,
+                                                delayNode
                                             },
                                             owner);
             
             var actionSequence = new SequenceNode(new List<Node>
                                                   {
                                                       patternA,
-                                                      patternB
+                                                      patternB,
+                                                      patternC
                                                   },
                                                   owner);
 
