@@ -32,9 +32,9 @@ public class HealthBarBehavior : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         slider.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + offset);
-        SetHealth(stats.Health.Value, 10);
+        SetHealth(stats.Health.Value, stats.Health.MaxValue);
     }
 }

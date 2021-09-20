@@ -5,6 +5,7 @@ namespace TDS
     public class HealthStat : UnitStat
     {
         private readonly int maxValue;
+        public int MaxValue => maxValue;
 
         public HealthStat(int maxHealth) : base(maxHealth)
         {
