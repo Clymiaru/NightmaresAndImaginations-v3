@@ -78,8 +78,8 @@ public class BGMPlayer : MonoBehaviour
 
 		else if (SceneManager.GetActiveScene().buildIndex == 10) // Final Win | Cutscene 5
 		{
-			//audioManagerRef.Stop(AudioManager.LEVEL_2_BGM);
-			//audioManagerRef.Play(AudioManager.BOSS_LEVEL_BGM);
+			audioManagerRef.Stop(AudioManager.BOSS_LEVEL_BGM);
+			audioManagerRef.Play(AudioManager.TUTORIAL_LEVEL_BGM);
 		}
 	}
 }
