@@ -4,11 +4,13 @@ using UnityEngine;
 
 namespace TDS.AI
 {
-    public class BossSlashChargingNode : ActionNode
+    public class BossBulletHellNode : ActionNode
     {
         private float duration = 1.0f;
         private float elapsedTime;
-
+        
+        private BossBulletHellHandler bulletHellHandler;
+        
         protected override void OnStart()
         {
             elapsedTime = 0.0f;
@@ -19,6 +21,7 @@ namespace TDS.AI
         {
             if (elapsedTime >= duration)
             {
+                bulletHellHandler.Shoot();
                 return State.Success;
             }
 
@@ -30,8 +33,10 @@ namespace TDS.AI
         {
         }
 
-        public BossSlashChargingNode(Enemy owner) : base(owner)
+        public BossBulletHellNode(BossBulletHellHandler bulletHell, Enemy owner) : base(owner)
         {
+            bulletHellHandler = bulletHell;
         }
     }
+ 
 }

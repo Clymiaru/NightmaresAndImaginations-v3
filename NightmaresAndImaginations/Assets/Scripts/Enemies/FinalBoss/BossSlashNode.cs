@@ -8,10 +8,10 @@ namespace TDS.AI
     {
         private float elapsedTime;
         private float duration = 1.0f;
-        
-        public BossSlashNode(Enemy owner) : base(owner)
+        private GameObject collider;
+        public BossSlashNode(GameObject collider, Enemy owner) : base(owner)
         {
-            
+            this.collider = collider;
         }
 
         protected override void OnStart()
@@ -25,6 +25,8 @@ namespace TDS.AI
             if (elapsedTime >= duration)
             {
                 Owner.StopAttacking();
+                Debug.Log("Hello");
+                collider.SetActive(true);
                 Owner.ChangeAnimationState("Idle");
                 return State.Success;
             }

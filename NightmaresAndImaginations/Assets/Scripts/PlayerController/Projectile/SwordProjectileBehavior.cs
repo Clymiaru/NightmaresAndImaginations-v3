@@ -89,7 +89,7 @@ public class SwordProjectileBehavior : MonoBehaviour
             collision.GetComponent<Enemy>().TakeDamage(10);
         }
 
-        if(collision.gameObject.name != "Player")
+        if(collision.gameObject.name != "Player" && !collision.CompareTag("Others"))
         {
             rb2d.velocity = new Vector2(0, 0);
             SwordHit();

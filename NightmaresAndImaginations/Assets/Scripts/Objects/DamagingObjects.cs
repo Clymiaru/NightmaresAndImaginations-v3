@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class DamagingObjects : MonoBehaviour
 {
-    int damage = 1;
+    [SerializeField] private int damage = 1;
 
-    float cd = 1.0f;
+    [SerializeField] private float cd = 1.0f;
     float cdTimer = 0.0f;
 
     private bool isPlayerIn = false;

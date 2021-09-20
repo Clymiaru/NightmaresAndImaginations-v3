@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 849099387880893578}
   - component: {fileID: 849099387880893576}
   - component: {fileID: 849099387880893577}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AttackArea
-  m_TagString: Untagged
+  m_TagString: Others
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,9 +82,9 @@ GameObject:
   - component: {fileID: 849099388623201795}
   - component: {fileID: 849099388623201793}
   - component: {fileID: 849099388623201794}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AttackRangeSensor
-  m_TagString: Untagged
+  m_TagString: Others
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,9 +151,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5631447058043526643}
   - component: {fileID: 5631447058043526640}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FarRangeSensor
-  m_TagString: Untagged
+  m_TagString: Others
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 5631447058489724323}
   m_Layer: 7
   m_Name: Mask
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -419,9 +419,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5631447058931712411}
   - component: {fileID: 5631447058931712408}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PathSensor
-  m_TagString: Untagged
+  m_TagString: Others
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
