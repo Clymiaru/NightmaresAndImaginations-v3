@@ -28,7 +28,6 @@ public class PlungeAttack : MonoBehaviour
 
     private float cd = 1.5f;
     private float cdCounter = 0.0f;
-    private bool canAttack = true;
 
     private void Start()
     {
@@ -52,7 +51,7 @@ public class PlungeAttack : MonoBehaviour
 
     private void Update()
     {
-        if (!this.playerRef.IsGrounded() && !playerRef.IsTakingDamage() && canAttack)
+        if (!this.playerRef.IsGrounded() && !playerRef.IsTakingDamage() && playerRef.CanPlungeAttack())
         {
             if(Input.GetMouseButtonDown(0) && !this.playerRef.IsPlungeAttacking())
             {
@@ -61,7 +60,7 @@ public class PlungeAttack : MonoBehaviour
 
 
                 this.playerRef.CanTakeDamage(false);
-                this.canAttack = false;
+                playerRef.CanPlungeAttack(false);
                 this.rb2d.velocity = new Vector2(0, 0);
                 this.rb2d.AddForce(new Vector2(0, this.dropDownForce), ForceMode2D.Impulse);
                 this.playerRef.IsPlungeAttacking(true);
@@ -84,7 +83,7 @@ public class PlungeAttack : MonoBehaviour
         }
 
         //CD
-        if(!canAttack)
+        if(!playerRef.CanPlungeAttack())
         {
             if(cdCounter < cd)
             {
@@ -93,7 +92,7 @@ public class PlungeAttack : MonoBehaviour
             else
             {
                 cdCounter = 0.0f;
-                canAttack = true;
+                playerRef.CanPlungeAttack(true);
             }
         }
 

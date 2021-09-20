@@ -13,16 +13,22 @@ public class PlayerStatsManager : MonoBehaviour
 
     //is plunge attacking
     private bool isPlungeAttacking = false;
+    private bool canPlungeAttack = true;
 
     //grounded attack combo
     private bool isAttacking = false;
 
     //dash
     private bool isDashing = false;
+    private bool canDash = true;
 
     //player responses
     private bool isTakingDamage = false;
     private bool canTakeDamage = true;
+
+    //throw sword
+    bool canThrow = true;
+
 
     // Start is called before the first frame update
     void Start()
@@ -59,6 +65,15 @@ public class PlayerStatsManager : MonoBehaviour
     {
         this.isPlungeAttacking = isPlungeattacking;
     }
+    public bool CanPlungeAttack()
+    {
+        return this.canPlungeAttack;
+    }
+    public void CanPlungeAttack(bool canPlungeAttack)
+    {
+        this.canPlungeAttack = canPlungeAttack;
+    }
+
 
     public bool IsAttacking()
     {
@@ -77,6 +92,14 @@ public class PlayerStatsManager : MonoBehaviour
     {
         this.isDashing = isDashing;
     }
+    public bool CanDash()
+    {
+        return canDash;
+    }
+    public void CanDash(bool canDash)
+    {
+        this.canDash =  canDash;
+    }
 
     public bool IsTakingDamage()
     {
@@ -94,5 +117,15 @@ public class PlayerStatsManager : MonoBehaviour
     public void CanTakeDamage(bool canTakeDamage)
     {
        this.canTakeDamage = canTakeDamage;
+    }
+
+
+    public bool CanThrow()
+    {
+        return canThrow;
+    }
+    public void CanThrow(bool canThrow)
+    {
+        this.canThrow = canThrow;
     }
 }
